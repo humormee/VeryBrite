@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 // import { signin, signup, signout } from './util/session_api_util'
 import configureStore from './store/store';
