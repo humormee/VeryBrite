@@ -4,16 +4,16 @@ export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const SIGNOUT_CURRENT_USER = 'SIGNOUT_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 
-const receiveCurrentUser = user => ({
+export const receiveCurrentUser = user => ({
   type: RECEIVE_CURRENT_USER,
   user
 });
 
-const signoutCurrentUser = () => ({
+export const signoutCurrentUser = () => ({
   type: SIGNOUT_CURRENT_USER
 });
 
-const receiveErrors = errors => ({
+export const receiveErrors = errors => ({
   type: RECEIVE_SESSION_ERRORS,
   errors
 });
@@ -33,5 +33,5 @@ export const signin = user => dispatch => (
 );
 
 export const signout = () => dispatch => (
-  APISessionUtil.signout.then(user => dispatch(signoutCurrentUser()))
+  APISessionUtil.signout.then(() => dispatch(signoutCurrentUser()))
 );
