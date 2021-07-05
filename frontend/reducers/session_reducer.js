@@ -3,17 +3,17 @@ import {
   SIGNOUT_CURRENT_USER
 } from '../actions/session_actions';
 
-const defaultUser = Object.freeze({
+const _nullUser = Object.freeze({
   id: null
 });
 
-const session = (state = defaultUser, action) => {
+const session = (state = _nullUser, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
       return { id: action.currentUser.id };
     case SIGNOUT_CURRENT_USER:
-      return defaultUser;
+      return _nullUser;
     default:
       return state;
   }

@@ -19,7 +19,7 @@ export const receiveErrors = errors => ({
 });
 
 export const signup = user => dispatch => (
-  APISessionUtil.signup(user).then(user => dispatch(receiveCurrentUser(user)),
+  APISessionUtil.signup(user).then(user => (dispatch(receiveCurrentUser(user))),
   error => (
     dispatch(receiveErrors(error.responseJSON))
   ))
