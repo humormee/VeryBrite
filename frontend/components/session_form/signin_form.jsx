@@ -44,15 +44,22 @@ class SessionForm extends React.Component {
           {this.renderErrors()}
           <div className="signin-form">
             <br />
-            <label>Username:
+            <label>
+              
               <input type="text"
+                placeholder="Username"
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="signin-input"
-              />
+              ><span
+                className="inner-text">Username
+                </span></input>
             </label>
             <br />
-            <label>Password:
+            <label>
+              <span 
+              className="inner-text">Password
+              </span>
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
@@ -60,9 +67,11 @@ class SessionForm extends React.Component {
               />
             </label>
             <br />
-            <input className="session-submit" type="submit" value={'signin'} />
+            <input className="session-submit" type="submit" value='Log in'/>
           </div>
         </form>
+
+        
       </div>
     );
   }

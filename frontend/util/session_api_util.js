@@ -10,7 +10,7 @@ export const signin = user => (
   $.ajax({
     method: 'POST',
     url: '/api/session',
-    data: { user , authenticity_token: $("['name=csrf-token']")[0].content}
+    data: { user }
   })
 )
 

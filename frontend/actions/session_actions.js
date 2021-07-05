@@ -33,5 +33,5 @@ export const signin = user => dispatch => (
 );
 
 export const signout = () => dispatch => (
-  APISessionUtil.signout.then(() => dispatch(signoutCurrentUser()))
+  APISessionUtil.signout().then(() => dispatch(signoutCurrentUser()))
 );
