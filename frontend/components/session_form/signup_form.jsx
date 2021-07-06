@@ -90,6 +90,7 @@ class SignupForm extends React.Component {
             <br />
             <input className="session-submit" type="submit" value='signup' />
           </div>
+          {this.props.navLink}
         </form>
       </div>
     );

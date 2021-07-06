@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom'
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
@@ -37,12 +37,16 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div className="signin-form-container">
+        
         <form onSubmit={this.handleSubmit} className="signin-form-box">
-          Welcome to VeryBrite!
           <br />
-          Please {this.props.formType} or {this.props.navLink}
           {this.renderErrors()}
           <div className="signin-form">
+            <Link to="/"
+              className="header-link">
+              <h1>verybrite</h1>
+            </Link>
+            {/* <h1 className="verybrite-header-login">verybrite</h1> */}
             <br />
             <label>
               <input type="text"
@@ -64,6 +68,7 @@ class SessionForm extends React.Component {
             <br />
             <input className="session-submit" type="submit" value='Log in' />
 
+            
             {this.props.navLink}
           </div>
         </form>

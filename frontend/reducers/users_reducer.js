@@ -4,7 +4,9 @@ const users = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
-      return Object.assign({}, state, { [action.currentUser.id]: action.currentUser });
+      debugger
+      console.log(action.user.id)
+      return Object.assign({}, state, { [action.user.id]: action.user });
     default:
       return state;
   }

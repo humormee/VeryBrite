@@ -40,7 +40,6 @@ class SessionForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="signin-form-box">
           Welcome to VeryBrite!
           <br />
-          Please {this.props.formType} or {this.props.navLink}
           {this.renderErrors()}
           <div className="signin-form">
             <br />
@@ -71,7 +70,7 @@ class SessionForm extends React.Component {
           </div>
         </form>
 
-        
+
       </div>
     );
   }
