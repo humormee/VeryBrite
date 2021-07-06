@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -17,6 +18,10 @@ class SignupForm extends React.Component {
     return e => this.setState({
       [field]: e.currentTarget.value
     });
+  }
+
+  componentWillUnmount(){
+    // this.props.errors = [];
   }
 
   handleSubmit(e) {
@@ -40,48 +45,62 @@ class SignupForm extends React.Component {
   render() {
     return (
       <div className="signup-form-container">
+        <div className="signup-errors">
+          {this.renderErrors()}
+        </div>
+        
         <form onSubmit={this.handleSubmit}
           className="signup-form-box">
-          Welcome to VeryBrite!
           <br />
-          Please sign up or login!
-          {this.renderErrors()}
-          <div className="signup-form">
+          <div className="signup-form"
+          >
+            <div>
+              <Link to="/"
+                className="header-link">
+                <h1>verybrite</h1>
+              </Link>
+              <h1 className="header-create-account">Create an account</h1>
+            </div>
+            
             <br />
-            <label>First Name:
-              <input type="text"
+            <label>
+              <input placeholder="First Name" type="text"
                 value={this.state.first_name}
                 onChange={this.update('first_name')}
                 className="signup-input"
               />
             </label>
             <br />
-            <label>Last Name:
+            <label>
               <input type="text"
+                placeholder="Last Name"
                 value={this.state.last_name}
                 onChange={this.update('last_name')}
                 className="signup-input"
               />
             </label>
             <br />
-            <label>Email:
+            <label>
               <input type="text"
+                placeholder="Email"
                 value={this.state.email}
                 onChange={this.update('email')}
                 className="signup-input"
               />
             </label>
             <br />
-            <label>Username:
+            <label>
               <input type="text"
+                placeholder="Username"
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="signup-input"
               />
             </label>
             <br />
-            <label>Password:
+            <label>
               <input type="password"
+                placeholder="Password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="signup-input"
@@ -90,7 +109,7 @@ class SignupForm extends React.Component {
             <br />
             <input className="session-submit" type="submit" value='signup' />
           </div>
-          {this.props.navLink}
+            {this.props.navLink}
         </form>
       </div>
     );

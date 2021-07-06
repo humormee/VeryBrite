@@ -19,10 +19,56 @@
    margin: auto;
  }
 
+ .signup-input {
+   /* position: relative; */
+   margin-top: 10px;
+   margin-left: auto;
+   padding: 12px;
+   height: 22px;
+   width: 140%;
+   font-size: 14px;
+ }
+
  .header-link {
    cursor: pointer;
    color: #f05537;
    text-decoration: none;
+ }
+
+ .signup-form-box {
+   /* top: 50%; */
+   position: absolute;
+ }
+ .signup-form-container {
+   float: left;
+   display: flex;
+   position: absolute;
+   top: 20%;
+   transform: translate(0, -50%);
+ }
+
+ .signup-errors {
+    bottom: 100px;
+    color: #C5162E;
+   position: relative;
+ }
+
+ .signin-errors {
+   bottom: 100px;
+   position: relative;
+ }
+ .signup-form {
+   display: flex;
+   flex-wrap: wrap;
+   width: 300px;
+ }
+
+ .nav-login {
+   position: relative;
+   top: 15px;
+   color: #3659E3;
+   text-decoration: none;
+   font: 14px "Neue Plak";
  }
 
  .verybrite-header-login {
@@ -32,8 +78,7 @@
    position: absolute;
    top: 30%;
    transform: translate(0, -50%);
-   /* width: auto;
-   margin: auto; */
+  
  }
 
  .signin-form {
@@ -42,16 +87,14 @@
   width: 300px;
  }
 
+
  .signin-input {
-   /* position: absolute; */
-   /* top: 4px;
-   left: 4px; */
+   margin-top: 10px;
    margin-left: auto;
    padding: 12px;
    height: 22px;
    width: 140%;
    font-size: 14px;
-   /* cursor: text; */
  }
 
  .session-submit {
@@ -78,8 +121,11 @@
  }
 
  .nav-signup {
+   position: relative;
+   top: 15px;
    color: #3659E3;
    text-decoration: none;
+   font: 14px "Neue Plak";
  }
 
  

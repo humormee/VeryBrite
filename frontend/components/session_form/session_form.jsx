@@ -10,6 +10,10 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentWillUnmount(){
+    // this.props.errors = [];
+  }
+
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -37,16 +41,16 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div className="signin-form-container">
-        
+        <div className="signup-errors">
+          {this.renderErrors()}
+        </div>
         <form onSubmit={this.handleSubmit} className="signin-form-box">
           <br />
-          {this.renderErrors()}
           <div className="signin-form">
             <Link to="/"
               className="header-link">
               <h1>verybrite</h1>
             </Link>
-            {/* <h1 className="verybrite-header-login">verybrite</h1> */}
             <br />
             <label>
               <input type="text"
