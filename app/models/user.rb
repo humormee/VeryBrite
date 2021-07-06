@@ -5,9 +5,9 @@ class User < ApplicationRecord
 
   attr_reader :password
 
-  # has_many :events,
-  # foreign_key: :author_id,
-  # class_name: "Event"
+  has_many :events,
+  foreign_key: :author_id,
+  class_name: "Event"
 
   # has_many :registrations,
   # foreign_key :attendee_id,
