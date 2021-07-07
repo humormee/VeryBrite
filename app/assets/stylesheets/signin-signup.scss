@@ -8,15 +8,48 @@
    font-size: 14px;
  }
 
-  .split-right {
-    // position: fixed;
-    // right: 0;
-    background-image: url(cover.jpg);
-    // background-repeat: no-repeat;
-    // background-position: left bottom;
-    // background-size: auto 150%;
-    // flex: 1;
-    // height: 135%;
+
+.split-left-container {
+  width: 40%;
+  height: 100%;
+}
+.split-left {
+  // width: 40%;
+}
+
+.signup {
+  display: flex;
+  justify-content: space-between;
+}
+.split-right-container {
+  // display: inline;
+  left: 0;
+  // right: 20%;
+  position: relative;
+  // right: 0;
+  background-image: url(cover.jpg);
+  background-repeat: no-repeat;
+  background-position: 0;
+  background-size: cover;
+  // flex: 1;
+  height: 100%;
+  width: 40%
+}
+
+.split-right {
+  position: relative;
+  // right: 0;
+  background-image: url(cover.jpg);
+  background-repeat: no-repeat;
+  // background-position: 0;
+  background-size: cover;
+  // flex: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  // right: 20%;
+  width: 100%;
+  height: 100%;
 }
 
   .signin-signup {
@@ -49,7 +82,7 @@
 
  .signup-form-box {
    top: 20%;
-   left: 30%;
+   left: 20%;
    position: absolute;
    .signup-form-container {
     // float: left;

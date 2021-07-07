@@ -46,80 +46,84 @@ class SignupForm extends React.Component {
 
   render() {
     return (
-      <>
-      <div className="split-left">
-      <div className="signup-form-container">
-        <div className="signin-signup-errors">
-          {this.renderErrors()}
-        </div>
-        <form onSubmit={this.handleSubmit}
-          className="signup-form-box">
-          <br />
-          <div className="signup-form"
-          >
-            <div>
-              <Link to="/"
-                className="header-link">
-                <h1>verybrite</h1>
-              </Link>
-              <h1 className="header-create-account">Create an account</h1>
-            </div>
-            <br />
-            <br />
-            <label>
-              <input placeholder="First Name" type="text"
-                value={this.state.first_name}
-                onChange={this.update('first_name')}
-                className="signup-input"
-              />
-            </label>
-            <br />
-            <label>
-              <input type="text"
-                placeholder="Last Name"
-                value={this.state.last_name}
-                onChange={this.update('last_name')}
-                className="signup-input"
-              />
-            </label>
-            <br />
-            <label>
-              <input type="text"
-                placeholder="Email"
-                value={this.state.email}
-                onChange={this.update('email')}
-                className="signup-input"
-              />
-            </label>
-            <br />
-            <label>
-              <input type="text"
-                placeholder="Username"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="signup-input"
-              />
-            </label>
-            <br />
-            <label>
-              <input type="password"
-                placeholder="Password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="signup-input"
-              />
-            </label>
-            <br />
-            <input className="session-submit" type="submit" value='signup' />
+      <div className="signup">
+        <div className="split-left-container">
+        <div className="split-left">
+        <div className="signup-form-container">
+          <div className="signin-signup-errors">
+            {this.renderErrors()}
           </div>
-            {this.props.navLink}
-        </form>
+          <form onSubmit={this.handleSubmit}
+            className="signup-form-box">
+            <br />
+            <div className="signup-form"
+            >
+              <div>
+                <Link to="/"
+                  className="header-link">
+                  <h1>verybrite</h1>
+                </Link>
+                <h1 className="header-create-account">Create an account</h1>
+              </div>
+              <br />
+              <br />
+              <label>
+                <input placeholder="First Name" type="text"
+                  value={this.state.first_name}
+                  onChange={this.update('first_name')}
+                  className="signup-input"
+                />
+              </label>
+              <br />
+              <label>
+                <input type="text"
+                  placeholder="Last Name"
+                  value={this.state.last_name}
+                  onChange={this.update('last_name')}
+                  className="signup-input"
+                />
+              </label>
+              <br />
+              <label>
+                <input type="text"
+                  placeholder="Email"
+                  value={this.state.email}
+                  onChange={this.update('email')}
+                  className="signup-input"
+                />
+              </label>
+              <br />
+              <label>
+                <input type="text"
+                  placeholder="Username"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  className="signup-input"
+                />
+              </label>
+              <br />
+              <label>
+                <input type="password"
+                  placeholder="Password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="signup-input"
+                />
+              </label>
+              <br />
+              <input className="session-submit" type="submit" value='signup' />
+            </div>
+              {this.props.navLink}
+          </form>
+          </div>
+          </div>
+        </div>
+        <div className="split-right-container">
+          <div className="split-right">
+          {/* <p></p> */}
+          </div>
         </div>
       </div>
-      <div className="split-right">
-      <img></img>
-      </div>
-      </>
 
     );
   }
