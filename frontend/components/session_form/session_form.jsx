@@ -63,9 +63,10 @@ class SessionForm extends React.Component {
   render() {
     return (
       
-      <div className="signin-form-container">
-        <div className="split-container-right"></div>
-        <div className="split-container-left">
+      <div className="signup">
+      <div className="split-left-container">
+        <div className="split-left">
+        <div className="signup-form-container">
         <div className="signin-signup-errors">
           {this.renderErrors()}
         </div>
@@ -105,7 +106,14 @@ class SessionForm extends React.Component {
           </div>
         </form>
         </div>
-      </div>
+        </div>
+        </div>
+        <div className="split-right-container">
+          <div className="split-right">
+          </div>
+        </div>
+        </div>
+        
     );
   }
 }

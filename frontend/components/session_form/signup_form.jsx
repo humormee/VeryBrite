@@ -120,7 +120,6 @@ class SignupForm extends React.Component {
         </div>
         <div className="split-right-container">
           <div className="split-right">
-          {/* <p></p> */}
           </div>
         </div>
       </div>
