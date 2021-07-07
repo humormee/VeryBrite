@@ -1,17 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+// import cover from 
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      errors: this.props.errors
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   componentWillUnmount(){
-    // this.props.errors = [];
+    // this.unsubscribe();
   }
 
   update(field) {
@@ -21,9 +24,28 @@ class SessionForm extends React.Component {
   }
 
   handleSubmit(e) {
+    // debugger;
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
+  }
+
+  handleDemo(e) {
+    e.preventDefault();
+    // debugger
+    // this.setState({
+    //   username: 'demo',
+    //   password: 'password'
+    // });
+    // const user = Object.assign({
+    //   'username': 'demo', 
+    //   'password': 'password'}, 
+    //   this.state)
+
+    this.props.processForm({
+      username: 'demo',
+      password: 'password'
+    });
   }
 
   renderErrors() {
@@ -40,8 +62,11 @@ class SessionForm extends React.Component {
 
   render() {
     return (
+      
       <div className="signin-form-container">
-        <div className="signup-errors">
+        <div className="split-container-right"></div>
+        <div className="split-container-left">
+        <div className="signin-signup-errors">
           {this.renderErrors()}
         </div>
         <form onSubmit={this.handleSubmit} className="signin-form-box">
@@ -51,6 +76,8 @@ class SessionForm extends React.Component {
               className="header-link">
               <h1>verybrite</h1>
             </Link>
+            <br />
+            <h1 className="login-header">Log in</h1>
             <br />
             <label>
               <input type="text"
@@ -72,10 +99,12 @@ class SessionForm extends React.Component {
             <br />
             <input className="session-submit" type="submit" value='Log in' />
 
+            <button className="demo-submit" type="submit" value='Demo' onClick={this.handleDemo}>Demo</button>
             
             {this.props.navLink}
           </div>
         </form>
+        </div>
       </div>
     );
   }

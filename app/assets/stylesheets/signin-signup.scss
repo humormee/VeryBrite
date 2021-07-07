@@ -1,0 +1,148 @@
+ .signup-input {
+   /* position: relative; */
+   margin-top: 10px;
+   margin-left: auto;
+   padding: 12px;
+   height: 22px;
+   width: 155%;
+   font-size: 14px;
+ }
+
+  .split-right {
+    // position: fixed;
+    // right: 0;
+    background-image: url(cover.jpg);
+    // background-repeat: no-repeat;
+    // background-position: left bottom;
+    // background-size: auto 150%;
+    // flex: 1;
+    // height: 135%;
+}
+
+  .signin-signup {
+   display: flex;
+   justify-content: space-between;
+   background-color: #f05537;
+   color: white;
+   font: 20px "Neue Plak";
+   /* border-style: solid; */
+   border: 1px solid black;
+    border-radius: 5px;
+ }
+
+.signin-signup-buttons {
+   color: white;
+   text-decoration: none;
+ }
+
+  .login-header {
+   font-weight: bold;
+   font-size: 40px;
+ }
+
+  .header-create-account {
+  //  display: flex;
+  //  justify-content: center;
+   font-size: 45px;
+   font-weight: bold;
+ }
+
+ .signup-form-box {
+   top: 20%;
+   left: 30%;
+   position: absolute;
+   .signup-form-container {
+    // float: left;
+    left: 30%;
+    display: flex;
+    position: absolute;
+    // top: 20%;
+    transform: translate(0, -50%);
+  }
+}
+
+ .signin-signup-errors {
+    bottom: 100px;
+    color: #C5162E;
+   position: relative;
+ }
+
+//  .signin-errors {
+//    bottom: 100px;
+//    position: relative;
+//  }
+
+ .signup-form {
+   display: flex;
+   flex-wrap: wrap;
+   width: 300px;
+ }
+
+  .verybrite-header-login {
+   color: #f05537;
+ }
+ .signin-form-container {
+   position: absolute;
+   top: 70%;
+   left: 30%;
+   transform: translate(0, -50%);
+  
+ }
+
+ .signin-form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  flex-direction: column;
+ }
+
+
+ .signin-input {
+  //  margin-top: 5px;
+   margin-left: auto;
+   padding: 12px;
+   height: 22px;
+   width: 90%;
+   font-size: 14px;
+ }
+
+ .session-submit {
+  margin-top: 10px;
+  /* margin-left: 30px; */
+  /* justify-content: stretch; */
+  /* vertical-align: center; */
+  width: 100%;
+  background-color: #D1410C;
+  padding: 0px 30px 1px;
+  height: 40px;
+  font: 14px;
+  color: white;
+ }
+
+ .demo-submit {
+   margin-top: 10px;
+  /* margin-left: 30px; */
+  /* justify-content: stretch; */
+  /* vertical-align: center; */
+  width: 100%;
+  background-color: #D1410C;
+  padding: 0px 30px 1px;
+  height: 40px;
+  font: 14px;
+  color: white;
+ }
+
+ .demo-submit:hover {
+   cursor: pointer;
+   opacity: .8;
+ }
+ 
+ .session-submit:hover {
+  cursor: pointer;
+  opacity: .8;
+ }
+
+ .signin-input .inner-text {
+  position: absolute;
+  width: 100%;
+ }

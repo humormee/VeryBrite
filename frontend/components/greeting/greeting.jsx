@@ -1,21 +1,44 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Greeting = ({ currentUser, signout }) => {
-  const sessionLinks = () => (
-    <nav className="signin-signup">
-      <Link to="/signin">Signin</Link>
-      <Link to="/signup">Sign up!</Link>
-    </nav>
-  );
-  const personalGreeting = () => (
+  // const sessionLinks = () => (
+  //   <nav className="signin-signup">
+  //     <Link className="signin-signup-buttons"to="/signin">Log in</Link>
+  //     <Link 
+  //     className="signin-signup-buttons"
+  //     to="/signup">Sign up!</Link>
+  //   </nav>
+
+const Greeting = ({ currentUser, signout, signin }) => {
+  const greeting = () => (
     <hgroup className="header-group">
-      <h2 className="header-name">Welcome, {currentUser.username}!</h2>
+          <Link to="/" className="nav-verybrite">verybrite</Link>
+          {/* <h2 className="nav-verybrite">verybrite
+          </h2> */}
+        <Link to="/signin"className="header-button">Sign In</Link>
+      </hgroup>
+      
+    );
+
+  const personalGreeting = () => (
+  <hgroup className="header-group">
+    <Link to="/" className="nav-verybrite">verybrite</Link>        
+    <h2 className="header-name">Welcome, {currentUser.username}!</h2>
       <button className="header-button" onClick={signout}>Sign Out</button>
-    </hgroup>
+    </hgroup> 
   )
 
-  return currentUser ? personalGreeting() : sessionLinks();
-};
+  // const personalGreeting = () => (
+  //   <hgroup className="header-group">
+  //     <h2 className="nav-verybrite">verybrite</h2>
+  //     <h2 className="header-name">Welcome, {currentUser.username}!</h2>
+  //     <button className="header-button" onClick={signout}>Sign Out</button>
+  //   </hgroup>
+  // )
 
-export default Greeting;
+  return currentUser ? personalGreeting() : greeting();
+}
+  // return personalGreeting();
+
+  // currentUser ? 
+  export default Greeting;

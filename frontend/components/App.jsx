@@ -10,16 +10,12 @@ import SignInFormContainer from './session_form/signin_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util'
 
 const App = () => (
-  <div>
+  <div className="app">
     <header>
-    {/* <Link to="/"
-    className="header-link">
-      <h1>verybrite</h1>
-      </Link> */}
+    <Route exact path="/" component={GreetingContainer}></Route>
       </header>
+      
       <Switch>
-        
-        <Route exact path="/" component={GreetingContainer}></Route>
         <AuthRoute exact path="/signin" component={SignInFormContainer}/>
         <AuthRoute exact path="/signup" component={SignUpFormContainer}/>
       </Switch>

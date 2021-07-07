@@ -1,0 +1,82 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+
+//  div#root {
+//   //  width: 100%;
+//    margin: auto;
+//  }
+@import 'signin-signup';
+@import 'index';
+
+
+
+
+  html, body, #root, .app, .app>div {
+  height: 100%
+}
+
+ .header-group {
+   width: auto;
+   display: flex;
+   justify-content: space-between;
+   background-color: #f05537;
+   color: white;
+   font: 20px "Neue Plak";
+   /* border-style: solid; */
+   border: 1px solid black;
+    border-radius: 5px;
+    .header-button {
+      color: white;
+      text-decoration: none;
+      background-color: #f05537;
+
+    }
+ }
+
+ 
+ .header-link {
+   cursor: pointer;
+   color: #f05537;
+   text-decoration: none;
+   font-size: 40px;
+   font-weight: bold;
+   
+ }
+
+
+ .nav-login {
+   position: relative;
+   top: 15px;
+   color: #3659E3;
+   text-decoration: none;
+   font: 14px "Neue Plak";
+ }
+
+ .nav-signup {
+   position: relative;
+   top: 15px;
+   color: #3659E3;
+   text-decoration: none;
+   font: 14px "Neue Plak";
+ }
+
+//  .body {
+//    display: flex;
+//  }
+
+ 

@@ -21,17 +21,18 @@ class SignupForm extends React.Component {
   }
 
   componentWillUnmount(){
-    // this.props.errors = [];
+    // this.unsubscribe();
   }
 
   handleSubmit(e) {
+    // debugger;
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
   }
 
   renderErrors() {
-    debugger
+    
     return (
       <ul>
         {this.props.errors.map((error, i) => (
@@ -45,11 +46,12 @@ class SignupForm extends React.Component {
 
   render() {
     return (
+      <>
+      <div className="split-left">
       <div className="signup-form-container">
-        <div className="signup-errors">
+        <div className="signin-signup-errors">
           {this.renderErrors()}
         </div>
-        
         <form onSubmit={this.handleSubmit}
           className="signup-form-box">
           <br />
@@ -62,7 +64,7 @@ class SignupForm extends React.Component {
               </Link>
               <h1 className="header-create-account">Create an account</h1>
             </div>
-            
+            <br />
             <br />
             <label>
               <input placeholder="First Name" type="text"
@@ -112,7 +114,13 @@ class SignupForm extends React.Component {
           </div>
             {this.props.navLink}
         </form>
+        </div>
       </div>
+      <div className="split-right">
+      <img></img>
+      </div>
+      </>
+
     );
   }
 }
