@@ -1,28 +1,18 @@
 class Api::EventsController < ApplicationController
 
-
-  def new
-    render :new
-  end
-
   def index
-    events = Events.all
+    @events = Event.all
     render :index
   end
 
-  def edit
-    @event = Event.find(params[:id])
-    render :edit
-  end
 
   def create
     @event = Event.new(event_params)
 
     if @event.save
-      redirect_to event_url(@event)
+      render :show
     else
-      render json:["all fields need to be occupied"], status: 401
-      render :new
+      render json: @event.errors.full_messages, status: 401
     end
   end
 
@@ -34,17 +24,19 @@ class Api::EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
     if @event.update(event_params)
-      redirect_to event_url(@event)
+      render :show
     else
-      flash.now[:errors] = @event.errors.full_messages
-      render :edit
+      render json: @event.errors.full_messages, status: 401
     end
   end
 
   def destroy
     @event = Event.find(params[:id])
-    @event.destroy
-    render "api/events"
+    if @event.destroy
+      render json: ['Event deleted']
+    else
+      render json: @event.errors.full_messages, status: 400
+    end
   end
 
   private

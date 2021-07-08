@@ -1,7 +1,8 @@
 class Event < ApplicationRecord
 
-  validates :title, :description, :author_id, :date, :type, :start_time, :end_time, :category, presence: true
-  
+  validates :title, :description, :author_id, :start_time, :end_time, :category, presence: true
+  validates :category, inclusion: { in: ["Entertainment", "Food and Drink", "Free", "Charity and Causes", "Music"],  message: "%{value} is not a valid category" }
+
   CATEGORIES = ["Entertainment", "Food and Drink", "Free", "Charity and Causes", "Music"]
 
   belongs_to :author,
