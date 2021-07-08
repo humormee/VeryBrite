@@ -62,7 +62,6 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-      
       <div className="signup">
       <div className="split-left-container">
         <div className="split-left">
