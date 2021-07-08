@@ -1,8 +1,10 @@
 import { combineReducers } from "redux";
-import users from "./users_reducer"
+import users from "./users_reducer";
+import events from "./events_reducer";
 
 const entities = combineReducers({
-  users
+  users,
+  events
 });
 
 export default entities;

@@ -21,6 +21,11 @@ export const removeEvent = eventId => ({
   eventId
 })
 
+export const receiveEventErrors = errors => ({
+  type: RECEIVE_EVENT_ERRORS,
+  errors
+})
+
 export const clearEventErrors = () => ({
   type: CLEAR_EVENT_ERRORS
 })

@@ -1,5 +1,3 @@
-import { $CombinedState } from "redux"
-
 export const fetchEvents = () => (
   $.ajax({
     method: 'GET',
