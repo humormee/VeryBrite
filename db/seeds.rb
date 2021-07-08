@@ -21,3 +21,21 @@ user2 = User.create!(
   password: 'password',
   email: 'jernst766@gmail.com1'
 )
+
+event1 = Event.create!(
+  author_id: 1;
+  category: 'Food and Drink'
+  title: 'fun in the sun'
+  description: "picnic in Pioneers Park",
+  start_time: "2021-07-28 11:00:00",
+  end_time: "2021-07-28 14:00:00"
+)
+
+event2 = Event.create!(
+  author_id: 2;
+  category: 'Entertainment'
+  title: 'movie night'
+  description: "drive-thru movie",
+  start_time: "2021-08-18 20:00:00",
+  end_time: "2021-07-28 23:00:00"
+)

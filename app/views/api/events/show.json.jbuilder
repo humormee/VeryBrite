@@ -1,6 +1,5 @@
-json.event do
-  json.extract! @event, :id, :title, :description, :author_id, :date, :type, :start_time, :end_time
-end
+json.partial! 'event', event: event;
 
 json.author do
-  json.extract! author, :first_name, :last_name
+  json.partial! "api/users/user", user: @event.author
+end
