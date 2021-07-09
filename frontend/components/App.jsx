@@ -9,7 +9,7 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import SignInFormContainer from './session_form/signin_form_container';
 import EventsIndexContainer from './events/events_index_container';
 import EventShowContainer from './events/event_show_container';
-
+import EventEditContainer from './events/event_edit_container';
 
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util'
@@ -26,6 +26,7 @@ const App = () => (
         <AuthRoute exact path="/signup" component={SignUpFormContainer}/>
         <Route exact path="/" component=  {EventsIndexContainer}></Route>
         <Route exact path="/events/:id" component={EventShowContainer}></Route>
+        <Route exact path="/events/:id/edit" component={EventEditContainer}></Route>
       </Switch>
   </div>
 );

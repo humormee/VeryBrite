@@ -16,17 +16,21 @@ class EventsIndex extends React.Component {
     //   start_time: '',
     //   end_time: '',
     // }
-    this.handleClick = this.handleClick.bind(this);
+    // this.handleClick = this.handleClick.bind(this);
+    // this.renderCreateButton = this.renderCreateButton.bind(this);
   }
 
+  renderCreateButton(){
+    // if
+  }
   componentDidMount(){
     // this.state.isFetching = true;
     this.props.fetchEvents();
   }
 
-  handleClick() {
-    // this.props.history.push(`/events/${this.props.event.id}`)
-  }
+  // handleClick() {
+  //   // this.props.history.push(`/events/${this.props.event.id}`)
+  // }
 
   render() {
 
@@ -48,6 +52,8 @@ class EventsIndex extends React.Component {
         <ul className="event-index">
           {eventItems}
         </ul>
+
+        {this.renderCreateButton()}
       </div>
     );
   }

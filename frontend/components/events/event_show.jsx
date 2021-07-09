@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import EventItem from './event_item';
+import EventEdit from './event_edit';
 
 class EventShow extends React.Component {
 
@@ -15,8 +16,9 @@ class EventShow extends React.Component {
     this.props.fetchEvent(this.props.match.params.id);
   }
 
-  handleEdit() {
-
+  handleEdit(e) {
+    e.preventDefault();
+    this.props.history.push(`/events/${e.currentTarget.value}/edit`)
   }
 
   renderButton(){
@@ -25,7 +27,10 @@ class EventShow extends React.Component {
     const { id } = this.props.user;
     const { author_id } = this.props.event;
     if(user && id === author_id){
-      return <Link to="/events/:id/edit">Edit</Link>
+      return (
+        <button value={this.props.event.id} onClick={this.handleEdit}>Edit Event</button>
+      )
+      // <Link to="/events/:id/edit"><EventEdit props={this.props}>Edit</EventEdit></Link>
     };
   }
 

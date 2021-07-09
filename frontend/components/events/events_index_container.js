@@ -4,7 +4,9 @@ import { fetchEvents, fetchEvent } from "../../actions/event_actions";
 
 
 const mSTP = state => ({
-  events: Object.values(state.entities.events)
+  // debugger
+  events: Object.values(state.entities.events),
+  user: state.session
 })
 
 const mDTP = dispatch => ({
