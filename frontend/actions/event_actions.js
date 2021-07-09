@@ -4,7 +4,7 @@ export const RECEIVE_ALL_EVENTS = 'RECEIVE_ALL_EVENTS';
 export const RECEIVE_EVENT = 'RECEIVE_ALL_EVENT';
 export const REMOVE_EVENT = 'REMOVE_EVENT';
 export const RECEIVE_EVENT_ERRORS = 'RECEIVE_EVENT_ERRORS';
-export const REMOVE_EVENT_ERRORS = 'CLEAR_EVENT_ERRORS';
+export const CLEAR_EVENT_ERRORS = 'CLEAR_EVENT_ERRORS';
 
 export const receiveAllEvents = events => ({
   type: RECEIVE_ALL_EVENTS,
