@@ -13,7 +13,7 @@ const mSTP = (state, ownProps) => {
 }
 
 const mDTP = dispatch => {
-  debugger
+  // debugger
   return {
     fetchEvent: eventId => dispatch(fetchEvent(eventId))
   // fetchEvents: () => dispatch(fetchEvents()),

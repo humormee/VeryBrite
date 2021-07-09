@@ -7,15 +7,16 @@ class EventsIndex extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = {
-      id: '',
-      title: '',
-      start_time: '',
-      end_time: '',
-      // isFetching: false
-    }
+    // this.state = {
+    //   id: '',
+    //   author_id: '',
+    //   category: '',
+    //   title: '',
+    //   description: '',
+    //   start_time: '',
+    //   end_time: '',
+    // }
     this.handleClick = this.handleClick.bind(this);
-
   }
 
   componentDidMount(){
@@ -35,7 +36,10 @@ class EventsIndex extends React.Component {
 
     // debugger
     let eventItems = events.map(event => (
-      <Link onClick={this.handleClick} to={`./events/${event.id}`}><EventItem fetchEvent={fetchEvent} event={event} key={`${event.id}`}></EventItem></Link>
+      <div key={`${event.id}`}>
+        <Link onClick={this.handleClick} to={`./events/${event.id}`}>{event.title}</Link>
+        <EventItem fetchEvent={fetchEvent} event={event} ></EventItem>
+      </div>
     ))
     debugger
 
