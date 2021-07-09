@@ -1,16 +1,32 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import EventItem from './event_item';
 
 class EventShow extends React.Component {
 
   constructor(props){
-    super(props)
-    
+    super(props);
+    this.handleEdit = this.handleEdit.bind(this);
+    this.renderButton = this.renderButton.bind(this);
   }
 
   componentDidMount() {
-    debugger
+    // debugger
     this.props.fetchEvent(this.props.match.params.id);
+  }
+
+  handleEdit() {
+
+  }
+
+  renderButton(){
+    debugger
+    const { user } = this.props;
+    const { id } = this.props.user;
+    const { author_id } = this.props.event;
+    if(user && id === author_id){
+      return <Link to="/events/:id/edit">Edit</Link>
+    };
   }
 
   render() {
@@ -19,7 +35,8 @@ class EventShow extends React.Component {
       return null;
     }
     // let eventItem = <EventItem event={this.props.event}></EventItem>
-    const { title, start_time, end_time, category, description }  = this.props.event;
+    const { author_id, title, start_time, end_time, category, description }  = this.props.event;
+    const { user } = this.props.user;
     const start_date_time = new Date(start_time).toString();
     const end_date_time = new Date(end_time).toString();
 
@@ -33,6 +50,8 @@ class EventShow extends React.Component {
             <p className="event-show-start-time">{start_date_time}</p>
             <p className="event-show-end-time">{end_date_time}</p>
             <div className="event-show-description">{description}</div>
+            <p>{author_id}</p>
+            <p>{this.renderButton()}</p>
           </div>
         </div>
       </div>
