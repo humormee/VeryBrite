@@ -17,7 +17,10 @@ const Greeting = ({ currentUser, signout, signin }) => {
           <Link to="/" className="nav-verybrite">verybrite</Link>
           {/* <h2 className="nav-verybrite">verybrite
           </h2> */}
-        <Link to="/signin"className="header-button">Sign out</Link>
+          <div className="header-button-container">
+            <Link to="/signin"className="header-button">Sign In</Link>
+          </div>
+        
       </hgroup>
       
     );
@@ -29,7 +32,13 @@ const Greeting = ({ currentUser, signout, signin }) => {
       <hgroup className="header-group">
         <Link to="/" className="nav-verybrite">verybrite</Link>        
         <h2 className="header-name">Welcome, {currentUser.username}!</h2>
-          <button className="header-button" onClick={signout}>{currentUser.email}</button>
+        <div className="nav-dropdown">
+          <button className="nav-email">{currentUser.email}</button>
+          <div className="dropdown-content">
+            <button className="header-button" onClick={signout}>Sign Out</button>
+          </div>
+        </div>
+          
         </hgroup> 
       )
   }

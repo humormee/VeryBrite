@@ -48,6 +48,9 @@ class EventShow extends React.Component {
     debugger
     return (
       <div className="event-show-container">
+        <div className="event-show-background">
+
+        </div>
         <div className="event-show">
           <div className="event-show-details">
             <h1 className="event-show-title">{title}</h1>

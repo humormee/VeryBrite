@@ -83,7 +83,7 @@ event2 = Event.create!(
 event3 = Event.create!(
   author_id: user4.id,
   category: 'Music',
-  title: 'Rave and the Cove',
+  title: 'Rave the Cave',
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed libero varius, faucibus ipsum vel, malesuada turpis. Nam congue felis vitae eleifend hendrerit. Mauris ultrices, neque vel maximus efficitur, felis leo consectetur ligula, maximus interdum arcu nibh eget massa. In non mi porta, iaculis magna ut, aliquam mi. ",
   start_time: "2021-08-09 22:00:00",
   end_time: "2021-08-10 01:00:00"
