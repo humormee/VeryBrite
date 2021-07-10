@@ -39,16 +39,27 @@ class EventsIndex extends React.Component {
     const { events, fetchEvent } = this.props
 
     // debugger
+    
+
     let eventItems = events.map(event => (
-      <div key={`${event.id}`}>
-        <Link onClick={this.handleClick} to={`./events/${event.id}`}>{event.title}</Link>
-        <EventItem fetchEvent={fetchEvent} event={event} ></EventItem>
+      <div className="event-index-item-container" id={`${event.id}`} key={`${event.id}`}>
+        {/* <h1>Events</h1> */}
+        <div className="event-index-item">
+          <Link onClick={this.handleClick} to={`./events/${event.id}`}>{event.title}</Link>
+          {/* <div className="index-item-dates">
+            <p>{event.start_date}</p>
+            <p>{event.end_date}</p>
+          </div> */}
+          <EventItem fetchEvent={fetchEvent} event={event} ></EventItem>
+        </div>
+        
       </div>
     ))
     debugger
 
     return (
       <div className="event-index-container">
+        <h1>Events</h1>
         <ul className="event-index">
           {eventItems}
         </ul>

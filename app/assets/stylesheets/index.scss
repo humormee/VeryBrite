@@ -1,3 +1,87 @@
 // body {
 //   display: grid;
 // }
+
+.event-index-container {
+  .event-index {
+    grid-auto-flow: row;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    column-gap: 10px;
+    row-gap:15px;
+    grid-template-columns: repeat(8, 147px);
+    grid-template-rows: repeat(8, 198px);
+    border: 1px solid black;
+    // --items-row: 8;
+    // --items-col: 12;
+    // grid-auto-rows: calc(100vh / var(--items-row));
+    // grid-auto-columns: calc(100%/ var(--items-col));
+          // border: 3px solid black;
+
+    // $grid-items: (
+    //   "2 / 2 / 4 / 4",
+    //   "6 / 4 / 8 / 6",
+    // );
+    // --items: 16;
+    a {
+      text-decoration: none;
+      color: black;
+      font: 25px "Neue Plak";
+      font-weight: 700;
+    }
+
+    .event-index-item-container {
+      display: flex;
+      .event-index-item {
+        padding: 10px;
+        align-self: center;
+      }
+    }
+
+    .event-index-item-container:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    }
+
+    @for $i from 0 through 3 {
+      @for $j from 0 through 3 {
+          .event-index-item-container[id="#{$i}"] {
+            
+            justify-self: stretch;
+            align-self: stretch;
+            border: 3px solid black;
+            color: red;
+
+            grid-row-start: 2*$j - 4;
+            grid-row-end: 2*$j + 2 - 4;
+            grid-column-start: 2*$i;
+            grid-column-end: 2*$i + 2;
+
+            // .event-index-container
+
+
+        }
+      }
+      }
+
+
+    // i can use loop with i to find key values for assigning individual index-items 
+    // .event-index-item[id='1'] {
+    //   // border-style: solid;
+    //   // grid-area: item;
+    //   // border: 3px solid black;
+    //   color: red;
+    //   grid-area: 2 / 2 / 4 / 4;
+
+      
+    //   .index-item-dates {
+    //     display: flex;
+    //     p {
+    //     color: red;
+    //     }
+        
+    //   }
+    // }
+  }
+}
