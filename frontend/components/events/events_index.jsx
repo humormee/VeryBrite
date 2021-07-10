@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import events from "../../reducers/events_reducer";
 import EventItem from "./event_item";
+// import index_header from "../../../app/assets/images/index_header.jpg"
 
 class EventsIndex extends React.Component {
   constructor(props) {
@@ -55,16 +55,27 @@ class EventsIndex extends React.Component {
         
       </div>
     ))
-    debugger
+    // debugger
 
     return (
+      <div>
+       <div className="index-header-container">
+            <div className="index-header">
+            <p></p>
+          </div>
+        </div>
       <div className="event-index-container">
-        <h1>Events</h1>
+        
+        {/* <img src={index_header} alt="now is your time" /> */}
+        {/* <h1>Events</h1> */}
+       
+
         <ul className="event-index">
           {eventItems}
         </ul>
 
         {this.renderCreateButton()}
+      </div>
       </div>
     );
   }

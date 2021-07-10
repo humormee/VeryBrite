@@ -2,28 +2,53 @@
 //   display: grid;
 // }
 
-.event-index-container {
-  .event-index {
-    grid-auto-flow: row;
-    height: 100%;
+.index-header-container {
+    // display: inline;
+    position: relative;
+    // top: 2%;
     width: 100%;
-    display: grid;
-    column-gap: 10px;
-    row-gap:15px;
-    grid-template-columns: repeat(8, 147px);
-    grid-template-rows: repeat(8, 198px);
-    border: 1px solid black;
-    // --items-row: 8;
-    // --items-col: 12;
-    // grid-auto-rows: calc(100vh / var(--items-row));
-    // grid-auto-columns: calc(100%/ var(--items-col));
-          // border: 3px solid black;
+    height: 30%;
+        
 
-    // $grid-items: (
-    //   "2 / 2 / 4 / 4",
-    //   "6 / 4 / 8 / 6",
-    // );
-    // --items: 16;
+    .index-header {
+      
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%, contain;
+      background-repeat: no-repeat;
+
+      background-image: url(outdoor_party.jpg)
+    
+  }
+  }
+
+.event-index-container {
+  display: flex;
+  position: relative;
+  top: 5%;
+  // width: 100%;
+  justify-content: center;
+
+  
+
+  .event-index {
+    
+    justify-content: center;
+    grid-auto-flow: row;
+    position: relative;
+    width: 80%;
+    top: 25%;
+    // height: 100%;
+    // width: 100%;
+    display: grid;
+    // justify-content: space-evenly;
+    column-gap: 10px;
+    row-gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 330px);
+
+    
+  
     a {
       text-decoration: none;
       color: black;
@@ -44,8 +69,8 @@
 
     }
 
-    @for $i from 0 through 3 {
-      @for $j from 0 through 3 {
+    @for $i from 0 through 8 {
+      // @for $j from 0 through 3 {
           .event-index-item-container[id="#{$i}"] {
             
             justify-self: stretch;
@@ -53,15 +78,15 @@
             border: 3px solid black;
             color: red;
 
-            grid-row-start: 2*$j - 4;
-            grid-row-end: 2*$j + 2 - 4;
-            grid-column-start: 2*$i;
-            grid-column-end: 2*$i + 2;
+            // grid-row-start: 2*$j - 4;
+            // grid-row-end: 2*$j + 2 - 4;
+            // grid-column-start: 2*$i;
+            // grid-column-end: 2*$i + 2;
 
             // .event-index-container
 
 
-        }
+        // }
       }
       }
 

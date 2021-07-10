@@ -34,17 +34,25 @@
    width: auto;
    display: flex;
    justify-content: space-between;
-   background-color: #f05537;
-   color: white;
+   background-color: white;
+   color: #f05537;
    font: 20px "Neue Plak";
    /* border-style: solid; */
    border: 1px solid black;
     border-radius: 5px;
     .header-button {
-      color: white;
+      color: #f05537;
       text-decoration: none;
-      background-color: #f05537;
-
+      background-color: white;
+      border: none;
+    }
+    .nav-verybrite {
+      text-decoration: none;
+      color: #f05537;
+    }
+    .header-button:hover {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
+      cursor: pointer;
     }
  }
 

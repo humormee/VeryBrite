@@ -10,23 +10,29 @@ import { Link } from 'react-router-dom';
   //   </nav>
 
 const Greeting = ({ currentUser, signout, signin }) => {
-  const greeting = () => (
+  const greeting = () => {
+    debugger;
+    return (
     <hgroup className="header-group">
           <Link to="/" className="nav-verybrite">verybrite</Link>
           {/* <h2 className="nav-verybrite">verybrite
           </h2> */}
-        <Link to="/signin"className="header-button">Sign In</Link>
+        <Link to="/signin"className="header-button">Sign out</Link>
       </hgroup>
       
     );
+  }
 
-  const personalGreeting = () => (
-  <hgroup className="header-group">
-    <Link to="/" className="nav-verybrite">verybrite</Link>        
-    <h2 className="header-name">Welcome, {currentUser.username}!</h2>
-      <button className="header-button" onClick={signout}>Sign Out</button>
-    </hgroup> 
-  )
+  const personalGreeting = () => {
+    debugger
+    return (
+      <hgroup className="header-group">
+        <Link to="/" className="nav-verybrite">verybrite</Link>        
+        <h2 className="header-name">Welcome, {currentUser.username}!</h2>
+          <button className="header-button" onClick={signout}>{currentUser.email}</button>
+        </hgroup> 
+      )
+  }
 
   // const personalGreeting = () => (
   //   <hgroup className="header-group">
