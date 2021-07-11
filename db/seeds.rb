@@ -75,13 +75,13 @@ event2 = Event.create!(
   author_id: user1.id,
   category: 'Entertainment',
   title: 'movie night',
-  description: "drive-thru movie",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed libero varius, faucibus ipsum vel, malesuada turpis. Nam congue felis vitae eleifend hendrerit. Mauris ultrices, neque vel maximus efficitur, felis leo consectetur ligula, maximus interdum arcu nibh eget massa. In non mi porta, iaculis magna ut, aliquam mi.",
   start_time: "2021-08-18 20:00:00",
   end_time: "2021-07-28 23:00:00"
 )
 
 event3 = Event.create!(
-  author_id: user4.id,
+  author_id: demo.id,
   category: 'Music',
   title: 'Rave the Cave',
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed libero varius, faucibus ipsum vel, malesuada turpis. Nam congue felis vitae eleifend hendrerit. Mauris ultrices, neque vel maximus efficitur, felis leo consectetur ligula, maximus interdum arcu nibh eget massa. In non mi porta, iaculis magna ut, aliquam mi. ",
