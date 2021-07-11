@@ -42,15 +42,15 @@ class EventEdit extends React.Component {
           <form className="edit-form">
             <div className="event-edit-details">
               <input className="event-edit-title" type="text" value={title}
-              onChange={event => this.update(event)}/>
+              onChange={event => this.update('event')}/>
               {/* <h1 className="event-show-title">{title}</h1> */}
-              <input type="text" value={category} onChange={event => this.update(event)}/>
+              <input type="text" value={category} onChange={event => this.update('category')}/>
               {/* <h3 className="event-show-category">{category}</h3> */}
-              <input type="date" value={start_date_time} onChange={event => this.update(event)}/>
+              <input type="date" value={start_date_time} onChange={event => this.update('start_date_time')}/>
               {/* <p className="event-show-start-time">{start_date_time}</p> */}
-              <input type="date" value={end_date_time} onChange={event => this.update(event)}/>
+              <input type="date" value={end_date_time} onChange={event => this.update('end_date_time')}/>
               {/* <p className="event-show-end-time">{end_date_time}</p> */}
-              <textarea value={description}cols="30" rows="10" onChange={event => this.update(event)}></textarea>
+              <textarea value={description}cols="30" rows="10" onChange={event => this.update('description')}></textarea>
               <div className="event-show-description">{description}</div>
               <button onSubmit={this.handleSubmit}>Update</button>
             </div>

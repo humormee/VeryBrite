@@ -22,7 +22,7 @@ class EventShow extends React.Component {
   }
 
   renderButton(){
-    debugger
+    // debugger
     const { user } = this.props;
     const { id } = this.props.user;
     const { author_id } = this.props.event;
@@ -40,12 +40,23 @@ class EventShow extends React.Component {
       return null;
     }
     // let eventItem = <EventItem event={this.props.event}></EventItem>
-    const { author_id, title, start_time, end_time, category, description }  = this.props.event;
-    const { user } = this.props.user;
-    const start_date_time = new Date(start_time).toString();
-    const end_date_time = new Date(end_time).toString();
-
     debugger
+    const { authorFName, authorLName, author_id, title, start_time, end_time, category, description }  = this.props.event;
+    const { user } = this.props.user;
+    // const start_date_time = new Date(start_time).toString();
+    // const end_date_time = new Date(end_time).toString();
+
+    // const { title, start_time, end_time, category }  = this.props.event;
+    debugger
+    const startDate = new Date(start_time);
+    const endDate = new Date(end_time);
+    const startDateString = startDate.toDateString();
+    const formatStartTime = new Date(startDate.getTime())
+            .toLocaleTimeString().replace(/(.*)\D\d+/, '$1');
+    const formatEndTime = new Date(endDate.getTime())
+          .toLocaleTimeString().replace(/(.*)\D\d+/, '$1');
+      
+    // debugger
     return (
       <div className="event-show-container">
         <div className="event-show-background">
@@ -53,13 +64,33 @@ class EventShow extends React.Component {
         </div>
         <div className="event-show">
           <div className="event-show-details">
-            <h1 className="event-show-title">{title}</h1>
-            <h3 className="event-show-category">{category}</h3>
-            <p className="event-show-start-time">{start_date_time}</p>
-            <p className="event-show-end-time">{end_date_time}</p>
-            <div className="event-show-description">{description}</div>
-            <p>{author_id}</p>
-            <p>{this.renderButton()}</p>
+            <div className="event-show-image">
+              <div></div>
+            </div>
+            <div className="event-show-basic-info">
+              <h3 className="date">{startDateString}</h3>
+              <h1 className="event-show-title">{title}</h1>
+              <h3 className="event-show-host">{`by ${authorFName} ${authorLName}`}</h3>
+              <h3 className="event-show-category">{category}</h3>
+            </div>
+
+            <div className="event-show-date-time">
+              <p className="event-show-date">Date and time</p>
+              <br />
+              <p className="event-show-time">{startDateString}
+              <br />
+              {`${formatStartTime} - ${formatEndTime}`}</p>
+            </div>
+            
+            <div className="event-show-other-details">
+              <h2>About this event</h2>
+              
+              {/* <p className="event-show-end-time">{formatEndTime}</p> */}
+              <div className="event-show-description">{description}</div>
+              {/* <p>{author_id}</p> */}
+              <p>{this.renderButton()}</p>
+            </div>
+            
           </div>
         </div>
       </div>
