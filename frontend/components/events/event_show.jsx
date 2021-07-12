@@ -48,9 +48,18 @@ class EventShow extends React.Component {
 
     // const { title, start_time, end_time, category }  = this.props.event;
     // debugger
-    const startDate = new Date(start_time);
-    const endDate = new Date(end_time);
+
+    //takes the z off end of start_time (was messing up conversions)
+
+
+    const startDate = new Date(start_time.slice(0,-1));
+    const endDate = new Date(end_time.slice(0,-1));
     const startDateString = startDate.toDateString();
+
+    const startDateArr = startDateString.split(' ').slice(1,-1);
+    const monthDayString = startDateArr.join(' ');
+
+
     const formatStartTime = new Date(startDate.getTime())
             .toLocaleTimeString().replace(/(.*)\D\d+/, '$1');
     const formatEndTime = new Date(endDate.getTime())
@@ -68,7 +77,7 @@ class EventShow extends React.Component {
               <div></div>
             </div>
             <div className="event-show-basic-info">
-              <h3 className="date">{startDateString}</h3>
+              <h3 className="date">{monthDayString}</h3>
               <h1 className="event-show-title">{title}</h1>
               <h3 className="event-show-host">{`by ${authorFName} ${authorLName}`}</h3>
               <h3 className="event-show-category">{category}</h3>

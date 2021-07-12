@@ -6,6 +6,9 @@ import Root from './components/root';
 
 document.addEventListener("DOMContentLoaded", () => {
 
+
+  // document.getElementById('start-date').value = 
+  // document.getElementById('end-date')
   let store;
   if (window.currentUser) {
     const preloadedState = {

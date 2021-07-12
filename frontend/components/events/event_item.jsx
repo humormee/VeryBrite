@@ -9,7 +9,7 @@ class EventItem extends React.Component {
 
   render() {
     const { title, start_time, end_time, category }  = this.props.event;
-    const startDate = new Date(start_time)
+    const startDate = new Date(start_time.slice(0,-1))
     const startDateString = startDate.toDateString();
     const formatTime = new Date(startDate.getTime())
             .toLocaleTimeString().replace(/(.*)\D\d+/, '$1');

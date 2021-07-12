@@ -1,30 +1,51 @@
 import React from "react";
 import EventShow from "./event_show";
+// import DateTimePicker from 'react-datetime-picker';
 
 class EventEdit extends React.Component {
   constructor(props) {
     super(props);
 
     debugger
-    props.fetchEvent(props.match.params.id)
-    debugger
-    this.state = {
-      id: props.event.id,
-      title: props.event.title,
-      category: props.event.category,
-      description: props.event.description,
-      start_time: props.event.start_time,
-      end_time: props.event.end_time
+    if (props.event) {
+      // this.state = {
+      //   id: props.event.id,
+      //   title: props.event.title,
+      //   category: props.event.category,
+      //   description: props.event.description,
+      //   start_time: props.event.start_time,
+      //   end_time: props.event.end_time
+      // }
+      // debugger
+      
+      this.state = props.event
     }
+    
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
 
   componentDidMount(){
+    debugger
     this.props.fetchEvent(this.props.match.params.id)
   }
 
+  componentDidUpdate(prevProps, prevstate, snapshot){
+    debugger
+    if(prevProps !== this.props) {
+      this.setState ({
+        id: this.props.event.id,
+        title: this.props.event.title,
+        category: this.props.event.category,
+        description: this.props.event.description,
+        start_time: this.props.event.start_time,
+        end_time: this.props.event.end_time
+      })
+    }
+    
+
+  }
   
 
   handleSubmit(e){
@@ -38,18 +59,23 @@ class EventEdit extends React.Component {
  
 
   update(e, field){
+    debugger
     this.setState({ [field]: e.currentTarget.value})
   }
 
   render(){
     // debugger
-    // if (!this.props.event) {
-    //   return null;
-    // }
-    // let eventItem = <EventItem event={this.props.event}></EventItem>
-    const { title, start_time, end_time, category, description }  = this.state;
-    // const start_date_time = new Date(start_time).toString();
-    // const end_date_time = new Date(end_time).toString();
+
+    if (!this.state) {
+      return null;
+    }
+ 
+    
+      const { title, start_time, end_time, category, description }  = this.state;
+    
+      debugger
+        // document.getElementById("start-date").defaultValue = this.props.start_time;
+      debugger
     
     return (
       <div className="edit-form-container">
@@ -60,10 +86,10 @@ class EventEdit extends React.Component {
               <h3>Title</h3>
               <input className="event-edit-title" type="text" value={title}
               onChange={e => this.update(e, 'title')}/>
-              {/* <h1 className="event-show-title">{title}</h1> */}
-              <h3>Pick a category:</h3>
-              {/* <input type="text" onChange={e => this.update(e, 'category')} value={category} /> */}
-              <select selected value={category} onChange={e => this.update(e, 'category')}>
+              
+              {/* <h3>Pick a category:</h3> */}
+              
+              {/* <select selected value={category} onChange={e => this.update(e, 'category')}>
                 <option disabled>pick a category</option>
                 <option value="Activities">Acitivities</option>
                 <option value="Free">Free</option>
@@ -71,18 +97,18 @@ class EventEdit extends React.Component {
                 <option value="Food and Drink">Food and Drink</option>
                 <option value="Entertainment">Entertainment</option>
                 <option value="Music">Music</option>
-              </select>
-              {/* <input type="text" value={category} onChange={e => this.update(e, 'category')}/> */}
-              {/* <h3 className="event-show-category">{category}</h3> */}
+              </select> */}
+             
               <h3>When should the event start?</h3>
-              <input type="datetime-local" value={start_time} onChange={e => this.update(e, 'start_time')}/>
+              <input id="start-date" type="datetime-local" value={start_time} onChange={e => this.update(e, 'start_time')}/>
               {/* <p className="event-show-start-time">{start_date_time}</p> */}
               <h3>When should the event end?</h3>
-              <input type="datetime-local" value={end_time} onChange={e => this.update(e, 'end_time')}/>
-              {/* <p className="event-show-end-time">{end_date_time}</p> */}
+              {/* <DateTimePicker value={end_time} onChange={e => this.update(e, 'end_time')}/> */}
+              <input id="end-date" type="datetime-local" value={end_time} onChange={e => this.update(e, 'end_time')}/>
+              
               <h3>Give a description of the event:</h3>
               <textarea value={description}cols="30" rows="10" onChange={e => this.update(e, 'description')}></textarea>
-              {/* <div className="event-show-description">{description}</div> */}
+           
             </div>
             <button onClick={e => this.handleSubmit(e)}>Update</button>
           </form>

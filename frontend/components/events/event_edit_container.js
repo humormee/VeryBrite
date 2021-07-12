@@ -3,7 +3,7 @@ import EventEdit from './event_edit';
 import { fetchEvent, updateEvent } from "../../actions/event_actions";
 
 const mSTP = (state, ownProps) => {
-  debugger
+  // debugger
   return ({
     event: state.entities.events[ownProps.match.params.id]
   })
