@@ -27,7 +27,7 @@ const Greeting = ({ currentUser, signout, signin }) => {
   }
 
   const personalGreeting = () => {
-    debugger
+    // debugger
     return (
       <hgroup className="header-group">
         <Link to="/" className="nav-verybrite">verybrite</Link>        

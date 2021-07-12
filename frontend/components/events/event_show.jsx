@@ -40,14 +40,14 @@ class EventShow extends React.Component {
       return null;
     }
     // let eventItem = <EventItem event={this.props.event}></EventItem>
-    debugger
+    // debugger
     const { authorFName, authorLName, author_id, title, start_time, end_time, category, description }  = this.props.event;
     const { user } = this.props.user;
     // const start_date_time = new Date(start_time).toString();
     // const end_date_time = new Date(end_time).toString();
 
     // const { title, start_time, end_time, category }  = this.props.event;
-    debugger
+    // debugger
     const startDate = new Date(start_time);
     const endDate = new Date(end_time);
     const startDateString = startDate.toDateString();
