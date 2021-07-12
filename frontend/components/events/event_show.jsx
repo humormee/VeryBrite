@@ -23,9 +23,10 @@ class EventShow extends React.Component {
   }
 
   handleDelete(e) {
+    debugger
     e.preventDefault();
     debugger
-    this.props.deleteEvent(this.props.match.params.id).then(this.props.history.push('/'))
+    this.props.deleteEvent(this.props.match.params.id).then(this.props.history.push('/')).then(() => window.location.reload)
   }
 
   renderButton(){
