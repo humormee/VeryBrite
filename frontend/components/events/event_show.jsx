@@ -8,6 +8,7 @@ class EventShow extends React.Component {
   constructor(props){
     super(props);
     this.handleEdit = this.handleEdit.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
     this.renderButton = this.renderButton.bind(this);
   }
 
@@ -21,6 +22,12 @@ class EventShow extends React.Component {
     this.props.history.push(`/events/${e.currentTarget.value}/edit`)
   }
 
+  handleDelete(e) {
+    e.preventDefault();
+    debugger
+    this.props.deleteEvent(this.props.match.params.id).then(this.props.history.push('/'))
+  }
+
   renderButton(){
     // debugger
     const { user } = this.props;
@@ -28,9 +35,12 @@ class EventShow extends React.Component {
     const { author_id } = this.props.event;
     if(user && id === author_id){
       return (
-        <button value={this.props.event.id} onClick={this.handleEdit}>Edit Event</button>
+        <div>
+          <button value={this.props.event.id} onClick={this.handleEdit}>Edit Event</button>
+          <button value={this.props.event.id} onClick={this.handleDelete}>Delete Event</button>
+        </div>
       )
-      // <Link to="/events/:id/edit"><EventEdit props={this.props}>Edit</EventEdit></Link>
+
     };
   }
 
@@ -39,15 +49,9 @@ class EventShow extends React.Component {
     if (!this.props.event) {
       return null;
     }
-    // let eventItem = <EventItem event={this.props.event}></EventItem>
-    // debugger
+  
     const { authorFName, authorLName, author_id, title, start_time, end_time, category, description }  = this.props.event;
     const { user } = this.props.user;
-    // const start_date_time = new Date(start_time).toString();
-    // const end_date_time = new Date(end_time).toString();
-
-    // const { title, start_time, end_time, category }  = this.props.event;
-    // debugger
 
     //takes the z off end of start_time (was messing up conversions)
 
@@ -65,7 +69,6 @@ class EventShow extends React.Component {
     const formatEndTime = new Date(endDate.getTime())
           .toLocaleTimeString().replace(/(.*)\D\d+/, '$1');
       
-    // debugger
     return (
       <div className="event-show-container">
         
@@ -74,6 +77,7 @@ class EventShow extends React.Component {
             
           </div>
         </div>
+
         <div className="event-show">
           <div className="event-show-details">
             <div className="event-show-image">
@@ -101,9 +105,8 @@ class EventShow extends React.Component {
             <div className="event-show-other-details">
               <h2>About this event</h2>
               
-              {/* <p className="event-show-end-time">{formatEndTime}</p> */}
+
               <div className="event-show-description">{description}</div>
-              {/* <p>{author_id}</p> */}
               <p>{this.renderButton()}</p>
             </div>
             

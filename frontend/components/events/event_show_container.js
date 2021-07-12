@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import EventShow from "./event_show";
-import { fetchEvent } from "../../actions/event_actions";
+import { fetchEvent, deleteEvent } from "../../actions/event_actions";
 import session from "../../reducers/session_reducer";
 
 const mSTP = (state, ownProps) => {
@@ -18,9 +18,8 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => {
   // debugger
   return {
-    fetchEvent: eventId => dispatch(fetchEvent(eventId))
-  // fetchEvents: () => dispatch(fetchEvents()),
-  // deleteEvent: eventId => dispatch(deleteEvent(e))
+    fetchEvent: eventId => dispatch(fetchEvent(eventId)),
+    deleteEvent: eventId => dispatch(deleteEvent(eventId))
   }
   
 }
