@@ -5,20 +5,15 @@ import {
 
 const eventErrors = (state = [], action) => {
   Object.freeze(state);
-  // let nextState = Object.assign({}, state);
-  // debugger
+  debugger
   switch (action.type) {
     case RECEIVE_EVENT_ERRORS:
-      // debugger
       return action.errors;
     case CLEAR_EVENT_ERRORS:
-      // debugger
       return [];
     default:
-      // debugger
       return state;
   }
 }
-// debugger
 
 export default eventErrors;

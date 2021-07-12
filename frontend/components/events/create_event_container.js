@@ -1,8 +1,8 @@
-import { fetchEvent, createEvent } from '../../actions/event_actions';
+import { createEvent } from '../../actions/event_actions';
 import { connect } from 'react-redux';
 import CreateEvent from './create_event';
 
-const mSTP = () => ({
+const mSTP = state => ({
   event: {
     author_id: '',
     category: 'Free',

@@ -5,8 +5,8 @@ class Api::EventsController < ApplicationController
     render :index
   end
 
-
   def create
+    debugger
     @event = Event.new(event_params)
 
     if @event.save
