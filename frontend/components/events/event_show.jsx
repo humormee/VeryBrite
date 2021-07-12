@@ -68,8 +68,11 @@ class EventShow extends React.Component {
     // debugger
     return (
       <div className="event-show-container">
+        
         <div className="event-show-background">
-
+          <div className="background-image">
+            
+          </div>
         </div>
         <div className="event-show">
           <div className="event-show-details">
@@ -77,7 +80,11 @@ class EventShow extends React.Component {
               <div></div>
             </div>
             <div className="event-show-basic-info">
-              <h3 className="date">{monthDayString}</h3>
+              <div className="date">
+                <h3 className="date">{monthDayString.split(" ")[0]}</h3>
+                <h3>{monthDayString.split(" ")[1]}</h3>
+              </div>
+              
               <h1 className="event-show-title">{title}</h1>
               <h3 className="event-show-host">{`by ${authorFName} ${authorLName}`}</h3>
               <h3 className="event-show-category">{category}</h3>

@@ -1,10 +1,31 @@
 .event-show-container {
-  background-color: lightsteelblue;
+  background-color: white;
   display: flex;
   justify-content: center;
+  z-index: 0;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  // justify-content: ;
+  .event-show-background {
+    
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background-size: 100% 100%, contain;
+    background-repeat: no-repeat;
+
+    background-image: url(show-image.jpg);
+    filter: blur(8px);
+    
+  }
+  
   .event-show {
-    // justify-content: center;
-    padding: 3%;
+    position: relative;
+    // left: 50%;
+    z-index: 999;
+    filter: blur(0);
+    padding-bottom: 3%;
     margin-top: 2%;
     display: flex;
     width: 60%;
@@ -14,19 +35,23 @@
     background-color: white;
     .event-show-details {
       width: 100%;
-      // background-color: white;
       position: relative;
-      // left: 70%;
-      // top:
+      
       justify-content: center;
       .event-show-image {
-        // display: block;
         position: absolute;
-        background-color: beige;
         height: 30%;
+        width: 70%;
+        background-size: 100% 100%, contain;
+        background-repeat: no-repeat;
+
+        background-image: url(show-image.jpg)
+
       }
       .event-show-basic-info {
-        padding: 20px;
+        // padding-top: 20px;
+        padding-right: 20px;
+        padding-left: 20px;
         position: absolute;
         right: 0%;
         left: 70%;
