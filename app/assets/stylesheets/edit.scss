@@ -6,14 +6,13 @@
   position: absolute;
   left: 30%;
   right: 30%;
-  // width: 60%;
-  // width: 100%;;
+  border-style: solid;
+  border-width: 0.5px;
   .edit-form {
     width: 100%;
   
     display: flex;
     justify-content: center;
-    // align-self: center;
     .event-edit-details {
       display: flex;
       flex-direction: column;
@@ -22,15 +21,43 @@
       width: 100%;
 
       div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
         h3 {
+          display: flex;
+          justify-content: center;
           margin-bottom: 10px;
           padding: 10px;
+          font-family: "Neue Plak";
+          font-size: 20px;
           font-weight: bolder;
         }
         div {
           width: 100%;
+          i {
+            padding: 10px;
+          }
           input {
+            font-family: "Neue Plak";
+            font-size: 20px;
+            border-style: none;
+            text-align: center;
             line-height: 3;
+          }
+
+          textarea {
+            font-family: "Neue Plak";
+            font-size: 18px;
+          }
+
+          input:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          }
+
+          textarea:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           }
         }
       }
