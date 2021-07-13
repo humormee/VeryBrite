@@ -1,59 +1,152 @@
+
 .edit-form-container {
   background-color: darkgrey;
   display: flex;
   justify-content: center;
- 
-  .edit-form{
-    padding: 20px;
-    background-color: white;
-    display: flex;
-    position: relative;
-
-    right: 50%;
-    top: 10%;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 100%;
-    width: 200%;
-    align-self: center;
-  h3 {
-    font-weight: 700;
-  }
-
-  .event-edit-details {
-    position: relative;
-
-    display: flex;
-    align-self: center;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 100%;
+  position: absolute;
+  left: 30%;
+  right: 30%;
+  // width: 60%;
+  // width: 100%;;
+  .edit-form {
     width: 100%;
-    line-height: 2;
-    input {
-      line-height: 3;
-      border: 1px solid lightgray;
-    }
+  
+    display: flex;
+    justify-content: center;
+    // align-self: center;
+    .event-edit-details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
 
-    select {
-      border: 1px solid lightgray;
-      height: 45px;
-    }
-    textarea {
-      border: 1px solid lightgray;
-    }
+      div {
+        h3 {
+          margin-bottom: 10px;
+          padding: 10px;
+          font-weight: bolder;
+        }
+        div {
+          width: 100%;
+          input {
+            line-height: 3;
+          }
+        }
+      }
+      // .title-container {
+      //   .title {
+          
+      //   }
+      // }
 
+      // .start-date-container {
+      //   .start-date {
+      //     input {
+      //       line-height: 3;
+      //     }
+      //   }
+      // }
 
+      // .end-date-container {
+      //   .end-date {
+      //     input {
+      //       line-height: 3;
+      //     }
+      //   }
+      // }
+
+      // .description-container {
+      //   .desciption {
+      //     input {
+      //       line-height: 3;
+      //     }
+      //   }
+      // }
+    }
 
   }
-  button {
-    background-color: white;
-    &:hover {
-      cursor: pointer;
-      background-color: rgb(243, 243, 243);
-    }
-      border: 2px solid lightgray;
-  }
-} 
-
 }
+
+// .edit-form-container {
+//   background-color: darkgrey;
+//   display: flex;
+//   justify-content: center;
+ 
+//   .edit-form{
+//     padding: 20px;
+//     background-color: white;
+//     display: flex;
+//     position: relative;
+
+//     right: 50%;
+//     top: 10%;
+//     flex-direction: column;
+//     justify-content: space-around;
+//     height: 100%;
+//     width: 200%;
+//     align-self: center;
+//     div {
+//       div {
+//         position: relative;
+//         display: flex;
+//         align-self: center;
+//         flex-direction: column;
+//         justify-content: center;
+//         height: 100%;
+//         width: 100%;
+//         line-height: 2;
+//         .title {
+//           display: flex;
+//           justify-content: space-between;
+//           .event-edit-title {
+//             width: 80%;;
+//           }
+//         }
+//       } 
+//     }
+    
+//     h3 {
+//       font-weight: 700;
+//     }
+
+//   .event-edit-details {
+//     // position: relative;
+
+//     // display: flex;
+//     // align-self: center;
+//     // flex-direction: column;
+//     // justify-content: space-around;
+//     // height: 100%;
+//     // width: 100%;
+//     // line-height: 2;
+//     input {
+//       line-height: 3;
+//       border: 1px solid lightgray;
+//     }
+
+//     select {
+//       border: 1px solid lightgray;
+//       height: 45px;
+//     }
+//     div {
+//       textarea {
+//         border: 1px solid lightgray;
+//       }
+//     }
+    
+
+
+
+//   }
+//   button {
+//     background-color: white;
+//     &:hover {
+//       cursor: pointer;
+//       background-color: rgb(243, 243, 243);
+//     }
+//       border: 2px solid lightgray;
+//   }
+// } 
+
+// }

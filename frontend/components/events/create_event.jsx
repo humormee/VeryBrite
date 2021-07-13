@@ -17,20 +17,17 @@ class CreateEvent extends React.Component {
   }
 
   componentDidMount(){
-    debugger
     this.setState({author_id: this.props.userId})
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger
     this.setState({author_id: this.props.userId});
     this.setState({category: "Free"});
     this.props.createEvent(this.state).then(event => this.props.history.push(`/events/${event.event.id}`));
   }
 
   update(e, field) {
-    // debugger
     this.setState({ [field]: e.currentTarget.value });
   }
 
@@ -54,19 +51,7 @@ class CreateEvent extends React.Component {
               <input className="event-create-title" type="text"
               value={title}
               onChange={e => this.update(e, 'title')}/>
-              
-              {/* <h3>Pick a category:</h3> */}
-              
-              {/* <select selected value={category} onChange={e => this.update(e, 'category')}>
-                <option disabled>pick a category</option>
-                <option value="Activities">Acitivities</option>
-                <option value="Free">Free</option>
-                <option value="Charity and Causes">Charisty and Causes</option>
-                <option value="Food and Drink">Food and Drink</option>
-                <option value="Entertainment">Entertainment</option>
-                <option value="Music">Music</option>
-              </select> */}
-             
+
 
               <h3>When should the event start?</h3>
               <input id="start-date" type="datetime-local"
@@ -79,8 +64,12 @@ class CreateEvent extends React.Component {
               onChange={e => this.update(e, 'end_time')}/>
               
               <h3>Give a description of the event:</h3>
-              <textarea value={description}
-              cols="30" rows="10" onChange={e => this.update(e, 'description')}></textarea>
+              <div>
+                <i class="far fa-sticky-note"></i>
+                <textarea value={description}
+                cols="30" rows="10" onChange={e => this.update(e, 'description')}></textarea>
+              </div>
+              
               
             </div>
             <button type="submit">Create</button>

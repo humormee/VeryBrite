@@ -13,7 +13,6 @@ class EventShow extends React.Component {
   }
 
   componentDidMount() {
-    // debugger
     this.props.fetchEvent(this.props.match.params.id);
   }
 
@@ -23,9 +22,7 @@ class EventShow extends React.Component {
   }
 
   handleDelete(e) {
-    // debugger
     e.preventDefault();
-    // debugger
     this.props.deleteEvent(this.props.match.params.id)
     .then(() => this.props.history.push('/')).then(() => window.location.reload());
   }
@@ -42,7 +39,6 @@ class EventShow extends React.Component {
           <button className="delete-event" value={this.props.event.id} onClick={this.handleDelete}>Delete Event</button>
         </div>
       )
-
     };
   }
 
@@ -114,7 +110,7 @@ class EventShow extends React.Component {
               
 
               <div className="event-show-description">{description}</div>
-              <p>{this.renderButton()}</p>
+              <div>{this.renderButton()}</div>
             </div>
             
           </div>

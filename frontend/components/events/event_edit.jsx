@@ -57,38 +57,50 @@ class EventEdit extends React.Component {
     
     return (
       <div className="edit-form-container">
-        <div>
+        
           <form className="edit-form">
             <div className="event-edit-details">
+
+              <div className="title-container">
               <h3>Title</h3>
-              <input className="event-edit-title" type="text" value={title}
-              onChange={e => this.update(e, 'title')}/>
+                <div className="title">
+                  <i class="fas fa-align-justify fa-3x"></i>
+                  <input className="event-edit-title" type="text" value={title}
+                  onChange={e => this.update(e, 'title')}/>
+                </div>
+              </div>
               
-              {/* <h3>Pick a category:</h3> */}
+              <div className="start-date-container">
+                <h3>When should the event start?</h3>
+                <div className="start-date">
+                  <i className="far fa-calendar-alt fa-3x"></i>
+                  <input id="start-date" type="datetime-local" value={start_time.slice(0,-1)} onChange={e => this.update(e, 'start_time')}/>
+                </div>
+              </div>
               
-              {/* <select selected value={category} onChange={e => this.update(e, 'category')}>
-                <option disabled>pick a category</option>
-                <option value="Activities">Acitivities</option>
-                <option value="Free">Free</option>
-                <option value="Charity and Causes">Charisty and Causes</option>
-                <option value="Food and Drink">Food and Drink</option>
-                <option value="Entertainment">Entertainment</option>
-                <option value="Music">Music</option>
-              </select> */}
+              <div className="end-date-container">
+                <h3>When should the event end?</h3>
+                <div className="end-date">
+                  <i className="far fa-calendar-alt fa-3x"></i>
+                  <input id="end-date" type="datetime-local" value={end_time.slice(0, -1)} onChange={e => this.update(e, 'end_time')}/>
+                </div>
+              </div>
+                
+              
+              <div className="description-container">
+                <h3>Give a description of the event:</h3>
+                <div className="description">
+                  <i className="far fa-sticky-note fa-3x"></i>
+                  <textarea value={description}cols="30" rows="10" onChange={e => this.update(e, 'description')}></textarea>
+                </div>
+              </div>
+              
              
-              <h3>When should the event start?</h3>
-              <input id="start-date" type="datetime-local" value={start_time.slice(0,-1)} onChange={e => this.update(e, 'start_time')}/>
-              <h3>When should the event end?</h3>
-            
-              <input id="end-date" type="datetime-local" value={end_time.slice(0, -1)} onChange={e => this.update(e, 'end_time')}/>
-              
-              <h3>Give a description of the event:</h3>
-              <textarea value={description}cols="30" rows="10" onChange={e => this.update(e, 'description')}></textarea>
            
             </div>
-            <button onClick={e => this.handleSubmit(e)}>Update</button>
+            {/* <button onClick={e => this.handleSubmit(e)}>Update</button> */}
           </form>
-        </div>
+        
       </div>
     )
   }
