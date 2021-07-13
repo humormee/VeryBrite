@@ -23,6 +23,9 @@ class EventItem extends React.Component {
       
       <div className="event-item-container">
         <div className="event-item">
+          <div className="event-item-image">
+            <div></div>
+          </div>
           <div className="event-item-info">
             {/* <p>{category}</p> */}
             {/* <p className="event-item-title">{title}</p> */}

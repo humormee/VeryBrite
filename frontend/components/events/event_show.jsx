@@ -23,22 +23,23 @@ class EventShow extends React.Component {
   }
 
   handleDelete(e) {
-    debugger
+    // debugger
     e.preventDefault();
-    debugger
-    this.props.deleteEvent(this.props.match.params.id).then(this.props.history.push('/')).then(() => window.location.reload)
+    // debugger
+    this.props.deleteEvent(this.props.match.params.id)
+    .then(() => this.props.history.push('/')).then(() => window.location.reload());
   }
 
   renderButton(){
-    // debugger
+
     const { user } = this.props;
     const { id } = this.props.user;
     const { author_id } = this.props.event;
     if(user && id === author_id){
       return (
-        <div>
-          <button value={this.props.event.id} onClick={this.handleEdit}>Edit Event</button>
-          <button value={this.props.event.id} onClick={this.handleDelete}>Delete Event</button>
+        <div className="edit-delete-event">
+          <button className="edit-event" value={this.props.event.id} onClick={this.handleEdit}>Edit Event</button>
+          <button className="delete-event" value={this.props.event.id} onClick={this.handleDelete}>Delete Event</button>
         </div>
       )
 
@@ -60,7 +61,9 @@ class EventShow extends React.Component {
     const startDate = new Date(start_time.slice(0,-1));
     const endDate = new Date(end_time.slice(0,-1));
     const startDateString = startDate.toDateString();
-
+    const dayMonthArr = startDateString.split(' ');
+    const dayMonthString = dayMonthArr[0].concat(', ').concat(`${dayMonthArr[1]} `).concat(`${dayMonthArr[2]}, `).concat(dayMonthArr[3])
+    
     const startDateArr = startDateString.split(' ').slice(1,-1);
     const monthDayString = startDateArr.join(' ');
 
@@ -86,19 +89,22 @@ class EventShow extends React.Component {
             </div>
             <div className="event-show-basic-info">
               <div className="date">
-                <h3 className="date">{monthDayString.split(" ")[0]}</h3>
-                <h3>{monthDayString.split(" ")[1]}</h3>
+                <h3 className="month">{monthDayString.split(" ")[0].toUpperCase()}</h3>
+                <h3 className="day">{monthDayString.split(" ")[1]}</h3>
               </div>
               
-              <h1 className="event-show-title">{title}</h1>
-              <h3 className="event-show-host">{`by ${authorFName} ${authorLName}`}</h3>
+              <div>
+                <h1 className="event-show-title">{title}</h1>
+                <h3 className="event-show-host">{`by ${authorFName} ${authorLName}`}</h3>
+              </div>
+              
               <h3 className="event-show-category">{category}</h3>
             </div>
 
             <div className="event-show-date-time">
               <p className="event-show-date">Date and time</p>
               <br />
-              <p className="event-show-time">{startDateString}
+              <p className="event-show-time">{dayMonthString}
               <br />
               {`${formatStartTime} - ${formatEndTime}`}</p>
             </div>

@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 const Greeting = ({ currentUser, signout, signin }) => {
   const greeting = () => {
-    debugger;
+    // debugger;
     return (
     <hgroup className="header-group">
           <Link to="/" className="nav-verybrite">verybrite</Link>
@@ -32,12 +32,16 @@ const Greeting = ({ currentUser, signout, signin }) => {
       <hgroup className="header-group">
         <Link to="/" className="nav-verybrite">verybrite</Link>        
         <h2 className="header-name">Welcome, {currentUser.username}!</h2>
-        <div className="nav-dropdown">
-          <button className="nav-email">{currentUser.email}</button>
-          <div className="dropdown-content">
-            <button className="header-button" onClick={signout}>Sign Out</button>
+        <div>
+          <Link to="/events/create">Create</Link>  
+          <div className="nav-dropdown">
+            <button className="nav-email">{currentUser.email}</button>
+            <div className="dropdown-content">
+              <button className="header-button" onClick={signout}>Sign Out</button>
+            </div>
           </div>
         </div>
+        
           
         </hgroup> 
       )

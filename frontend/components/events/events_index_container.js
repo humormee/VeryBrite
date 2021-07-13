@@ -3,11 +3,13 @@ import EventsIndex from "./events_index";
 import { fetchEvents, fetchEvent } from "../../actions/event_actions";
 
 
-const mSTP = state => ({
-  // debugger
+const mSTP = state =>{
+  debugger
+  return ({
   events: Object.values(state.entities.events),
   user: state.session
 })
+} 
 
 const mDTP = dispatch => ({
   fetchEvents: () => dispatch(fetchEvents()),

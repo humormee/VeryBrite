@@ -24,7 +24,6 @@ class EventsIndex extends React.Component {
     // if
   }
   componentDidMount(){
-    // this.state.isFetching = true;
     this.props.fetchEvents();
   }
 
@@ -44,7 +43,11 @@ class EventsIndex extends React.Component {
     let eventItems = events.map(event => (
       <div className="event-index-item-container" id={`${event.id}`} key={`${event.id}`}>
         {/* <h1>Events</h1> */}
+        <div className="event-index-item-image">
+            <div></div>
+          </div>
         <div className="event-index-item">
+          
           <Link onClick={this.handleClick} to={`./events/${event.id}`}>{event.title}</Link>
           {/* <div className="index-item-dates">
             <p>{event.start_date}</p>

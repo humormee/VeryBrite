@@ -24,7 +24,8 @@ class CreateEvent extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     debugger
-    this.setState({author_id: this.props.userId})
+    this.setState({author_id: this.props.userId});
+    this.setState({category: "Free"});
     this.props.createEvent(this.state).then(event => this.props.history.push(`/events/${event.event.id}`));
   }
 
@@ -47,7 +48,7 @@ class CreateEvent extends React.Component {
     return (
       <div className="create-form-container">
         <div>
-          <form className="create-form">
+          <form onSubmit={e => this.handleSubmit(e)} className="create-form">
             <div className="event-create-details">
               <h3>Title</h3>
               <input className="event-create-title" type="text"
@@ -82,7 +83,7 @@ class CreateEvent extends React.Component {
               cols="30" rows="10" onChange={e => this.update(e, 'description')}></textarea>
               
             </div>
-            <button onClick={e => this.handleSubmit(e)}>Create</button>
+            <button type="submit">Create</button>
           </form>
         </div>
       </div>

@@ -32,8 +32,10 @@ export const updateEvent = event => {
 }
 
 export const deleteEvent = eventId => {
-  $.ajax({
+  return (
+    $.ajax({
     method: 'DELETE',
     url: `api/events/${eventId}`
   })
+  )
 }

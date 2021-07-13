@@ -14,6 +14,7 @@ const events = (state = {}, action) => {
     case RECEIVE_EVENT:
       return Object.assign({}, nextState, { [action.event.id] : action.event});
     case REMOVE_EVENT:
+      debugger
       delete nextState[action.eventId]
       return nextState;
     default:

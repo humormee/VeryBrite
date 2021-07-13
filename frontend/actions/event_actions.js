@@ -50,7 +50,10 @@ export const updateEvent = event => dispatch => (
     errors => dispatch(receiveEventErrors(errors.responseJSON)))
 )
 
-export const deleteEvent = eventId => dispatch => (
-  EventApiUtil.deleteEvent(eventId).then((eventId) => dispatch(removeEvent(eventId)),
+export const deleteEvent = eventId => dispatch => {
+  debugger
+  return (
+  EventApiUtil.deleteEvent(eventId).then(eventId => dispatch(removeEvent(eventId)),
     errors => dispatch(receiveEventErrors(errors.responseJSON)))
 )
+}
