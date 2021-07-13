@@ -3,18 +3,33 @@ import React from 'react';
 class CreateEvent extends React.Component {
   constructor(props){
     super(props);
-
-    this.state = props.event;
+    debugger
+    this.state = {
+      author_id: "",
+      category: "Free",
+      title: "",
+      description: "",
+      start_time: "",
+      end_time: ""
+    };
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount(){
+    debugger
+    this.setState({author_id: this.props.userId})
+  }
+
   handleSubmit(e) {
     e.preventDefault();
+    debugger
+    this.setState({author_id: this.props.userId})
     this.props.createEvent(this.state).then(event => this.props.history.push(`/events/${event.event.id}`));
   }
 
   update(e, field) {
+    // debugger
     this.setState({ [field]: e.currentTarget.value });
   }
 
@@ -36,6 +51,7 @@ class CreateEvent extends React.Component {
             <div className="event-create-details">
               <h3>Title</h3>
               <input className="event-create-title" type="text"
+              value={title}
               onChange={e => this.update(e, 'title')}/>
               
               {/* <h3>Pick a category:</h3> */}
@@ -52,13 +68,18 @@ class CreateEvent extends React.Component {
              
 
               <h3>When should the event start?</h3>
-              <input id="start-date" type="datetime-local" onChange={e => this.update(e, 'start_time')}/>
+              <input id="start-date" type="datetime-local"
+              value={start_time}
+              onChange={e => this.update(e, 'start_time')}/>
               <h3>When should the event end?</h3>
             
-              <input id="end-date" type="datetime-local" value={end_time.slice(0, -1)} onChange={e => this.update(e, 'end_time')}/>
+              <input id="end-date" type="datetime-local"
+              value={end_time}
+              onChange={e => this.update(e, 'end_time')}/>
               
               <h3>Give a description of the event:</h3>
-              <textarea cols="30" rows="10" onChange={e => this.update(e, 'description')}></textarea>
+              <textarea value={description}
+              cols="30" rows="10" onChange={e => this.update(e, 'description')}></textarea>
               
             </div>
             <button onClick={e => this.handleSubmit(e)}>Create</button>

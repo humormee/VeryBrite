@@ -5,7 +5,7 @@ import {
 
 const eventErrors = (state = [], action) => {
   Object.freeze(state);
-  debugger
+  
   switch (action.type) {
     case RECEIVE_EVENT_ERRORS:
       return action.errors;

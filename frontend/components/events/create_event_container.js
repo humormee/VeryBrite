@@ -4,7 +4,8 @@ import CreateEvent from './create_event';
 
 const mSTP = state => ({
   event: {
-    author_id: '',
+    
+    author_id: null,
     category: 'Free',
     title: '',
     description: '',

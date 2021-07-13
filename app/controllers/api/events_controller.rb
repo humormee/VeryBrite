@@ -7,12 +7,13 @@ class Api::EventsController < ApplicationController
 
   def create
     debugger
-    @event = Event.new(event_params)
+    @event = Event.create(event_params)
 
-    if @event.save
+    if @event
       render :show
     else
-      render json: @event.errors.full_messages, status: 401
+      debugger
+      render json: @event.errors.full_messages, status: 422
     end
   end
 
@@ -45,4 +46,8 @@ class Api::EventsController < ApplicationController
     # debugger
     params.require(:event).permit(:id, :title, :description, :author_id, :start_time, :end_time)
   end
+
+  # def create_event_params
+  #   params.require(:event).permit(:title, :description, :author_id, :start_time, :end_time)
+  # end
 end
