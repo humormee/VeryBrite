@@ -1,7 +1,7 @@
 class Registration < ApplicationRecord
 
   validates :event_id, :attendee_id, presence: true
-  validates :attendee_id, uniqueness: { scope: :event_id }
+  # validates :attendee_id, uniqueness: { scope: :event_id }
   
   belongs_to :event,
     foreign_key: :event_id,

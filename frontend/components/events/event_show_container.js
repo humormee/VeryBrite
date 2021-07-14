@@ -6,9 +6,10 @@ import { createRegistration, removeRegistration } from "../../actions/registrati
 const mSTP = (state, ownProps) => {
 
   return ({
+    entities: state.entities,
     event: state.entities.events[ownProps.match.params.id],
     user: state.session,
-    registration: state.entities.registrations
+    registration: state.registrations
   })
   
 }
@@ -17,7 +18,7 @@ const mDTP = dispatch => {
   return {
     fetchEvent: eventId => dispatch(fetchEvent(eventId)),
     deleteEvent: eventId => dispatch(deleteEvent(eventId)),
-    createEvent: registrationId => dispatch(createRegistration(registrationId)),
+    createRegistration: registration => dispatch(createRegistration(registration)),
     removeRegistration: registrationId => dispatch(removeRegistration(registrationId))
   }
   

@@ -16,6 +16,8 @@ class EventShow extends React.Component {
     this.handleRegistration = this.handleRegistration.bind(this);
     this.registrationButton = this.registrationButton.bind(this);
     this.renderButton = this.renderButton.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
     
   }
 
@@ -35,12 +37,13 @@ class EventShow extends React.Component {
   }
 
   openModal() {
-    e.preventDefault()
+    // e.preventDefault()
     this.setState({isModalOpen: true})
   }
 
   closeModal() {
-    e.preventDefault()
+    // e.preventDefault()
+    debugger
     this.setState({isModalOpen: false})
   }
 
@@ -50,16 +53,19 @@ class EventShow extends React.Component {
 
     if(this.props.event.registrations && this.props.event.registrations[this.props.user.id]) {
       debugger
-      return <button  value={this.props.event.id} onClick={this.openModal}>Register</button>
+      return <button  value={this.props.event.id} onClick={this.closeModal}>UNREGISTER</button>
     } else {
-      return <button value={this.props.event.id} onClick={this.closeModal}>Unregister</button>
+      return <button value={this.props.event.id} onClick={this.openModal}>REGISTER</button>
     }
   }
 
   handleRegistration(e) {
-    e.preventDefault();
-
-    this.props.createRegistration(this.props.registration)
+    // e.preventDefault();
+    debugger
+    this.props.createRegistration({
+      attendee_id: this.props.user.id,
+      event_id: this.props.event.id
+    })
   }
 
   renderButton(){
@@ -152,7 +158,8 @@ class EventShow extends React.Component {
 
         {this.state.isModalOpen ? <div className="modal-container">
           <div className="modal">
-            <i onClick={this.closeModal} className="fas fa-times"></i>
+            <button onClick={this.closeModal}></button>
+            {/* button onClick={this.closeModal} className="fas fa-times"></i> */}
             <p>Are you registering or unregistering for this event?</p>
             <button onClick={() => this.handleRegistration()}>Register</button>
             <button onClick={this.closeModal}>Unregister</button>

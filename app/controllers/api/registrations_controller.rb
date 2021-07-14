@@ -6,18 +6,21 @@ class Api::RegistrationsController < ApplicationController
       render :show
     else
       render json: @registration.full_messages, status: 401
+    end
   end
 
   def create
     @registration = Registration.new(registration_params)
-    @registraion.attendee_id = current_user.id
+    @registration.attendee_id = current_user.id
     # @registraion.event_id = params[:event_id]
+    # debugger
 
     if @registration.save
+      # debugger
       @event = @registration.event
-      render 'api/events/show'
+      render :show
     else
-      render json: @registraion.errors.full_messages, status: 422
+      render json: @registration.errors.full_messages, status: 422
     end
   end
 
