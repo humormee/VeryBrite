@@ -18,11 +18,11 @@ const events = (state = {}, action) => {
 
     case RECEIVE_REGISTRATION:
       updateEvent = state[action.registration.event_id];
-      updateEvent.attendees.push(action.registration.user_id);
+      updateEvent.attendees.push(action.registration.attendee_id);
       return Object.assign(nextState, { [updateEvent.id]: updateEvent });
     // case REMOVE_REGISTRATION:
-    //   updateEvent = state[action.registration.user_id];
-    //   removeUser = updateEvent.attendees.filter(user => user.id !== action.)
+    //   updateEvent = state[action.registration.attendee_id];
+    //   removeAttendee = updateEvent.attendees.filter(attendee => attendee.id !== action.)
 
     case RECEIVE_ALL_EVENTS:
       return Object.assign({}, nextState, action.events);

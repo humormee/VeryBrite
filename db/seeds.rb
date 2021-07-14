@@ -160,3 +160,18 @@ event8 = Event.create!(
   start_time: "2021-08-25 11:00:00",
   end_time: "2021-08-25 2:00:00"
 )
+
+registration1 = Registration.create!(
+  event_id: 2,
+  attendee_id: 1
+)
+
+registration2 = Registration.create!(
+  event_id: 4,
+  attendee_id: 3
+)
+
+registration1 = Registration.create!(
+  event_id: 1,
+  attendee_id: 1
+)
