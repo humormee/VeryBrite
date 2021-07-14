@@ -7,9 +7,16 @@ class EventShow extends React.Component {
 
   constructor(props){
     super(props);
+
+    this.state = {
+      isModalOpen: false
+    }
     this.handleEdit = this.handleEdit.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.handleRegistration = this.handleRegistration.bind(this);
+    this.registrationButton = this.registrationButton.bind(this);
     this.renderButton = this.renderButton.bind(this);
+    
   }
 
   componentDidMount() {
@@ -27,6 +34,34 @@ class EventShow extends React.Component {
     .then(() => this.props.history.push('/')).then(() => window.location.reload());
   }
 
+  openModal() {
+    e.preventDefault()
+    this.setState({isModalOpen: true})
+  }
+
+  closeModal() {
+    e.preventDefault()
+    this.setState({isModalOpen: false})
+  }
+
+  registrationButton(e) {
+    debugger
+    // e.preventDefault();
+
+    if(this.props.event.registrations && this.props.event.registrations[this.props.user.id]) {
+      debugger
+      return <button  value={this.props.event.id} onClick={this.openModal}>Register</button>
+    } else {
+      return <button value={this.props.event.id} onClick={this.closeModal}>Unregister</button>
+    }
+  }
+
+  handleRegistration(e) {
+    e.preventDefault();
+
+    this.props.createRegistration(this.props.registration)
+  }
+
   renderButton(){
 
     const { user } = this.props;
@@ -37,6 +72,7 @@ class EventShow extends React.Component {
         <div className="edit-delete-event">
           <button className="edit-event" value={this.props.event.id} onClick={this.handleEdit}>Edit Event</button>
           <button className="delete-event" value={this.props.event.id} onClick={this.handleDelete}>Delete Event</button>
+          {this.registrationButton()}
         </div>
       )
     };
@@ -50,8 +86,6 @@ class EventShow extends React.Component {
   
     const { authorFName, authorLName, author_id, title, start_time, end_time, category, description }  = this.props.event;
     const { user } = this.props.user;
-
-    //takes the z off end of start_time (was messing up conversions)
 
 
     const startDate = new Date(start_time.slice(0,-1));
@@ -115,6 +149,17 @@ class EventShow extends React.Component {
             
           </div>
         </div>
+
+        {this.state.isModalOpen ? <div className="modal-container">
+          <div className="modal">
+            <i onClick={this.closeModal} className="fas fa-times"></i>
+            <p>Are you registering or unregistering for this event?</p>
+            <button onClick={() => this.handleRegistration()}>Register</button>
+            <button onClick={this.closeModal}>Unregister</button>
+          </div>
+        </div> : null
+        }
+
       </div>
     );
   }

@@ -1,7 +1,6 @@
 import { connect } from "react-redux";
 import EventShow from "./event_show";
 import { fetchEvent, deleteEvent } from "../../actions/event_actions";
-// import { createRegistration, removeRegistration } from "../../actions/registration_actions";
 import { createRegistration, removeRegistration } from "../../actions/registration_actions";
 
 const mSTP = (state, ownProps) => {
