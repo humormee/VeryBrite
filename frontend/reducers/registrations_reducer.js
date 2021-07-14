@@ -2,7 +2,7 @@ import {
   RECEIVE_REGISTRATION,
   REMOVE_REGISTRATION
 } from '../actions/registration_actions'
-import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
+// import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
 import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
 
 const registrations = (state = {}, action) => {
@@ -19,8 +19,6 @@ const registrations = (state = {}, action) => {
     debugger
     delete nextState[action.registrationId]
     return nextState;
-  case RECEIVE_CURRENT_USER:
-    return
   default:
     debugger
     return state;

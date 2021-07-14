@@ -8,7 +8,7 @@ import {
 //   RECEIVE_REGISTRATION,
 //   REMOVE_REGISTRATION
 // } from '../actions/registration_actions';
-import { updateEvent } from '../util/event_api_util';
+// import { updateEvent } from '../util/event_api_util';
 
 const events = (state = {}, action) => {
   Object.freeze(state);

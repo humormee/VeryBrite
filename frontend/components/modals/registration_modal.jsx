@@ -2,7 +2,7 @@ import React from 'react';
 
 class RegistrationModal extends React.Component {
   render() {
-    return null;
+    return <div>hi, from registration modal!</div>;
   }
 }
 
