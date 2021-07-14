@@ -3,7 +3,6 @@ import React from 'react';
 class CreateEvent extends React.Component {
   constructor(props){
     super(props);
-    debugger
     this.state = {
       author_id: "",
       category: "Free",
@@ -85,11 +84,7 @@ class CreateEvent extends React.Component {
                   cols="30" rows="10" onChange={e => this.update(e, 'description')}></textarea>
               </div>
 
-              <div>
-                <button type="submit">Create</button>
-                
-            </div>
-              
+              <button type="submit">Create</button>              
               
           </div>
           
