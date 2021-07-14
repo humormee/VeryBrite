@@ -75,17 +75,6 @@ class CreateEvent extends React.Component {
                   onChange={e => this.update(e, 'end_time')}/>
               </div>
               
-              {/* <div className="end-date-container">
-                <div className="end-date">  
-                  <i className="far fa-calendar-alt fa-3x"></i>
-                  <h3>Date and time</h3>
-                </div>
-                <input id="end-date" type="datetime-local"
-                  value={end_time}
-                  onChange={e => this.update(e, 'end_time')}/>
-              </div> */}
-            
-              
               
               <div className="description-container">
                 <div className="description">

@@ -12,6 +12,7 @@ class EventEdit extends React.Component {
     
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleStartDate = this.handleStartDate.bind(this);
   }
 
 
@@ -40,6 +41,13 @@ class EventEdit extends React.Component {
     })
   }
 
+  handleStartDate(e){ 
+    this.setState({ 'start_time': e.currentTarget.value.concat('Z')})
+  }
+
+  handleEndDate(e) {
+    this.setState({ 'end_time': e.currentTarget.value.concat('Z')})
+  }
  
 
   update(e, field){
@@ -76,9 +84,10 @@ class EventEdit extends React.Component {
                   <h3>Date and time</h3>
                 </div>
                 <p>start date and time</p>
-                  <input id="start-date" type="datetime-local" value={start_time.slice(0,-1)} onChange={e => this.update(e, 'start_time')}/>
+                
+                  <input id="start-date" type="datetime-local" value={start_time.slice(0,-1)} onChange={e => this.handleStartDate(e)}/>
                   <p>Event end date and time</p>
-                  <input id="end-date" type="datetime-local" value={end_time.slice(0, -1)} onChange={e => this.update(e, 'end_time')}/>
+                  <input id="end-date" type="datetime-local" value={end_time.slice(0, -1)} onChange={e => this.handleEndDate(e)}/>
                 </div>
               
               
