@@ -48,44 +48,52 @@ class CreateEvent extends React.Component {
             <div className="event-create-details">
 
               <div className="title-container">
-                <h3>Title</h3>
                 <div className="title">
-                  <i class="fas fa-align-justify fa-3x"></i>
-                  <input className="event-create-title" type="text"
+                <i class="fas fa-align-justify fa-3x"></i>
+                <h3>Title</h3>
+                </div>
+                <input className="event-create-title" 
+                type="text" placeholder="enter a title"
                   value={title}
                   onChange={e => this.update(e, 'title')}/>
-                </div>
               </div>
 
+
               <div className="start-date-container">
-                <h3>When should the event start?</h3>
                 <div className="start-date">
-                  <i className="far fa-calendar-alt fa-3x"></i>
+                <i className="far fa-calendar-alt fa-3x"></i>
+                <h3>Date and time</h3>
+                </div>
+                <p>Start day and time</p>
                   <input id="start-date" type="datetime-local"
                   value={start_time}
                   onChange={e => this.update(e, 'start_time')}/>
-                </div>
-              </div>
-              
-              <div className="end-date-container">
-                <h3>When should the event end?</h3>
-                <div className="end-date">
-                  <i className="far fa-calendar-alt fa-3x"></i>
+                  <br />
+                  <p>End day and time</p>
                   <input id="end-date" type="datetime-local"
                   value={end_time}
                   onChange={e => this.update(e, 'end_time')}/>
-                </div>
               </div>
+              
+              {/* <div className="end-date-container">
+                <div className="end-date">  
+                  <i className="far fa-calendar-alt fa-3x"></i>
+                  <h3>Date and time</h3>
+                </div>
+                <input id="end-date" type="datetime-local"
+                  value={end_time}
+                  onChange={e => this.update(e, 'end_time')}/>
+              </div> */}
             
               
               
               <div className="description-container">
-                <h3>Give a description of the event:</h3>
                 <div className="description">
                   <i class="far fa-sticky-note fa-3x"></i>
-                  <textarea value={description}
-                  cols="30" rows="10" onChange={e => this.update(e, 'description')}></textarea>
+                  <h3>Description</h3>
                 </div>
+                  <textarea value={description} placeholder="describe the event"
+                  cols="30" rows="10" onChange={e => this.update(e, 'description')}></textarea>
               </div>
 
               <div>
