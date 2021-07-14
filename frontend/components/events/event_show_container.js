@@ -21,7 +21,8 @@ const mDTP = dispatch => {
   return {
     fetchEvent: eventId => dispatch(fetchEvent(eventId)),
     deleteEvent: eventId => dispatch(deleteEvent(eventId)),
-    registerEvent: registrationId => dispatch(createRegistration(registrationId))
+    createEvent: registrationId => dispatch(createRegistration(registrationId)),
+    removeRegistration: registrationId => dispatch(removeRegistration(registrationId))
   }
   
 }

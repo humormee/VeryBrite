@@ -1,5 +1,13 @@
 class Api::RegistrationsController < ApplicationController
 
+  def show
+    @registration = Registration.find(params[:id])
+    if @registration
+      render :show
+    else
+      render json: @registration.full_messages, status: 401
+  end
+
   def create
     @registration = Registration.new(registration_params)
     @registraion.attendee_id = current_user.id
@@ -7,7 +15,7 @@ class Api::RegistrationsController < ApplicationController
 
     if @registration.save
       @event = @registration.event
-      rendre 'api/events/show'
+      render 'api/events/show'
     else
       render json: @registraion.errors.full_messages, status: 422
     end

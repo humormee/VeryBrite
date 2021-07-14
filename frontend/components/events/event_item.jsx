@@ -27,11 +27,10 @@ class EventItem extends React.Component {
             <div></div>
           </div>
           <div className="event-item-info">
-            {/* <p>{category}</p> */}
-            {/* <p className="event-item-title">{title}</p> */}
+            
             <div className="event-item-dates">
               <p className="event-item-starttime">{startDateString}, {formatTime}</p>
-              {/* <p className="event-item-endtime">{end_date_time}</p> */}
+              
             </div>
           </div>
         </div>
