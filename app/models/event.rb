@@ -9,4 +9,12 @@ class Event < ApplicationRecord
   belongs_to :author,
     foreign_key: :author_id,
     class_name: :User
+
+  has_many :registrations,
+    foreign_key: :event_id,
+    class_name: :Registration
+
+  # has_many :attendees,
+  #   through: :attendees,
+  #   source: :Registration
 end
