@@ -97,12 +97,13 @@ class CreateEvent extends React.Component {
               </div>
 
               <div>
+                <button type="submit">Create</button>
                 
             </div>
               
               
           </div>
-          {/* <button type="submit">Create</button> */}
+          
         </form>
       </div>
     )

@@ -32,8 +32,11 @@ const Greeting = ({ currentUser, signout, signin }) => {
       <hgroup className="header-group">
         <Link to="/" className="nav-verybrite">verybrite</Link>        
         <h2 className="header-name">Welcome, {currentUser.username}!</h2>
-        <div>
-          <Link to="/events/create">Create</Link>  
+        <div className="right-nav-bar">
+          <div className="create-container">
+            <Link className="create" to="/events/create">Create</Link>  
+          </div>
+          
           <div className="nav-dropdown">
             <button className="nav-email">{currentUser.email}</button>
             <div className="dropdown-content">
@@ -41,8 +44,6 @@ const Greeting = ({ currentUser, signout, signin }) => {
             </div>
           </div>
         </div>
-        
-          
         </hgroup> 
       )
   }

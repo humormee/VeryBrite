@@ -35,10 +35,6 @@
     background-color: rgba(240, 240, 240, 0.918);
   }
 
-  // div {
-  //   background-color: rgba(240, 240, 240, 0.918);
-  // }
-
  .header-group {
    height: 72px;
    width: auto;
@@ -51,9 +47,7 @@
    .header-name {
      align-self: center;
    }
-   /* border-style: solid; */
-  //  border: 1px solid black;
-  //  border-radius: 5px;
+
     .nav-verybrite {
       position: relative;
       left: 20px;
@@ -72,7 +66,7 @@
         text-decoration: none;
         color: #39364F;
         font: 16px "Neue Plak";
-        align-self: center;
+        // align-self: center;
       }
     }
 
@@ -81,23 +75,41 @@
 
     }
 
-    // .header-button-container:hover {
-    //   // background-size: cover;
-    //   // background-color: rgba(0, 0, 0, 0.03);
 
-    // }
-    
+    .right-nav-bar {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      .create-container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        a.create{
+          color: blue;
+          align-items: center;
+          // height: 100%;
+          text-decoration: none;
+          padding-right: 15px;
+          padding-left: 15px;
+
+      }
+
+      
+      }
+      .create-container:hover {
+        background-color: rgba(0, 0, 0, 0.03);
+      } 
+      
+    }
     .nav-dropdown {
       position: relative;
       display: inline-block;
       height: 100%;
-      // top: 35%;
       .nav-email {
         height: 100%;
         color: #f05537;
         text-decoration: none;
         background-color: white;
-        // align-self: center;
         border: none;
       }
       .dropdown-content {
@@ -142,7 +154,6 @@
       display: block;
       background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
       cursor: pointer;
-      // z-index: 2;
     }
 
     .nav-verybrite {
@@ -175,9 +186,5 @@
    position: relative;
    top: 15px;
  }
-
-//  .body {
-//    display: flex;
-//  }
 
  

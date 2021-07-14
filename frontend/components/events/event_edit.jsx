@@ -90,10 +90,10 @@ class EventEdit extends React.Component {
                   <textarea value={description}cols="30" rows="10" onChange={e => this.update(e, 'description')}></textarea>
               </div>
               
-             
+             <button onClick={e => this.handleSubmit(e)}>Update</button>
            
             </div>
-            {/* <button onClick={e => this.handleSubmit(e)}>Update</button> */}
+            
           </form>
         
       </div>
