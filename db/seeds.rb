@@ -163,7 +163,7 @@ event8 = Event.create!(
 
 registration1 = Registration.create!(
   event_id: 2,
-  attendee_id: 1
+  attendee_id: 7
 )
 
 registration2 = Registration.create!(
@@ -173,5 +173,5 @@ registration2 = Registration.create!(
 
 registration1 = Registration.create!(
   event_id: 1,
-  attendee_id: 1
+  attendee_id: 7
 )

@@ -15,8 +15,9 @@ const events = (state = {}, action) => {
   let nextState = Object.assign({}, state);
 
   switch (action.type) {
-
+    
     case RECEIVE_REGISTRATION:
+      debugger
       updateEvent = state[action.registration.event_id];
       updateEvent.attendees.push(action.registration.attendee_id);
       return Object.assign(nextState, { [updateEvent.id]: updateEvent });
@@ -25,11 +26,12 @@ const events = (state = {}, action) => {
     //   removeAttendee = updateEvent.attendees.filter(attendee => attendee.id !== action.)
 
     case RECEIVE_ALL_EVENTS:
+      debugger
       return Object.assign({}, nextState, action.events);
     case RECEIVE_EVENT:
+      debugger
       return Object.assign({}, nextState, { [action.event.id] : action.event});
     case REMOVE_EVENT:
-      debugger
       delete nextState[action.eventId]
       return nextState;
     default:
