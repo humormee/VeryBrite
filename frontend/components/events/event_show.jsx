@@ -14,6 +14,7 @@ class EventShow extends React.Component {
     this.handleEdit = this.handleEdit.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
     this.handleRegistration = this.handleRegistration.bind(this);
+    this.handleDeleteRegistration = this.handleDeleteRegistration.bind(this);
     this.registrationButton = this.registrationButton.bind(this);
     this.renderButton = this.renderButton.bind(this);
     this.openModal = this.openModal.bind(this);
@@ -44,25 +45,24 @@ class EventShow extends React.Component {
 
   closeModal() {
     // e.preventDefault()
-    debugger
+    
     this.setState({isModalOpen: false})
   }
 
   registrationButton(e) {
-    debugger
-    // e.preventDefault();
+    
     let isOwnReg = false;
     
     let regArr = Object.values(this.props.registrations);
     regArr.forEach(reg => {
-      if (reg.attendee_id === this.props.user.id){
+      if (reg.attendee_id === this.props.user.id && reg.event_id == this.props.event.id){
         isOwnReg = true;
       }
     })
 
     if(isOwnReg) {
       debugger
-      return <button  value={this.props.event.id} onClick={this.closeModal}>UNREGISTER</button>
+      return <button  value={this.props.event.id} onClick={this.openModal}>UNREGISTER</button>
     } else {
       return <button value={this.props.event.id} onClick={this.openModal}>REGISTER</button>
     }
@@ -70,11 +70,24 @@ class EventShow extends React.Component {
 
   handleRegistration(e) {
     // e.preventDefault();
-    debugger
+    
     this.props.createRegistration({
       attendee_id: this.props.user.id,
       event_id: this.props.event.id
     })
+  }
+
+  handleDeleteRegistration() {
+    debugger
+    let regArr = Object.values(this.props.registrations);
+    let regId;
+    regArr.forEach(reg => {
+      if(reg.attendee_id == this.props.user.id && reg.event_id == this.props.event.id) {
+        regId = reg.id
+      }
+    })
+    debugger
+    this.props.deleteRegistration({ regId })
   }
 
   renderButton(){
@@ -87,7 +100,6 @@ class EventShow extends React.Component {
         <div className="edit-delete-event">
           <button className="edit-event" value={this.props.event.id} onClick={this.handleEdit}>Edit Event</button>
           <button className="delete-event" value={this.props.event.id} onClick={this.handleDelete}>Delete Event</button>
-          {/* {this.registrationButton()} */}
         </div>
       )
     };
@@ -173,11 +185,10 @@ class EventShow extends React.Component {
             {/* button onClick={this.closeModal} className="fas fa-times"></i> */}
             <p>Are you registering or unregistering for this event?</p>
             <button onClick={() => this.handleRegistration()}>Register</button>
-            <button onClick={this.closeModal}>Unregister</button>
+            <button onClick={() => this.handleDeleteRegistration()}>Unregister</button>
           </div>
         </div> : null
         }
-
       </div>
     );
   }

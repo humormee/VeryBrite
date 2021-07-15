@@ -14,10 +14,12 @@ export const createRegistration = registration => (
   })
 )
 
-export const deleteRegistration = registrationId => (
+export const deleteRegistration = registrationId => {
+  debugger
+  return(
   $.ajax({
     method: 'DELETE',
-    url: `api/registration/${registrationId}`
+    url: `api/registrations/${registrationId.regId}`
   })
 )
-
+}
