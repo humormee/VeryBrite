@@ -23,9 +23,9 @@ class EventItem extends React.Component {
       
       <div className="event-item-container">
         <div className="event-item">
-          <div className="event-item-image">
+          {/* <Link to="api/events/${}"className="event-item-image"> */}
             <div></div>
-          </div>
+          {/* </Link> */}
           <div className="event-item-info">
             
             <div className="event-item-dates">
