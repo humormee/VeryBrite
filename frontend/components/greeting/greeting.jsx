@@ -38,7 +38,7 @@ const Greeting = ({ currentUser, signout, signin }) => {
           </div>
 
           <div className="tickets-container">
-            <Link className="tickets" to="users/:id/registrations">Tickets</Link>
+            <Link className="tickets" to={`users/${currentUser.id}/registrations`}>Tickets</Link>
           </div>
           
           <div className="nav-dropdown">

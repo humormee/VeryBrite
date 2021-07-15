@@ -11,6 +11,7 @@ import EventsIndexContainer from './events/events_index_container';
 import EventShowContainer from './events/event_show_container';
 import EventEditContainer from './events/event_edit_container';
 import CreateEventContainer from './events/create_event_container';
+import TicketsContainer from "./users/tickets_container";
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util'
 
@@ -27,7 +28,7 @@ const App = () => (
         <Route exact path="/" component=  {EventsIndexContainer}></Route>
         <Route exact path="/events/create" component={CreateEventContainer}></Route>
         <Route exact path="/events/:id" component={EventShowContainer}></Route>
-        
+        <Route exact path="/users/:id/registrations" component={TicketsContainer}></Route>
         <ProtectedRoute exact path="/events/:id/edit" component={EventEditContainer}></ProtectedRoute>
         
       </Switch>
