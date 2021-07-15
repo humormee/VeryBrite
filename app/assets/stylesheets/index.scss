@@ -16,7 +16,7 @@
       background-size: 100% 100%, contain;
       background-repeat: no-repeat;
 
-      background-image: url(mountains.jpg);
+      background-image: image-url('mountains.jpg');
     
   }
   }
@@ -71,7 +71,7 @@
         background-size: 100% 100%, contain;
         background-repeat: no-repeat;
 
-        background-image: url(outdoor_party.jpg)
+        background-image: image-url('outdoor_party.jpg')
       }
       .event-index-item {
         position: relative;
