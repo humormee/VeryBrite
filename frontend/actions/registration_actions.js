@@ -6,10 +6,15 @@ export const RECEIVE_REGISTRATION = "RECEIVE_REGISTRATION";
 export const DELETE_REGISTRATION = "REMOVE_REGISTRATION";
 export const RECEIVE_REGISTRATION_ERRORS = "RECEIVE_REGISTRATION_ERRORS";
 
-const receiveAllRegistrations = registrations => ({
-  type: RECEIVE_ALL_REGISTRATIONS,
-  registrations
-})
+const receiveAllRegistrations = registrations => {
+  debugger
+  return ({
+    type: RECEIVE_ALL_REGISTRATIONS,
+    registrations
+    // eventId
+  })
+  
+}
 
 const receiveRegistration = registration => ({
   type: RECEIVE_REGISTRATION,
@@ -31,12 +36,12 @@ const receiveRegistrationErrors = errors => ({
 });
 
 
-export const fetchRegistrations = () => dispatch => (
-  RegistrationApiUtil.fetchRegistrations()
-      .then(registrations =>{ 
+export const fetchRegistrations = userId => dispatch => (
+  RegistrationApiUtil.fetchRegistrations(userId)
+      .then((events) =>{ 
         debugger
         return (
-          dispatch(receiveAllRegistrations(registrations))
+          dispatch(receiveAllRegistrations(events))
           )},
       e => dispatch(receiveRegistrationErrors(e.responseJSON)))
 );

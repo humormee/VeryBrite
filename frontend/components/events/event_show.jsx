@@ -23,8 +23,9 @@ class EventShow extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchRegistrations();
+    debugger
     this.props.fetchEvent(this.props.match.params.id);
+    this.props.fetchRegistrations(this.props.match.params.id);
   }
 
   handleEdit(e) {
