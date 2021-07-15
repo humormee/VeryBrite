@@ -90,14 +90,30 @@
           text-decoration: none;
           padding-right: 15px;
           padding-left: 15px;
-
-      }
-
+        }
     
       }
       .create-container:hover {
         background-color: rgba(0, 0, 0, 0.03);
-      } 
+      }
+      
+      .tickets-container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      &:hover {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.03);
+      }
+        a.tickets {
+          color: #39364F;
+          padding-left: 15px;
+          padding-right: 15px;
+          text-decoration: none;
+        }
+    }
+
       
     }
     .nav-dropdown {

@@ -36,6 +36,10 @@ const Greeting = ({ currentUser, signout, signin }) => {
           <div className="create-container">
             <Link className="create" to="/events/create">Create</Link>  
           </div>
+
+          <div className="tickets-container">
+            <Link className="tickets" to="users/:id/registrations">Tickets</Link>
+          </div>
           
           <div className="nav-dropdown">
             <button className="nav-email">{currentUser.email}</button>

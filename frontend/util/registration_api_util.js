@@ -1,25 +1,37 @@
 
-export const fetchRegistrations = () => (
+// export const fetchRegistrations = () => (
+//   $.ajax({
+//     method: 'GET',
+//     url: 'api/registrations',
+//   })
+// )
+
+export const fetchRegistrations = eventId => (
   $.ajax({
     method: 'GET',
-    url: 'api/registrations',
+    url: `api/events/${eventId}/registrations`,
   })
 )
 
-export const createRegistration = registration => (
-  $.ajax({
+export const createRegistration = registration => {
+  debugger
+  return (
+    $.ajax({
     method: 'POST',
-    url: 'api/registrations',
+    // url should be: /api/events/:id/registrations
+    url: `api/events/${registration.event_id}/registrations`,
     data: { registration }
   })
-)
+  )
+  
+}
 
-export const deleteRegistration = registrationId => {
+export const deleteRegistration = registration => {
   debugger
   return(
   $.ajax({
     method: 'DELETE',
-    url: `api/registrations/${registrationId.regId}`
+    url: `api/events/${registration.event_id}/registrations/${registration.id}`
   })
 )
 }

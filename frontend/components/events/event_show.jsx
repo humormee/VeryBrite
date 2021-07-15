@@ -77,14 +77,14 @@ class EventShow extends React.Component {
 
   handleDeleteRegistration() {
     let regArr = Object.values(this.props.registrations);
-    let regId;
+    let regToDelete;
     regArr.forEach(reg => {
       if(reg.attendee_id == this.props.user.id && reg.event_id == this.props.event.id) {
-        regId = reg.id
+        regToDelete = reg
       }
     })
-    this.props.deleteRegistration({ regId })
-    window.location.reload();
+    this.props.deleteRegistration(regToDelete)
+    // window.location.reload();
   }
 
   renderButton(){

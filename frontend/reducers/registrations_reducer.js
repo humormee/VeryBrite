@@ -13,6 +13,7 @@ const registrations = (state = {}, action) => {
   switch (action.type) {
 
   case RECEIVE_ALL_REGISTRATIONS:
+    debugger
     return Object.assign({}, nextState, action.registrations)
   case RECEIVE_REGISTRATION:
     let registration = { [action.registration.id]: action.registration};
