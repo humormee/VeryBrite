@@ -85,7 +85,7 @@ class EventShow extends React.Component {
       }
     })
     this.props.deleteRegistration(regToDelete)
-    // window.location.reload();
+    window.location.reload();
   }
 
   renderButton(){

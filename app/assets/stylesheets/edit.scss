@@ -13,6 +13,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: left;
 
     .event-edit-details {
       display: flex;
@@ -79,7 +80,6 @@
       }
       button {
         color: lightcoral;
-        // background-color: lightgrey;
         width: 30%;
         line-height: 3;
       }
