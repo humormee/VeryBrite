@@ -1,5 +1,15 @@
 class Api::RegistrationsController < ApplicationController
 
+  def index
+    @registrations = Registration.all
+
+    if @registrations
+      render :index
+    else
+      render json: @registrations.full_messages, status: 422
+    end
+  end
+
   def show
     @registration = Registration.find(params[:id])
     if @registration

@@ -22,6 +22,7 @@ class EventShow extends React.Component {
   }
 
   componentDidMount() {
+    this.props.fetchRegistrations();
     this.props.fetchEvent(this.props.match.params.id);
   }
 
@@ -50,8 +51,16 @@ class EventShow extends React.Component {
   registrationButton(e) {
     debugger
     // e.preventDefault();
+    let isOwnReg = false;
+    
+    let regArr = Object.values(this.props.registrations);
+    regArr.forEach(reg => {
+      if (reg.attendee_id === this.props.user.id){
+        isOwnReg = true;
+      }
+    })
 
-    if(this.props.event.registrations && this.props.event.registrations[this.props.user.id]) {
+    if(isOwnReg) {
       debugger
       return <button  value={this.props.event.id} onClick={this.closeModal}>UNREGISTER</button>
     } else {

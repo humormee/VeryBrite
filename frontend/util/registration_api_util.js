@@ -1,3 +1,11 @@
+
+export const fetchRegistrations = () => (
+  $.ajax({
+    method: 'GET',
+    url: 'api/registrations',
+  })
+)
+
 export const createRegistration = registration => (
   $.ajax({
     method: 'POST',
