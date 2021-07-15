@@ -83,17 +83,11 @@ class EventEdit extends React.Component {
                   <i className="far fa-calendar-alt fa-3x"></i>
                   <h3>Date and time</h3>
                 </div>
-                <p>start date and time</p>
-                <div>
-                  <p>{start_time.toString()}</p>
+                <p>start date and time (click the right icon for calendar view)</p>
+                
                   <input id="start-date" type="datetime-local" value={start_time.slice(0,-1)} onChange={e => this.handleStartDate(e)}/>
-                </div>
-                  
-                  <p>Event end date and time</p>
-                  <div>
-                    <p>{end_time.toString()}</p>
-                    <input id="end-date" type="datetime-local" value={end_time.slice(0, -1)} onChange={e => this.handleEndDate(e)}/>
-                  </div>
+                  <p>end date and time (click the right icon for calendar view)</p>
+                  <input id="end-date" type="datetime-local" value={end_time.slice(0, -1)} onChange={e => this.handleEndDate(e)}/>
                 </div>
               
               

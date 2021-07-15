@@ -42,7 +42,6 @@ class EventsIndex extends React.Component {
 
     let eventItems = events.map(event => (
       <div className="event-index-item-container" id={`${event.id}`} key={`${event.id}`}>
-        {/* <h1>Events</h1> */}
             <Link to={`./events/${event.id}`}>
               <div className="event-index-item-image">
               </div>
@@ -51,10 +50,7 @@ class EventsIndex extends React.Component {
         <div className="event-index-item">
           
           <Link onClick={this.handleClick} to={`./events/${event.id}`}>{event.title}</Link>
-          {/* <div className="index-item-dates">
-            <p>{event.start_date}</p>
-            <p>{event.end_date}</p>
-          </div> */}
+          
           <EventItem fetchEvent={fetchEvent} event={event} ></EventItem>
         </div>
         
@@ -69,12 +65,9 @@ class EventsIndex extends React.Component {
             <p></p>
           </div>
         </div>
+        <h1 className="events-title">Find a <h1>very</h1> cool event near you </h1>
       <div className="event-index-container">
-        
-        {/* <img src={index_header} alt="now is your time" /> */}
-        {/* <h1>Events</h1> */}
-       
-
+  
         <ul className="event-index">
           {eventItems}
         </ul>

@@ -5,7 +5,7 @@
 .index-header-container {
     position: relative;
     width: 100%;
-    height: 40%;
+    height: 50%;
     background-color: rgba(240, 240, 240, 0.918);
 
 
@@ -21,6 +21,27 @@
   }
   }
 
+  .events-title {
+    // width: 75%;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    // position: right;
+    left: 10%;
+    color: rgb(33, 35, 39);
+    background-color: rgba(240, 240, 240, 0.918);
+    font-family: "Neue Plak";
+    font-weight: bold;
+    font-size: 30px;
+    h1 {
+      font-style: italic;
+      font-size: 30px;
+      color: #F05537;
+      // color: lightslategray;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
 .event-index-container {
 
   background-color: rgba(240, 240, 240, 0.918);
@@ -28,8 +49,7 @@
   display: flex;
   position: relative;
   padding: 5%;
-  // top: 5%;
-  // width: 100%;
+  
   justify-content: center;
 
   

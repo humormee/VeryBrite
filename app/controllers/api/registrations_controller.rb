@@ -2,8 +2,8 @@ class Api::RegistrationsController < ApplicationController
 
   def index
     @registrations = Registration.all
-
-    if @registrations
+    # User.find(userid).registrations to get all associated registrations
+    if @registrations 
       render :index
     else
       render json: @registrations.full_messages, status: 422
