@@ -17,8 +17,8 @@ class EventShow extends React.Component {
     this.handleDeleteRegistration = this.handleDeleteRegistration.bind(this);
     this.registrationButton = this.registrationButton.bind(this);
     this.renderButton = this.renderButton.bind(this);
-    this.openModal = this.openModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
+    // this.openModal = this.openModal.bind(this);
+    // this.closeModal = this.closeModal.bind(this);
     
   }
 
@@ -38,16 +38,16 @@ class EventShow extends React.Component {
     .then(() => this.props.history.push('/')).then(() => window.location.reload());
   }
 
-  openModal() {
-    // e.preventDefault()
-    this.setState({isModalOpen: true})
-  }
+  // openModal() {
+  //   // e.preventDefault()
+  //   this.setState({isModalOpen: true})
+  // }
 
-  closeModal() {
-    // e.preventDefault()
+  // closeModal() {
+  //   // e.preventDefault()
     
-    this.setState({isModalOpen: false})
-  }
+  //   this.setState({isModalOpen: false})
+  // }
 
   registrationButton(e) {
     

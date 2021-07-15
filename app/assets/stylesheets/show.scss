@@ -54,7 +54,7 @@
     .event-show-details {
       width: 100%;
       position: relative;
-      
+      // display: flex;
       justify-content: center;
       .event-show-image {
         position: absolute;
@@ -141,9 +141,26 @@
         }
       }
       .registration {
+
+     
         position: relative;
-        top: 42%;
+        top: 44%;
+        // right: 20%;
+        left: 70%;
+      
         z-index: 1;
+        button {
+          color: white;
+          background-color: #0D8547;
+          padding: 20px;
+          border: none;
+          &:hover {
+          cursor: pointer;
+          background-color: lighten(#0D8547, 10%);
+        }
+        }
+
+        
       }
       .event-show-other-details {
         position: relative;
