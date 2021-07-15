@@ -63,12 +63,12 @@ class CreateEvent extends React.Component {
                 <i className="far fa-calendar-alt fa-3x"></i>
                 <h3>Date and time</h3>
                 </div>
-                <p>Start day and time</p>
+                <p>Start day and time (click right icon for calendar view)</p>
                   <input id="start-date" type="datetime-local"
                   value={start_time}
                   onChange={e => this.update(e, 'start_time')}/>
                   <br />
-                  <p>End day and time</p>
+                  <p>End day and time (click right icon for calendar view)</p>
                   <input id="end-date" type="datetime-local"
                   value={end_time}
                   onChange={e => this.update(e, 'end_time')}/>

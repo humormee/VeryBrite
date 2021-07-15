@@ -61,7 +61,6 @@
       background-color: white;
       display: flex;
       flex-direction: column;
-      // border: 3px solid black;
       color: red;
       a {
         width: 100%;
@@ -70,7 +69,6 @@
 
         width: 100%;
         height: 100%;
-        // background-color: beige;
         background-size: 100% 100%, contain;
         background-repeat: no-repeat;
 
@@ -92,43 +90,15 @@
     }
 
     @for $i from 0 through 8 {
-      // @for $j from 0 through 3 {
           .event-index-item-container[id="#{$i}"] {
             
             justify-self: stretch;
             align-self: stretch;
-            // border: 3px solid black;
             color: red;
-
-            // grid-row-start: 2*$j - 4;
-            // grid-row-end: 2*$j + 2 - 4;
-            // grid-column-start: 2*$i;
-            // grid-column-end: 2*$i + 2;
-
-            // .event-index-container
-
-
-        // }
       }
       }
 
 
-    // i can use loop with i to find key values for assigning individual index-items 
-    // .event-index-item[id='1'] {
-    //   // border-style: solid;
-    //   // grid-area: item;
-    //   // border: 3px solid black;
-    //   color: red;
-    //   grid-area: 2 / 2 / 4 / 4;
 
-      
-    //   .index-item-dates {
-    //     display: flex;
-    //     p {
-    //     color: red;
-    //     }
-        
-    //   }
-    // }
   }
 }
