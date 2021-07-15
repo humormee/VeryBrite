@@ -3,14 +3,11 @@
 // }
 
 .index-header-container {
-    // display: inline;
     position: relative;
-    // top: 2%;
     width: 100%;
     height: 40%;
     background-color: rgba(240, 240, 240, 0.918);
 
-    // margin: 5px;
 
     .index-header {
       
@@ -19,14 +16,14 @@
       background-size: 100% 100%, contain;
       background-repeat: no-repeat;
 
-      background-image: url(mountains.jpg)
+      background-image: url(mountains.jpg);
     
   }
   }
 
 .event-index-container {
 
-      background-color: rgba(240, 240, 240, 0.918);
+  background-color: rgba(240, 240, 240, 0.918);
 
   display: flex;
   position: relative;
