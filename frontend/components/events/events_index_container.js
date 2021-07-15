@@ -1,7 +1,6 @@
 import { connect } from "react-redux";
 import EventsIndex from "./events_index";
 import { fetchEvents, fetchEvent } from "../../actions/event_actions";
-import { registerEvent } from "../../actions/registration_actions"
 
 
 const mSTP = state =>{

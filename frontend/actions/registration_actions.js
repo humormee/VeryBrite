@@ -1,8 +1,9 @@
+import registrations from '../reducers/registrations_reducer';
 import * as RegistrationApiUtil from '../util/registration_api_util';
 
 export const RECEIVE_ALL_REGISTRATIONS = "RECEIVE_ALL_REGISTRATIONS";
 export const RECEIVE_REGISTRATION = "RECEIVE_REGISTRATION";
-export const REMOVE_REGISTRATION = "REMOVE_REGISTRATION";
+export const DELETE_REGISTRATION = "REMOVE_REGISTRATION";
 export const RECEIVE_REGISTRATION_ERRORS = "RECEIVE_REGISTRATION_ERRORS";
 
 const receiveAllRegistrations = registrations => ({
@@ -16,7 +17,7 @@ const receiveRegistration = registration => ({
 });
 
 const removeRegistration = registrationId => ({
-  type: REMOVE_REGISTRATION,
+  type: DELETE_REGISTRATION,
   registrationId
 });
 
@@ -42,8 +43,15 @@ export const createRegistration = registration => dispatch => (
       e => dispatch(receiveRegistrationErrors(e.responseJSON)))
 );
 
-export const deleteRegistration = registrationId => dispatch => (
-  RegistrationApiUtil.deleteRegistration(registrationId)
-      .then(registrationId => dispatch(removeRegistration(registrationId)),
-      e => dispatch(receiveRegistrationErrors(e.responseJSON)))
-);
+export const deleteRegistration = registrationId => dispatch => {
+  return (
+    RegistrationApiUtil.deleteRegistration(registrationId).then(registrationId => dispatch(removeRegistration(registrationId)),
+    e => dispatch(receiveRegistrationErrors(e.responseJSON)))
+  )
+}
+
+// export const deleteRegistration = registrationId => dispatch => (
+//   RegistrationApiUtil.deleteRegistration(registrationId)
+//       .then(registrationId => dispatch(removeRegistration(registrationId)),
+//       e => dispatch(receiveRegistrationErrors(e.responseJSON)))
+// );

@@ -1,8 +1,9 @@
 import { connect } from "react-redux";
 import EventShow from "./event_show";
 import { fetchEvent, deleteEvent } from "../../actions/event_actions";
-import { createRegistration, removeRegistration } from "../../actions/registration_actions";
+import { createRegistration, deleteRegistration } from "../../actions/registration_actions";
 import { fetchRegistrations } from "../../actions/registration_actions";
+
 
 const mSTP = (state, ownProps) => {
 
@@ -21,7 +22,7 @@ const mDTP = dispatch => {
     deleteEvent: eventId => dispatch(deleteEvent(eventId)),
     fetchRegistrations: () => dispatch(fetchRegistrations()),
     createRegistration: registration => dispatch(createRegistration(registration)),
-    removeRegistration: registrationId => dispatch(removeRegistration(registrationId))
+    deleteRegistration: registrationId => dispatch(deleteRegistration(registrationId))
   }
   
 }
