@@ -140,6 +140,11 @@
           align-self: start;
         }
       }
+      .registration {
+        position: relative;
+        top: 42%;
+        z-index: 1;
+      }
       .event-show-other-details {
         position: relative;
         background-color: white;

@@ -87,7 +87,7 @@ class EventShow extends React.Component {
         <div className="edit-delete-event">
           <button className="edit-event" value={this.props.event.id} onClick={this.handleEdit}>Edit Event</button>
           <button className="delete-event" value={this.props.event.id} onClick={this.handleDelete}>Delete Event</button>
-          {this.registrationButton()}
+          {/* {this.registrationButton()} */}
         </div>
       )
     };
@@ -154,6 +154,8 @@ class EventShow extends React.Component {
               {`${formatStartTime} - ${formatEndTime}`}</p>
             </div>
             
+            <div className="registration">{this.registrationButton()}</div>
+
             <div className="event-show-other-details">
               <h2>About this event</h2>
               
