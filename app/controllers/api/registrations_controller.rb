@@ -22,11 +22,8 @@ class Api::RegistrationsController < ApplicationController
   def create
     @registration = Registration.new(registration_params)
     @registration.attendee_id = current_user.id
-    # @registraion.event_id = params[:event_id]
-    # debugger
 
     if @registration.save
-      # debugger
       @event = @registration.event
       render :show
     else
@@ -35,7 +32,6 @@ class Api::RegistrationsController < ApplicationController
   end
 
   def destroy
-    # debugger
     @registration = Registration.find(params[:id])
     if @registration && @registration.destroy
       render json: ["Registration deleted"]
