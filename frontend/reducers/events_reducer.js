@@ -15,13 +15,13 @@ const events = (state = {}, action) => {
   let nextState = Object.assign({}, state);
 
   switch (action.type) {
-    
     case RECEIVE_ALL_EVENTS:
       return Object.assign({}, nextState, action.events);
     case RECEIVE_EVENT:
       return Object.assign({}, nextState, { [action.event.id] : action.event});
     case REMOVE_EVENT:
-      delete nextState[action.eventId]
+      debugger
+      delete nextState[action.eventId.id]
       return nextState;
     default:
       return state;

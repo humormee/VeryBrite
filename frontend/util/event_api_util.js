@@ -32,6 +32,7 @@ export const updateEvent = event => {
 }
 
 export const deleteEvent = eventId => {
+  debugger
   return (
     $.ajax({
     method: 'DELETE',

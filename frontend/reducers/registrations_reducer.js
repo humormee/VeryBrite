@@ -13,8 +13,7 @@ const registrations = (state = {}, action) => {
   switch (action.type) {
 
   case RECEIVE_ALL_REGISTRATIONS:
-    debugger
-    let eventRegistrations = Object.values(action.registrations).filter(registration => registration.event_id === 2);
+    // let eventRegistrations = Object.values(action.registrations).filter(registration => registration.event_id === 2);
     return Object.assign({}, nextState, action.registrations)
   case RECEIVE_REGISTRATION:
     let registration = { [action.registration.id]: action.registration};

@@ -14,7 +14,7 @@ export const fetchRegistrations = eventId => (
 )
 
 export const createRegistration = registration => {
-  debugger
+  // debugger
   return (
     $.ajax({
     method: 'POST',

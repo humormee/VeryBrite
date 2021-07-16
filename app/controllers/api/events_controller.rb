@@ -34,7 +34,7 @@ class Api::EventsController < ApplicationController
   def destroy
     @event = Event.find(params[:id])
     if @event.destroy
-      render json: ['Event deleted']
+      render :show
     else
       render json: @event.errors.full_messages, status: 400
     end

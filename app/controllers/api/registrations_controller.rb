@@ -33,8 +33,10 @@ class Api::RegistrationsController < ApplicationController
 
   def destroy
     @registration = Registration.find(params[:id])
+    id = @registration.id
     if @registration && @registration.destroy
-      render json: ["Registration deleted"]
+      debugger
+      render :show
     else
       render json: ["Registration does not exist"], status: 401
     end

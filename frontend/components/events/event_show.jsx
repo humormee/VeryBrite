@@ -23,7 +23,7 @@ class EventShow extends React.Component {
   }
 
   componentDidMount() {
-    debugger
+    // debugger
     this.props.fetchEvent(this.props.match.params.id);
     this.props.fetchRegistrations(this.props.match.params.id);
   }
@@ -36,7 +36,7 @@ class EventShow extends React.Component {
   handleDelete(e) {
     e.preventDefault();
     this.props.deleteEvent(this.props.match.params.id)
-    .then(() => this.props.history.push('/')).then(() => window.location.reload());
+    .then(() => this.props.history.push('/'));
   }
 
   // openModal() {
@@ -85,7 +85,7 @@ class EventShow extends React.Component {
       }
     })
     this.props.deleteRegistration(regToDelete)
-    window.location.reload();
+    // window.location.reload();
   }
 
   renderButton(){
