@@ -1,5 +1,4 @@
  .signup-input {
-   /* position: relative; */
    margin-top: 10px;
    margin-left: auto;
    padding: 12px;
@@ -17,7 +16,6 @@
   display: flex;
   width: 100%;
   height: 100%
-  // width: 40%;
 }
 
 .signup {
@@ -25,11 +23,9 @@
   justify-content: space-between;
 }
 .split-right-container {
-  // display: inline;
   left: 0;
-  // right: 20%;
   position: relative;
-  background-image: url(cover.jpg);
+  background-image: image-url('cover.jpg');
   background-repeat: no-repeat;
   background-position: 0;
   background-size: cover;
@@ -39,7 +35,7 @@
 
 .split-right {
   position: relative;
-  background-image: url(cover.jpg);
+  background-image: image-url('cover.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   margin: auto;
@@ -56,9 +52,8 @@
    background-color: #f05537;
    color: white;
    font: 20px "Neue Plak";
-   /* border-style: solid; */
    border: 1px solid black;
-    border-radius: 5px;
+   border-radius: 5px;
  }
 
 .signin-signup-buttons {
@@ -72,8 +67,6 @@
  }
 
   .header-create-account {
-  //  display: flex;
-  //  justify-content: center;
    font-size: 45px;
    font-weight: bold;
  }
@@ -83,11 +76,9 @@
    left: 13%;
    position: absolute;
    .signin-form-container {
-    // float: left;
     left: 30%;
     display: flex;
     position: absolute;
-    // top: 20%;
     transform: translate(0, -50%);
   }
 }
@@ -104,12 +95,10 @@
    left: 13%;
    position: absolute;
    .signup-form-container {
-    // float: left;
     height: 100%;
     left: 30%;
     display: flex;
     position: absolute;
-    // top: 20%;
     transform: translate(0, -50%);
   }
 }
@@ -119,11 +108,6 @@
     color: #C5162E;
    position: relative;
  }
-
-//  .signin-errors {
-//    bottom: 100px;
-//    position: relative;
-//  }
 
  .signup-form {
    display: flex;
@@ -138,7 +122,6 @@
 
 
  .signin-input {
-  //  margin-top: 5px;
    margin-left: auto;
    padding: 12px;
    height: 22px;
@@ -148,9 +131,6 @@
 
  .session-submit {
   margin-top: 10px;
-  /* margin-left: 30px; */
-  /* justify-content: stretch; */
-  /* vertical-align: center; */
   width: 100%;
   background-color: #D1410C;
   padding: 0px 30px 1px;
@@ -160,16 +140,13 @@
  }
 
  .demo-submit {
-   margin-top: 10px;
-  /* margin-left: 30px; */
-  /* justify-content: stretch; */
-  /* vertical-align: center; */
-  width: 100%;
-  background-color: #D1410C;
-  padding: 0px 30px 1px;
-  height: 40px;
-  font: 14px;
-  color: white;
+    margin-top: 10px;
+    width: 100%;
+    background-color: #D1410C;
+    padding: 0px 30px 1px;
+    height: 40px;
+    font: 14px;
+    color: white;
  }
 
  .demo-submit:hover {
