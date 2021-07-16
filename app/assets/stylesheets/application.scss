@@ -58,7 +58,7 @@
     }
     .header-button-container {
       display: flex;
-     
+      align-items: center;
       .header-button {
         
         padding-right: 20px;
@@ -66,7 +66,6 @@
         text-decoration: none;
         color: #39364F;
         font: 16px "Neue Plak";
-        // align-self: center;
       }
     }
 
