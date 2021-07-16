@@ -52,7 +52,6 @@ export const deleteRegistration = registration => dispatch => {
   return (
     RegistrationApiUtil.deleteRegistration(registration)
         .then(registration => {
-          debugger
           return (
             dispatch(removeRegistration(registration.id))
           )

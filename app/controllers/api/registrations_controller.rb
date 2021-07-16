@@ -2,7 +2,6 @@ class Api::RegistrationsController < ApplicationController
 
   def index
     @registrations = Registration.all
-    # User.find(userid).registrations to get all associated registrations
     if @registrations 
       render :index
     else
@@ -35,7 +34,6 @@ class Api::RegistrationsController < ApplicationController
     @registration = Registration.find(params[:id])
     id = @registration.id
     if @registration && @registration.destroy
-      debugger
       render :show
     else
       render json: ["Registration does not exist"], status: 401

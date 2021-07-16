@@ -27,7 +27,6 @@ export const createRegistration = registration => {
 }
 
 export const deleteRegistration = registration => {
-  debugger
   return(
   $.ajax({
     method: 'DELETE',

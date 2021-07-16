@@ -17,7 +17,6 @@ class EventItem extends React.Component {
     // const end_date_time = new Date(end_time).toString();
     // const format_date = Date.parse(start_time);
     // const formatTime = new Date(start_time.getTime());
-    // debugger
     
     return (
       
