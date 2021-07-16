@@ -1,24 +1,36 @@
-# README
+# verybrite
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Verybrite is an Eventbrite clone. Users of verybrite can register for the site, create, read and register for events.
 
-Things you may want to cover:
+[Verybrite Live Site](https://very-brite.herokuapp.com/)
 
-* Ruby version
+## Technologies
 
-* System dependencies
+Backend:
 
-* Configuration
+* Ruby on Rails
+* PostgreSQL
+* jQuery-rails
 
-* Database creation
+Frontend:
 
-* Database initialization
+* React
+* Redux
+* CSS/SASS
 
-* How to run the test suite
+Hosting: 
 
-* Services (job queues, cache servers, search engines, etc.)
+* Heroku
 
-* Deployment instructions
+## Features
 
-* ...
+* User authentication
+* Full CRUD (**C**reate, **R**ead, **U**pdate and **D**elete) functionality for events
+* Registered users can create and delete registrations
+
+## Future Implementations
+
+* User pages for viewing registered and hosted events
+* Bookmark events
+* Like events
+* Categories and search functionality
