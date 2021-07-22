@@ -15,4 +15,4 @@ const mDTP = dispatch => ({
   fetchEvent: eventId => dispatch(fetchEvent(eventId))
 })
 
-export default connect(mSTP, mDTP)(EventsIndex)
+export default connect(mSTP, mDTP)(EventsIndex);
