@@ -38,9 +38,7 @@ class Tickets extends React.Component {
     let events = Object.values(this.props.events);
     let userEvents = [];
     
-    // debugger
     events.forEach(event => {
-      // debugger
       regs.forEach(reg => {
         debugger
         if(event.id === reg.event_id) {
@@ -55,18 +53,17 @@ class Tickets extends React.Component {
   
   renderEvents() {
     let { fetchEvent } = this.props
-
     let events = this.findUserEvents();
 
     return (
       events.map(event => (
-      <div className="event-index-item-container" id={`${event.id}`} key={`${event.id}`}>
+      <div className="registration-index-item-container" id={`${event.id}`} key={`${event.id}`}>
             <Link to={`./events/${event.id}`}>
-              <div className="event-index-item-image">
+              <div className="registration-index-item-image">
               </div>
             </Link>
-        <div className="event-index-item">
-          <Link onClick={this.handleClick} to={`./events/${event.id}`}>{event.title}</Link>
+        <div className="registration-index-item">
+          <Link onClick={this.handleClick} to={`../../events/${event.id}`}>{event.title}</Link>
           <EventItem fetchEvent={fetchEvent} event={event} ></EventItem>
         </div>
       </div>
@@ -80,7 +77,7 @@ class Tickets extends React.Component {
       return null;
     }
     return (
-      <ul className="event-index">
+      <ul className="registrations-index">
       {this.renderEvents()}
     </ul>
     )
