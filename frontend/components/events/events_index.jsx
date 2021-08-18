@@ -6,18 +6,6 @@ import EventItem from "./event_item";
 class EventsIndex extends React.Component {
   constructor(props) {
     super(props)
-
-    // this.state = {
-    //   id: '',
-    //   author_id: '',
-    //   category: '',
-    //   title: '',
-    //   description: '',
-    //   start_time: '',
-    //   end_time: '',
-    // }
-    // this.handleClick = this.handleClick.bind(this);
-    // this.renderCreateButton = this.renderCreateButton.bind(this);
   }
 
   renderCreateButton(){

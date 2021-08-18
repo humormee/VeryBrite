@@ -7,7 +7,8 @@ const mSTP = state => {
   // debugger
   return ({
   registrations: state.registrations,
-  events: Object.values(state.entities.events)
+  events: Object.values(state.entities.events),
+  user: state.session.id
 })
 }
 

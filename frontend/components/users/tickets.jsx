@@ -7,13 +7,36 @@ class Tickets extends React.Component {
       this.props.fetchEvents(),
       this.props.fetchRegistrations()
     )
+    this.findUserTickets = this.findUserTickets.bind(this);
   }
-  render () {
-    if(!this.props.events){
-      return null;
+
+  findUserTickets() {
+    if(this.props.tickets.length < 1) {
+      return (
+        <div>No Registrations, sad</div>
+      )
     }
 
-    return ;
+    let { registrations, user } = this.props;
+    // let { user } = this.props
+    
+    registrations.forEach(reg => {
+      if(reg.attendee_id === user){
+        
+      }
+    })
+  }
+
+  render () {
+    debugger
+    if(!this.props.tickets){
+      return null;
+    } else if(this.props.tickets.length < 1){
+      return null;
+    }
+    this.findUserTickets();
+    debugger
+    return null;
   }
 }
 
