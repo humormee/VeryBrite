@@ -17,16 +17,10 @@
     align-items: center;
     // grid-auto-flow: row;
     position: relative;
-    width: 80%;
-    top: 25%;
-    
-    // display: grid;
-    // column-gap: 10px;
-    // row-gap: 15px;
-    // grid-template-columns: repeat(4, 1fr);
-    // grid-template-rows: repeat(4, 330px);
-
-    
+    width: 60%;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
   
     a {
       text-decoration: none;
@@ -36,25 +30,25 @@
     }
 
     .registration-index-item-container {
+      padding: 15px;
       margin: 15px;
       background-color: white;
       display: flex;
-      justify-content: space-between;
+      // justify-content: space-eve;
       align-items: center;
-      // flex-direction: column;
       color: red;
       width: 80%;
       height: 80%;
       a {
         width: 30%;
         height: 100%;
+        margin-right: 40px;
         .registration-index-item-image {
 
         width: 200px;
         height: 200px;
         background-size: 100% 100%, contain;
         background-repeat: no-repeat;
-
         background-image: image-url('outdoor_party.jpg')
       }
       }
@@ -63,7 +57,11 @@
         position: relative;
         top: 10%;
         padding: 10px;
-        align-self: center;
+        align-items: center;
+        .event-item-container {
+          color: grey;
+          margin-top: 10px;
+        }
       }
     }
 
