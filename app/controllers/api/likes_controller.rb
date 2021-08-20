@@ -20,8 +20,7 @@ class Api::LikesController < ApplicationController
 
   def create
     @like = Like.new(like_params)
-    @like.attendee_id = current_user.id
-
+    @like.liker_id = current_user.id
     if @like.save
       @event = @like.event
       render :show

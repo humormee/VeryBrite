@@ -5,7 +5,9 @@ class EventItem extends React.Component {
     super(props)
   }
 
-  
+  renderHeart() {
+    
+  }
 
   render() {
     const { title, start_time, end_time, category }  = this.props.event;
@@ -25,12 +27,16 @@ class EventItem extends React.Component {
           {/* <Link to="api/events/${}"className="event-item-image"> */}
             <div></div>
           {/* </Link> */}
+          <div className="like">
+            <p>Heart</p>
+          </div>
           <div className="event-item-info">
             
             <div className="event-item-dates">
               <p className="event-item-starttime">{startDateString}, {formatTime}</p>
               
             </div>
+
           </div>
         </div>
 

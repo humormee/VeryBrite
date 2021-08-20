@@ -21,9 +21,6 @@ class EventsIndex extends React.Component {
 
     const { events, fetchEvent } = this.props
 
-    // debugger
-    
-
     let eventItems = events.map(event => (
       <div className="event-index-item-container" id={`${event.id}`} key={`${event.id}`}>
             <Link to={`./events/${event.id}`}>
@@ -40,7 +37,6 @@ class EventsIndex extends React.Component {
         
       </div>
     ))
-    // debugger
 
     return (
       <div>

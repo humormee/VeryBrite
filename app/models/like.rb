@@ -1,6 +1,6 @@
 class Like < ApplicationRecord
 
-  validates :event_id, :attendee_id, presence: true
+  validates :event_id, :liker_id, presence: true
 
   belongs_to :event,
     foreign_key: :event_id,

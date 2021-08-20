@@ -17,8 +17,8 @@ class EventShow extends React.Component {
     this.handleDeleteRegistration = this.handleDeleteRegistration.bind(this);
     this.registrationButton = this.registrationButton.bind(this);
     this.renderButton = this.renderButton.bind(this);
-    // this.openModal = this.openModal.bind(this);
-    // this.closeModal = this.closeModal.bind(this);
+    this.handleLike = this.handleLike.bind(this);
+    this.renderLike = this.renderLike.bind(this);
     
   }
 
@@ -26,6 +26,7 @@ class EventShow extends React.Component {
     // debugger
     this.props.fetchEvent(this.props.match.params.id);
     this.props.fetchRegistrations(this.props.match.params.id);
+    this.props.fetchLikes(this.props.user.id);
   }
 
   handleEdit(e) {
@@ -39,19 +40,8 @@ class EventShow extends React.Component {
     .then(() => this.props.history.push('/'));
   }
 
-  // openModal() {
-  //   // e.preventDefault()
-  //   this.setState({isModalOpen: true})
-  // }
-
-  // closeModal() {
-  //   // e.preventDefault()
-    
-  //   this.setState({isModalOpen: false})
-  // }
-
   registrationButton(e) {
-    
+    // debugger
     let isOwnReg = false;
     
     let regArr = Object.values(this.props.registrations);
@@ -62,10 +52,57 @@ class EventShow extends React.Component {
     })
 
     if(isOwnReg) {
-      return <button  value={this.props.event.id} onClick={() => this.handleDeleteRegistration()}>UNREGISTER</button>
+      return (<>
+      <button  value={this.props.event.id} onClick={() => this.handleDeleteRegistration()}>UNREGISTER</button>
+      </>
+      )
     } else {
       return <button value={this.props.event.id} onClick={() => this.handleRegistration()}>REGISTER</button>
     }
+  }
+
+  renderLike() {
+    debugger
+    // if(!this.props.likes){
+    //   return null;
+    // }
+    // debugger
+    // let { likes } = this.props;
+    // let likesArr = Object.values(likes);
+
+    // likesArr.forEach(like => {
+    //   if(this.props.user.id === like.liker_id) {
+    //     return (
+    //       <button  value={this.props.event.id} onClick={() => this.handleLike()}>Like</button>
+    //     )
+    //   }
+    // })
+
+    return (
+      <button  value={this.props.event.id} onClick={() => this.handleLike()}>Unlike</button>
+    )
+  }
+
+  handleLike() {
+
+    // if(!this.props.likes){
+    //   return null;
+    // }
+
+    // let { likes } = this.props;
+    // let likesArr = Object.values(likes);
+
+    // likesArr.forEach(like => {
+    //   if(this.props.user.id === like.liker_id) {
+    //     this.props.deleteLike(like.id)
+    //     return
+    //   }
+    // })
+    debugger
+    this.props.createLike({
+      liker_id: this.props.user.id,
+      event_id: this.props.event.id
+    })
   }
 
   handleRegistration() {
@@ -165,28 +202,16 @@ class EventShow extends React.Component {
             </div>
             
             <div className="registration">{this.registrationButton()}</div>
+            <div className="like">{this.renderLike()}</div>
 
             <div className="event-show-other-details">
               <h2>About this event</h2>
-              
-
               <div className="event-show-description">{description}</div>
               <div>{this.renderButton()}</div>
             </div>
             
           </div>
         </div>
-
-        {/* {this.state.isModalOpen ? <div className="modal-container">
-          <div className="modal">
-            <button onClick={this.closeModal}></button>
-           
-            <p>Are you registering or unregistering for this event?</p>
-            <button onClick={() => this.handleRegistration()}>Register</button>
-            <button onClick={() => this.handleDeleteRegistration()}>Unregister</button>
-          </div>
-        </div> : null
-        } */}
       </div>
     );
   }
