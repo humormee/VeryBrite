@@ -12,6 +12,10 @@ class User < ApplicationRecord
   has_many :registrations,
     foreign_key: :attendee_id,
     class_name: :Registration
+  
+  has_many :likes,
+    foreign_key: :liker_id,
+    class_name: :Like
 
   after_initialize :ensure_session_token
 

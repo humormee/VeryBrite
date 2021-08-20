@@ -14,7 +14,8 @@ class Event < ApplicationRecord
     foreign_key: :event_id,
     class_name: :Registration
 
-  # has_many :attendees,
-  #   through: :attendees,
-  #   source: :Registration
+  has_many :likes,
+    foreign_key: :event_id,
+    class_name: :Like
+
 end

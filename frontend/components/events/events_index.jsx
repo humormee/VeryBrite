@@ -15,10 +15,6 @@ class EventsIndex extends React.Component {
     this.props.fetchEvents();
   }
 
-  // handleClick() {
-  //   // this.props.history.push(`/events/${this.props.event.id}`)
-  // }
-
   render() {
 
     
