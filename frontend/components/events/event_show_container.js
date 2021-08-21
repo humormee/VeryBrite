@@ -12,7 +12,7 @@ const mSTP = (state, ownProps) => {
     event: state.entities.events[ownProps.match.params.id],
     user: state.session,
     registrations: state.registrations,
-    likes: state.likes
+    likes: state.entities.likes
   })
 
   

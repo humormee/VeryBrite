@@ -62,47 +62,59 @@ class EventShow extends React.Component {
   }
 
   renderLike() {
+    if(!this.props.likes){
+      return null;
+    }
+    let { likes } = this.props;
+    let eventId = this.props.match.params.id;
+    let userId = this.props.user.id;
+
+    let likesArr = Object.values(likes);
+    let text = 'Like';
+
+
+    for(let i = 0; i < likesArr.length; i++) {
+      debugger
+      if(userId === likesArr[i].liker_id && likesArr[i].event_id === parseInt(eventId)) {
+          debugger
+          text = 'Unlike';
+      }
+    }
+  
     debugger
-    // if(!this.props.likes){
-    //   return null;
-    // }
-    // debugger
-    // let { likes } = this.props;
-    // let likesArr = Object.values(likes);
-
-    // likesArr.forEach(like => {
-    //   if(this.props.user.id === like.liker_id) {
-    //     return (
-    //       <button  value={this.props.event.id} onClick={() => this.handleLike()}>Like</button>
-    //     )
-    //   }
-    // })
-
-    return (
-      <button  value={this.props.event.id} onClick={() => this.handleLike()}>Unlike</button>
-    )
+    return <button  value={this.props.event.id} onClick={() => this.handleLike()}>{text}</button>
   }
 
   handleLike() {
 
-    // if(!this.props.likes){
-    //   return null;
-    // }
+    if(!this.props.likes){
+      return null;
+    }
 
-    // let { likes } = this.props;
-    // let likesArr = Object.values(likes);
+    let { likes } = this.props;
+    let likesArr = Object.values(likes);
+    let isDelete = false;
+    let toDeleteLike;
+    let event = this.props.match.params.id;
+    let userId = this.props.user.id;
 
-    // likesArr.forEach(like => {
-    //   if(this.props.user.id === like.liker_id) {
-    //     this.props.deleteLike(like.id)
-    //     return
-    //   }
-    // })
-    debugger
-    this.props.createLike({
+    likesArr.forEach(like => {
+      if(userId === like.liker_id && parseInt(event) === like.event_id) {
+        isDelete = true;
+        toDeleteLike = like;
+        // break;
+        // this.props.deleteLike(like.id)
+      }
+    })
+    if(isDelete) {
+      this.props.deleteLike(toDeleteLike)
+    } else {
+      this.props.createLike({
       liker_id: this.props.user.id,
       event_id: this.props.event.id
-    })
+      })
+    }
+    
   }
 
   handleRegistration() {
@@ -130,7 +142,7 @@ class EventShow extends React.Component {
     const { user } = this.props;
     const { id } = this.props.user;
     const { author_id } = this.props.event;
-    if(user && id === author_id){
+    if(!!user && id === author_id){
       return (
         <div className="edit-delete-event">
           <button className="edit-event" value={this.props.event.id} onClick={this.handleEdit}>Edit Event</button>
