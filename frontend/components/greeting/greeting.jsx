@@ -40,6 +40,10 @@ const Greeting = ({ currentUser, signout, signin }) => {
           <div className="tickets-container">
             <Link className="tickets" to={`../../users/${currentUser.id}/registrations`}>Tickets</Link>
           </div>
+
+          <div className="likes-container">
+            <Link className="likes" to={`../../users/${currentUser.id}/likes`}>Likes</Link>
+          </div>
           
           <div className="nav-dropdown">
             <button className="nav-email">{currentUser.email}</button>

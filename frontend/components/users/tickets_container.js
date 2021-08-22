@@ -4,7 +4,6 @@ import { fetchEvents, fetchEvent } from "../../actions/event_actions";
 import Tickets from './tickets';
 
 const mSTP = state => {
-  // debugger
   return ({
   registrations: state.registrations,
   events: Object.values(state.entities.events),
