@@ -2,14 +2,60 @@ import React from 'react';
 
 class EventItem extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
+    this.renderLike = this.renderLike.bind(this);
+    this.handleLike = this.handleLike.bind(this);
   }
 
-  renderHeart() {
-    
+  renderLike() {
+    if(!this.props.likes) {
+      return null;
+    }
+
+    let { likes } = this.props;
+    let eventId = this.props.event.id;
+    let userId = this.props.user.id;
+
+    let text = "Like";
+
+    for(let i = 0; i < likes.length; i++) {
+      if(userId === likes[i].liker_id && likes[i].event_id === eventId) {
+          text = 'Unlike';
+      }
+    }
+  
+    return <button  value={this.props.event.id} onClick={() => this.handleLike()}>{text}</button>
+  }
+
+  handleLike() {
+    if(!this.props.likes){
+      return null;
+    }
+
+    let { likes } = this.props;
+    let isDelete = false;
+    let toDeleteLike;
+    let eventId = this.props.event.id;
+    let userId = this.props.user.id;
+
+    likes.forEach(like => {
+      if(userId === like.liker_id && eventId === like.event_id) {
+        isDelete = true;
+        toDeleteLike = like;
+      }
+    })
+    if(isDelete) {
+      this.props.deleteLike(toDeleteLike)
+    } else {
+      this.props.createLike({
+      liker_id: userId,
+      event_id: eventId
+      })
+    }
   }
 
   render() {
+    
     const { title, start_time, end_time, category }  = this.props.event;
     const startDate = new Date(start_time.slice(0,-1))
     const startDateString = startDate.toDateString();
@@ -29,6 +75,7 @@ class EventItem extends React.Component {
           {/* </Link> */}
           <div className="like">
             <p>Heart</p>
+            <div>{this.renderLike()}</div>
           </div>
           <div className="event-item-info">
             

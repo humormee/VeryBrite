@@ -13,13 +13,14 @@ class EventsIndex extends React.Component {
   }
   componentDidMount(){
     this.props.fetchEvents();
+    this.props.fetchLikes();
   }
 
   render() {
 
     
 
-    const { events, fetchEvent } = this.props
+    const { user, events, fetchEvent, likes, createLike, deleteLike } = this.props
 
     let eventItems = events.map(event => (
       <div className="event-index-item-container" id={`${event.id}`} key={`${event.id}`}>
@@ -32,7 +33,7 @@ class EventsIndex extends React.Component {
           
           <Link onClick={this.handleClick} to={`./events/${event.id}`}>{event.title}</Link>
           
-          <EventItem fetchEvent={fetchEvent} event={event} ></EventItem>
+          <EventItem user={user} createLike={createLike} deleteLike={deleteLike} likes={likes} fetchEvent={fetchEvent} event={event} ></EventItem>
         </div>
         
       </div>
