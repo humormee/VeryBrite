@@ -1,9 +1,8 @@
-  .registrations-index {
+.likes-index {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // grid-auto-flow: row;
     position: relative;
     width: 60%;
     top: 15%;
@@ -17,12 +16,11 @@
       font-weight: 700;
     }
 
-    .registration-index-item-container {
+    .likes-index-item-container {
       padding: 15px;
       margin: 15px;
       background-color: white;
       display: flex;
-      // justify-content: space-eve;
       align-items: center;
       color: red;
       width: 80%;
@@ -31,7 +29,7 @@
         width: 30%;
         height: 100%;
         margin-right: 40px;
-        .registration-index-item-image {
+        .likes-index-item-image {
 
         width: 200px;
         height: 200px;
@@ -41,7 +39,7 @@
       }
       }
       
-      .registration-index-item {
+      .like-index-item {
         position: relative;
         top: 10%;
         padding: 10px;
@@ -53,7 +51,7 @@
       }
     }
 
-    .registration-index-item-container:hover {
+    .likes-index-item-container:hover {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     }

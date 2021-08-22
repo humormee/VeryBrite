@@ -57,12 +57,12 @@ class Likes extends React.Component {
 
     return (
       events.map(event => (
-      <div className="registration-index-item-container" id={`${event.id}`} key={`${event.id}`}>
+      <div className="likes-index-item-container" id={`${event.id}`} key={`${event.id}`}>
             <Link to={`./events/${event.id}`}>
-              <div className="registration-index-item-image">
+              <div className="likes-index-item-image">
               </div>
             </Link>
-        <div className="registration-index-item">
+        <div className="like-index-item">
           <Link onClick={this.handleClick} to={`../../events/${event.id}`}>{event.title}</Link>
           <EventItem fetchEvent={fetchEvent} event={event} ></EventItem>
         </div>
