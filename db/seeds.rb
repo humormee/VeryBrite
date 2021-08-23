@@ -109,7 +109,7 @@ event5 = Event.create!(
 
 event6 = Event.create!(
   author_id: user5.id,
-  category: 'Free',
+  category: 'Food and Drink',
   title: 'Yoga with Alpacas',
   description: " Nulla diam magna, sagittis vel lacinia ac, suscipit et odio. Praesent ornare ex sed lectus commodo, in tristique sem sodales. Integer erat quam, auctor vitae lacus eu, suscipit commodo odio. Pellentesque nec leo sit amet nibh commodo pellentesque imperdiet eu massa. Morbi vel blandit sem. Integer ac venenatis orci.",
   start_time: "2021-08-04 8:00:00",

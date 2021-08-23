@@ -5,7 +5,7 @@ class CreateEvent extends React.Component {
     super(props);
     this.state = {
       author_id: "",
-      category: "Free",
+      category: "", // Free
       title: "",
       description: "",
       start_time: "",
@@ -37,7 +37,13 @@ class CreateEvent extends React.Component {
     if (!this.state) {
       return null;
     }
- 
+    // CATEGORIES
+    // 'Music'
+    // 'Free'
+    // 'Entertainment'
+    // "Charity and Causes"
+    // 'Food and Drink'
+    // 'Other'
     
     const { title, start_time, end_time, category, description }  = this.state;
     
@@ -57,6 +63,17 @@ class CreateEvent extends React.Component {
                   onChange={e => this.update(e, 'title')}/>
               </div>
 
+              <div className="category-container">
+                <select value={category} onChange={e => this.update(e, 'category')}> 
+                  <option>Select Category</option>
+                  <option value="Music">Music</option>
+                  <option value="Free">Free</option>
+                  <option value="Entertainment">Entertainment</option>
+                  <option value="Charity and Causes">Charity and Causes</option>
+                  <option value="Food and Drink">Food and Drink</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
 
               <div className="start-date-container">
                 <div className="start-date">

@@ -6,7 +6,7 @@ const mSTP = state => ({
   event: {
     
     author_id: null,
-    category: 'Free',
+    category: '', //'free'
     title: '',
     description: '',
     start_time: '',
