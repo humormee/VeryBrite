@@ -16,15 +16,15 @@ class EventItem extends React.Component {
     let eventId = this.props.event.id;
     let userId = this.props.user.id;
 
-    let text = "Like";
+    let icon = <i class="far fa-bookmark"></i>;
 
     for(let i = 0; i < likes.length; i++) {
       if(userId === likes[i].liker_id && likes[i].event_id === eventId) {
-          text = 'Unlike';
+          icon = <i class="fas fa-bookmark"></i>;
       }
     }
   
-    return <button  value={this.props.event.id} onClick={() => this.handleLike()}>{text}</button>
+    return <button  value={this.props.event.id} onClick={() => this.handleLike()}>{icon}</button>
   }
 
   handleLike() {
@@ -74,7 +74,6 @@ class EventItem extends React.Component {
             <div></div>
           {/* </Link> */}
           <div className="like">
-            <p>Heart</p>
             <div>{this.renderLike()}</div>
           </div>
           <div className="event-item-info">
