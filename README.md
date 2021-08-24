@@ -28,6 +28,12 @@ Hosting:
 * Full CRUD (**C**reate, **R**ead, **U**pdate and **D**elete) functionality for events
 * Registered users can create and delete registrations
 
+## Example Code
+
+One major technical issue was to auto style added events to the homepage while creating new rows. The solution was, using SASS, I could grab the id's of the elements
+
+
+
 ## Future Implementations
 
 * User pages for viewing registered and hosted events
