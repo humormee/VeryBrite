@@ -71,14 +71,14 @@ class EventShow extends React.Component {
     let userId = this.props.user.id;
 
     let likesArr = Object.values(likes);
-    let text = 'Like';
+    let text = <i class="far fa-bookmark fa-lg"></i>;;
 
 
     for(let i = 0; i < likesArr.length; i++) {
       debugger
       if(userId === likesArr[i].liker_id && likesArr[i].event_id === parseInt(eventId)) {
           debugger
-          text = 'Unlike';
+          text = <i class="fas fa-bookmark fa-lg"></i>;
       }
     }
   

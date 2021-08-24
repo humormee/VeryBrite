@@ -49,6 +49,7 @@
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    
     // background-color: white;
     .event-show-details {
       width: 100%;
@@ -77,9 +78,11 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        background-color: white;
-        background: rgba(0, 0, 0, 0.1);
+        // background-color: white;
+        // background: rgba(0, 0, 0, 0.1);
+        background: none;;
         .date {
+          background: none;
           position: relative;
           font: 14px "Neue Plak";
           display: flex;
@@ -94,14 +97,20 @@
             justify-content: stretch;
           }
         }
-        .event-show-title {
+        div {
+          background: none;
+          .event-show-title {
+          background: none;
           font: "Neue Plak";
           margin-bottom: 15px;
         }
         .event-show-host {
+          background: none;
           font-weight: 200;
           color: #6F7287
         }
+        }
+        
 
         .event-show-category {
           position: relative;
@@ -142,7 +151,8 @@
       }
       .registration {
 
-        background-color: white;
+        // background-color: none;
+        background: none;
         position: relative;
         top: 44%;
         // right: 20%;
