@@ -1,7 +1,9 @@
-.index-header-container {
+div {
+  background-color: rgba(240, 240, 240, 0.918);
+  .index-header-container {
     position: relative;
     width: 100%;
-    height: 50%;
+    height: 80%;
     background-color: rgba(240, 240, 240, 0.918);
 
 
@@ -12,11 +14,38 @@
       background-size: 100% 100%, contain;
       background-repeat: no-repeat;
 
-      // background-image: image-url('mountains.jpg');
+      background-image: image-url('concert.jpg');
     
   }
+}
+div{
+  background-color: rgba(240, 240, 240, 0.918);
+  .categories-list {
+    margin: 0 auto;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    li {
+      margin-top: 20px;
+      &:hover {
+        color: #F05537;
+        cursor: pointer;
+      }
+      &.active {
+        border-top-color: rgba(240, 240, 240, 0.918);
+        border-left-color: rgba(240, 240, 240, 0.918);
+        border-right-color: rgba(240, 240, 240, 0.918);
+        border-bottom: #F05537;
+        border-style: solid;
+        border-width: 3px;
+      }
+      margin-left: 20px;
+      margin-right: 20px;
+    }
   }
-
+}
+  
   .events-title {
     padding-top: 30px;
     display: flex;
@@ -90,10 +119,17 @@
       }
       
       .event-index-item {
+        background-color: white;
         position: relative;
         top: 10%;
         padding: 10px;
         align-self: center;
+        div {
+          background-color: white;
+        }
+        p {
+          background-color: white;
+        }
       }
     }
 
@@ -114,4 +150,4 @@
 
 
   }
-}
+}}

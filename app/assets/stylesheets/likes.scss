@@ -17,20 +17,22 @@
     }
 
     .likes-index-item-container {
-      padding: 15px;
+      min-width: 550px;
       margin: 15px;
       background-color: white;
       display: flex;
+      justify-content: space-between;
       align-items: center;
       color: red;
       width: 80%;
       height: 80%;
+      
       a {
+
         width: 30%;
         height: 100%;
         margin-right: 40px;
-        .likes-index-item-image {
-
+        
         width: 200px;
         height: 200px;
         background-size: 100% 100%, contain;
@@ -40,14 +42,23 @@
       }
       
       .like-index-item {
+        max-width: 250px;
         position: relative;
+        // right: -25px;
+        // left: -100px;
         top: 10%;
         padding: 10px;
         align-items: center;
+        background-color: white;
         .event-item-container {
+          background-color: white;
           color: grey;
           margin-top: 10px;
         }
+        p {
+          background-color: white;
+        }
+
       }
     }
 
@@ -55,4 +66,4 @@
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     }
-  }
+  

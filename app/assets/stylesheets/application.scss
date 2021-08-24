@@ -26,6 +26,9 @@
 
 
 
+  html {
+    background-color: white;
+  }
   html, body, #root, .app, .app>div {
   height: 100%;
   font-family: "Neue Plak",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",Helvetica,Tahoma,Arial,sans-serif;
@@ -36,6 +39,7 @@
   }
 
  .header-group {
+   background-color: white;
    height: 72px;
    width: auto;
    display: flex;
@@ -80,6 +84,7 @@
       height: 100%;
       align-items: center;
       .create-container {
+        background-color: white;
         height: 100%;
         display: flex;
         align-items: center;
@@ -102,6 +107,7 @@
         display: flex;
         align-items: center;
         text-decoration: none;
+        background-color: white;
       &:hover {
         cursor: pointer;
         background-color: rgba(0, 0, 0, 0.03);
@@ -118,6 +124,7 @@
         display: flex;
         align-items: center;
         text-decoration: none;
+        background-color: white;
       &:hover {
         cursor: pointer;
         background-color: rgba(0, 0, 0, 0.03);
