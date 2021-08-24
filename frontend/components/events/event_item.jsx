@@ -16,11 +16,11 @@ class EventItem extends React.Component {
     let eventId = this.props.event.id;
     let userId = this.props.user.id;
 
-    let icon = <i class="far fa-bookmark"></i>;
+    let icon = <i class="far fa-bookmark fa-lg"></i>;
 
     for(let i = 0; i < likes.length; i++) {
       if(userId === likes[i].liker_id && likes[i].event_id === eventId) {
-          icon = <i class="fas fa-bookmark"></i>;
+          icon = <i class="fas fa-bookmark fa-lg"></i>;
       }
     }
   
@@ -70,9 +70,6 @@ class EventItem extends React.Component {
       
       <div className="event-item-container">
         <div className="event-item">
-          {/* <Link to="api/events/${}"className="event-item-image"> */}
-            <div></div>
-          {/* </Link> */}
           <div className="like">
             <div>{this.renderLike()}</div>
           </div>

@@ -49,10 +49,11 @@
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: white;
+    // background-color: white;
     .event-show-details {
       width: 100%;
       position: relative;
+      background-color: white;
       // display: flex;
       justify-content: center;
       .event-show-image {
@@ -141,7 +142,7 @@
       }
       .registration {
 
-     
+        background-color: white;
         position: relative;
         top: 44%;
         // right: 20%;
@@ -199,7 +200,7 @@
           font-weight: 500;
         }
         div {
-          
+            background-color: white;
            div.edit-delete-event {
              position: relative;
              top: 20px;

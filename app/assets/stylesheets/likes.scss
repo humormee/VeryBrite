@@ -54,6 +54,14 @@
           background-color: white;
           color: grey;
           margin-top: 10px;
+          .event-item {
+            .like {
+              margin: 30px;
+              button {
+                padding: 30px;
+              }
+            }
+          }
         }
         p {
           background-color: white;

@@ -37,6 +37,8 @@ div{
         border-left-color: rgba(240, 240, 240, 0.918);
         border-right-color: rgba(240, 240, 240, 0.918);
         border-bottom: #F05537;
+        border-radius: 3px;
+        color: #F05537;
         border-style: solid;
         border-width: 3px;
       }
@@ -77,17 +79,20 @@ div{
   
 
   .event-index {
-    
+    display: flex;
     justify-content: center;
-    grid-auto-flow: row;
+    // grid-auto-flow: row;
     position: relative;
     width: 80%;
     top: 25%;
     
+    margin: 15px;
     display: grid;
     column-gap: 10px;
     row-gap: 15px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    // grid-template-rows: repeat(auto-fit, minmax(330px, 1fr));
+    // grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 330px);
 
     
@@ -104,6 +109,7 @@ div{
       display: flex;
       flex-direction: column;
       color: red;
+      min-width: 220px;
       a {
         width: 100%;
         height: 40%;
@@ -119,6 +125,8 @@ div{
       }
       
       .event-index-item {
+        
+        align-items: center;
         background-color: white;
         position: relative;
         top: 10%;
@@ -126,6 +134,38 @@ div{
         align-self: center;
         div {
           background-color: white;
+          .event-item {
+            .like {
+              background: none;
+              // margin: 10px;
+              margin-top: 20px;
+              .event-item-info {
+                // margin-top: 20px;
+                .event-item-dates {
+                  // margin-top: 20px;
+                  .event-item-starttime{ 
+                    // margin-top: 20px;
+                  }
+                }
+                
+                display: flex;
+                align-items: center;
+              }
+              button {
+                position: absolute;
+                top: -60px;
+                right: 10px;
+                background-color: white;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                &:hover {
+                  cursor: pointer;
+                  background-color:rgba(240, 240, 240, 0.918);
+                }
+              }
+            }
+          }
         }
         p {
           background-color: white;
@@ -138,14 +178,14 @@ div{
 
     }
 
-    @for $i from 0 through 4 {
-          .event-index-item-container[id="#{$i}"] {
+    // @for $i from 0 through 4 {
+    //       .event-index-item-container[id="#{$i}"] {
             
-            justify-self: stretch;
-            align-self: stretch;
-            color: red;
-      }
-      }
+    //         justify-self: stretch;
+    //         align-self: stretch;
+    //         color: red;
+    //   }
+    //   }
 
 
 
