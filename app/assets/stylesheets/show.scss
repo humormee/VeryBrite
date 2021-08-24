@@ -149,7 +149,9 @@
           align-self: start;
         }
       }
-      .registration {
+      .show-buttons-container {
+        display: flex;
+        .registration {
 
         // background-color: none;
         background: none;
@@ -175,9 +177,9 @@
       .like {
 
      
-        position: relative;
+        position: absolute;
         top: 44%;
-        // right: 20%;
+        right: 20%;
         left: 70%;
       
         z-index: 1;
@@ -191,6 +193,8 @@
           background-color: lighten(#0D8547, 10%);
         }
         }
+      }
+      
 
         
       }

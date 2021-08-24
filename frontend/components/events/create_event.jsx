@@ -63,17 +63,28 @@ class CreateEvent extends React.Component {
                   onChange={e => this.update(e, 'title')}/>
               </div>
 
-              <div className="category-container">
-                <select value={category} onChange={e => this.update(e, 'category')}> 
-                  <option>Select Category</option>
-                  <option value="Music">Music</option>
-                  <option value="Free">Free</option>
-                  <option value="Entertainment">Entertainment</option>
-                  <option value="Charity and Causes">Charity and Causes</option>
-                  <option value="Food and Drink">Food and Drink</option>
-                  <option value="Other">Other</option>
-                </select>
+              <div>
+                <div className="category-container">
+                  <select value={category} onChange={e => this.update(e, 'category')}> 
+                    <option>Select Category</option>
+                    <option value="Music">Music</option>
+                    <option value="Free">Free</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Charity and Causes">Charity and Causes</option>
+                    <option value="Food and Drink">Food and Drink</option>
+                    <option value="Other">Other</option>
+                  </select>
+               </div>
+               <div>
+                 <div className="genre-description-index">
+                  <select value={category} onChange={e => this.update(e, 'category')}>
+
+                  </select>
+                 </div>
+               </div>
+
               </div>
+              
 
               <div className="start-date-container">
                 <div className="start-date">

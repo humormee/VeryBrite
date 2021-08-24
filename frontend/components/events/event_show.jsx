@@ -213,9 +213,11 @@ class EventShow extends React.Component {
               <br />
               {`${formatStartTime} - ${formatEndTime}`}</p>
             </div>
+            <div className="show-buttons-container">
+              <div className="like">{this.renderLike()}</div>
+              <div className="registration">{this.registrationButton()}</div>
+            </div>
             
-            <div className="registration">{this.registrationButton()}</div>
-            <div className="like">{this.renderLike()}</div>
 
             <div className="event-show-other-details">
               <h2>About this event</h2>
