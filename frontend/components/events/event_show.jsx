@@ -9,8 +9,9 @@ class EventShow extends React.Component {
     super(props);
 
     this.state = {
-      isModalOpen: false
+      index: null
     }
+
     this.handleEdit = this.handleEdit.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
     this.handleRegistration = this.handleRegistration.bind(this);
@@ -19,7 +20,6 @@ class EventShow extends React.Component {
     this.renderButton = this.renderButton.bind(this);
     this.handleLike = this.handleLike.bind(this);
     this.renderLike = this.renderLike.bind(this);
-    
   }
 
   componentDidMount() {
@@ -28,6 +28,8 @@ class EventShow extends React.Component {
     this.props.fetchRegistrations(this.props.match.params.id);
     this.props.fetchLikes(this.props.user.id);
   }
+
+
 
   handleEdit(e) {
     e.preventDefault();
@@ -41,7 +43,6 @@ class EventShow extends React.Component {
   }
 
   registrationButton(e) {
-    // debugger
     let isOwnReg = false;
     
     let regArr = Object.values(this.props.registrations);
