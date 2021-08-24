@@ -57,14 +57,6 @@ class EventsIndex extends React.Component {
               // debugger
                 categoryEvents = events;
                 break;
-            // case 1:
-            //   // debugger
-            //     categoryEvents = events.filter(event => {
-            //       // debugger
-            //       return (
-            //         event.category === 'All')
-            //       });
-            //     break;
             case 1:
                 categoryEvents = events.filter(event => event.category === 'Music');
                 break;
