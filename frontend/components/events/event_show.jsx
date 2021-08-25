@@ -46,7 +46,7 @@ class EventShow extends React.Component {
     
     let regArr = Object.values(this.props.registrations);
     regArr.forEach(reg => {
-      if (reg.attendee_id === this.props.user.id && reg.event_id == this.props.event.id){
+      if (reg.attendee_id === this.props.user.id && reg.event_id === this.props.event.id){
         isOwnReg = true;
       }
     })
