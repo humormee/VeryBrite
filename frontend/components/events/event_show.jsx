@@ -23,7 +23,6 @@ class EventShow extends React.Component {
   }
 
   componentDidMount() {
-    // debugger
     this.props.fetchEvent(this.props.match.params.id);
     this.props.fetchRegistrations(this.props.match.params.id);
     this.props.fetchLikes(this.props.user.id);
@@ -75,14 +74,11 @@ class EventShow extends React.Component {
 
 
     for(let i = 0; i < likesArr.length; i++) {
-      debugger
       if(userId === likesArr[i].liker_id && likesArr[i].event_id === parseInt(eventId)) {
-          debugger
           text = <i class="fas fa-bookmark fa-lg"></i>;
       }
     }
   
-    debugger
     return <button  value={this.props.event.id} onClick={() => this.handleLike()}>{text}</button>
   }
 

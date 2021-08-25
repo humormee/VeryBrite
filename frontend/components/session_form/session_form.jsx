@@ -24,7 +24,6 @@ class SessionForm extends React.Component {
   }
 
   handleSubmit(e) {
-    // debugger;
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
@@ -32,7 +31,6 @@ class SessionForm extends React.Component {
 
   handleDemo(e) {
     e.preventDefault();
-    // debugger
     // this.setState({
     //   username: 'demo',
     //   password: 'password'

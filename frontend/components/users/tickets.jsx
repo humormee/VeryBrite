@@ -40,14 +40,12 @@ class Tickets extends React.Component {
     
     events.forEach(event => {
       regs.forEach(reg => {
-        debugger
         if(event.id === reg.event_id) {
           userEvents.push(event)
         }
       })
       
     })
-    debugger
     return userEvents;
   }
   

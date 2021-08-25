@@ -18,7 +18,6 @@ class EventsIndex extends React.Component {
   }
 
   selectCategory(e, index) {
-    debugger
     this.setState({index: index})
   }
 
@@ -44,17 +43,14 @@ class EventsIndex extends React.Component {
     const categories = CATEGORIES.map((category, index) => {
       const cat = category.name;
       const currentClass = index === selected ? 'active' : '';
-      // debugger
       return (
         <li key={index} className={currentClass} onClick={(e) => this.selectCategory(e, index)}>{cat}</li>
       )
     })
 
     let categoryEvents;
-    debugger
     switch (this.state.index) {
             case 0:
-              // debugger
                 categoryEvents = events;
                 break;
             case 1:

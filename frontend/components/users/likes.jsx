@@ -7,7 +7,6 @@ class Likes extends React.Component {
   componentDidMount() {
     this.props.fetchEvents();
     this.props.fetchLikes();
-    debugger
     this.findUserLikes = this.findUserLikes.bind(this);
     this.renderEvents = this.renderEvents.bind(this);
     this.findUserEvents = this.findUserEvents.bind(this);
@@ -24,14 +23,11 @@ class Likes extends React.Component {
     let { user } = this.props;
     let likes = this.props.likes;
     let userLikes = [];
-    debugger
     likes.forEach(like => {
-      debugger
       if(like.liker_id === user){
         userLikes.push(like)
       }
     })
-    // debugger
     return userLikes;
   }
 

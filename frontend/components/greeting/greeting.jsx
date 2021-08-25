@@ -11,7 +11,6 @@ import { Link } from 'react-router-dom';
 
 const Greeting = ({ currentUser, signout, signin }) => {
   const greeting = () => {
-    // debugger;
     return (
     <hgroup className="header-group">
           <Link to="/" className="nav-verybrite">verybrite</Link>
@@ -27,7 +26,6 @@ const Greeting = ({ currentUser, signout, signin }) => {
   }
 
   const personalGreeting = () => {
-    // debugger
     return (
       <hgroup className="header-group">
         <Link to="/" className="nav-verybrite">verybrite</Link>        
