@@ -8,7 +8,7 @@ const mSTP = state => {
   return ({
   likes: Object.values(state.entities.likes),
   events: Object.values(state.entities.events),
-  user: state.session.id
+  user: state.session
 })
 }
 

@@ -47,6 +47,7 @@ class Likes extends React.Component {
     })
     return userEvents;
   }
+
   
   renderEvents() {
     const { user, events, fetchEvent, likes, createLike, deleteLike } = this.props

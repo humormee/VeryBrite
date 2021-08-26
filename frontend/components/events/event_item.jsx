@@ -17,7 +17,6 @@ class EventItem extends React.Component {
     let userId = this.props.user.id;
 
     let icon = <i class="far fa-bookmark fa-lg"></i>;
-
     for(let i = 0; i < likes.length; i++) {
       if(userId === likes[i].liker_id && likes[i].event_id === eventId) {
           icon = <i class="fas fa-bookmark fa-lg"></i>;
@@ -31,7 +30,6 @@ class EventItem extends React.Component {
     if(!this.props.likes){
       return null;
     }
-
     let { likes } = this.props;
     let isDelete = false;
     let toDeleteLike;
@@ -39,7 +37,9 @@ class EventItem extends React.Component {
     let userId = this.props.user.id;
 
     likes.forEach(like => {
+      debugger
       if(userId === like.liker_id && eventId === like.event_id) {
+        debugger
         isDelete = true;
         toDeleteLike = like;
       }
@@ -61,11 +61,6 @@ class EventItem extends React.Component {
     const startDateString = startDate.toDateString();
     const formatTime = new Date(startDate.getTime())
             .toLocaleTimeString().replace(/(.*)\D\d+/, '$1');
-    // const start_date_time = new Date(start_time).toString();
-    // const end_date_time = new Date(end_time).toString();
-    // const format_date = Date.parse(start_time);
-    // const formatTime = new Date(start_time.getTime());
-    
     return (
       
       <div className="event-item-container">
