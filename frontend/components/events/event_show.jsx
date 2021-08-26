@@ -99,8 +99,7 @@ class EventShow extends React.Component {
       if(userId === like.liker_id && parseInt(event) === like.event_id) {
         isDelete = true;
         toDeleteLike = like;
-        // break;
-        // this.props.deleteLike(like.id)
+
       }
     })
     if(isDelete) {

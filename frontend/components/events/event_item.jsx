@@ -37,9 +37,7 @@ class EventItem extends React.Component {
     let userId = this.props.user.id;
 
     likes.forEach(like => {
-      debugger
       if(userId === like.liker_id && eventId === like.event_id) {
-        debugger
         isDelete = true;
         toDeleteLike = like;
       }
