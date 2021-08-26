@@ -78,7 +78,7 @@ class EventsIndex extends React.Component {
 
     let eventItems = categoryEvents.map(event => (
       <div className="event-index-item-container" id={`${event.id}`} key={`${event.id}`}>
-            <Link to={`./events/${event.id}`}>
+            <Link to={`../../events/${event.id}`}>
               <div className="event-index-item-image">
               </div>
             </Link>

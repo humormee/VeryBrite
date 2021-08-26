@@ -56,7 +56,7 @@ class Tickets extends React.Component {
     return (
       events.map(event => (
       <div className="registration-index-item-container" id={`${event.id}`} key={`${event.id}`}>
-            <Link to={`./events/${event.id}`}>
+            <Link to={`../../events/${event.id}`}>
               <div className="registration-index-item-image">
               </div>
             </Link>

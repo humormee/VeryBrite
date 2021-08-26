@@ -31,6 +31,7 @@ class Likes extends React.Component {
     return userLikes;
   }
 
+  
   findUserEvents() {
     let likes = this.findUserLikes();
     let events = Object.values(this.props.events);
@@ -48,19 +49,19 @@ class Likes extends React.Component {
   }
   
   renderEvents() {
-    let { fetchEvent } = this.props
-    let events = this.findUserEvents();
+    const { user, events, fetchEvent, likes, createLike, deleteLike } = this.props
+    // let events = this.findUserEvents();
 
     return (
       events.map(event => (
       <div className="likes-index-item-container" id={`${event.id}`} key={`${event.id}`}>
-            <Link to={`./events/${event.id}`}>
+            <Link to={`../../events/${event.id}`}>
               <div className="likes-index-item-image">
               </div>
             </Link>
         <div className="like-index-item">
           <Link onClick={this.handleClick} to={`../../events/${event.id}`}>{event.title}</Link>
-          <EventItem fetchEvent={fetchEvent} event={event} ></EventItem>
+          <EventItem user={user} createLike={createLike} deleteLike={deleteLike} likes={likes} fetchEvent={fetchEvent} event={event}></EventItem>
         </div>
       </div>
     ))
