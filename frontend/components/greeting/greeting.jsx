@@ -40,7 +40,7 @@ const Greeting = ({ currentUser, signout, signin }) => {
           </div>
 
           <div className="likes-container">
-            <Link className="likes" to={`../../users/${currentUser.id}/likes`}>Likes</Link>
+            <Link className="likes" to={`../../users/${currentUser.id}/likes`}>Bookmarks</Link>
           </div>
           
           <div className="nav-dropdown">
@@ -53,14 +53,6 @@ const Greeting = ({ currentUser, signout, signin }) => {
         </hgroup> 
       )
   }
-
-  // const personalGreeting = () => (
-  //   <hgroup className="header-group">
-  //     <h2 className="nav-verybrite">verybrite</h2>
-  //     <h2 className="header-name">Welcome, {currentUser.username}!</h2>
-  //     <button className="header-button" onClick={signout}>Sign Out</button>
-  //   </hgroup>
-  // )
 
   return currentUser ? personalGreeting() : greeting();
 }
