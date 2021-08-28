@@ -29,7 +29,7 @@ const Greeting = ({ currentUser, signout, signin }) => {
     return (
       <hgroup className="header-group">
         <Link to="/" className="nav-verybrite">verybrite</Link>        
-        <h2 className="header-name">Welcome, {currentUser.username}!</h2>
+        {/* <h2 className="header-name">Welcome, {currentUser.username}!</h2> */}
         <div className="right-nav-bar">
           <div className="create-container">
             <Link className="create" to="/events/create">Create</Link>  
@@ -47,6 +47,14 @@ const Greeting = ({ currentUser, signout, signin }) => {
             <button className="nav-email">{currentUser.email}</button>
             <div className="dropdown-content">
               <button className="header-button" onClick={signout}>Sign Out</button>
+              <Link to={`../../users/${currentUser.id}/registrations`}>
+              <button className="header-button">Bookmarks</button>
+              </Link>
+
+              <Link to={`../../users/${currentUser.id}/likes`}>
+                <button className="header-button">My Likes</button>
+              </Link>
+              
             </div>
           </div>
         </div>
