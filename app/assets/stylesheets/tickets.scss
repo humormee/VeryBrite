@@ -59,10 +59,25 @@
           background-color: white;
         }
       }
+
+      .show-buttons-container {
+          position: absolute;
+          right: 0;
+          button {
+            background-color: white;
+            border: none;
+            &:hover {
+              cursor: pointer;
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+          }
+        }
+
     }
 
     .registration-index-item-container:hover {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      cursor: pointer;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     }
   }

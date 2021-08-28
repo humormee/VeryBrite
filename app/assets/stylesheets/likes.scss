@@ -43,23 +43,42 @@
       
       .like-index-item {
         max-width: 250px;
+        
         position: relative;
         // right: -25px;
         // left: -100px;
         top: 10%;
+        right: 10%;
         padding: 10px;
         align-items: center;
         background-color: white;
+        a {
+          background: none;
+        }
         .event-item-container {
           background-color: white;
           color: grey;
           margin-top: 10px;
           .event-item {
+            background-color: white;
             .like {
-              margin: 30px;
-              button {
-                padding: 30px;
-              }
+              background-color: white;
+              div {
+                background-color: white;
+                margin: 30px;
+                button {
+                  position: absolute;
+                  right: -20%;
+                  top: -10%;
+                  background-color: white;
+                  padding: 30px;
+                  border: none;
+                  &:hover {
+                    cursor: pointer;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                  }
+                }
+            }
             }
           }
         }
