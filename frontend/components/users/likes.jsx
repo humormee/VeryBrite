@@ -7,12 +7,12 @@ class Likes extends React.Component {
   componentDidMount() {
     this.props.fetchEvents();
     this.props.fetchLikes();
-    this.findUserLikes = this.findUserLikes.bind(this);
+    this.findLikedEvents = this.findLikedEvents.bind(this);
     this.renderEvents = this.renderEvents.bind(this);
     this.findUserEvents = this.findUserEvents.bind(this);
   }
 
-  findUserLikes() {
+  findLikedEvents() {
     
     if(!this.props.likes) {
       return (
@@ -24,21 +24,24 @@ class Likes extends React.Component {
     let likes = this.props.likes;
     let userLikes = [];
     likes.forEach(like => {
-      if(like.liker_id === user){
+      if(like.liker_id === user.id){
         userLikes.push(like)
       }
     })
-    return userLikes;
+    let likedEvents = this.findUserEvents(userLikes)
+    return likedEvents;
   }
 
-  findUserEvents() {
-    let likes = this.findUserLikes();
+  
+  findUserEvents(userLikes) {
+    let { user } = this.props;
+    let likes = userLikes;
     let events = Object.values(this.props.events);
     let userEvents = [];
     
     events.forEach(event => {
       likes.forEach(like => {
-        if(event.id === like.event_id) {
+        if(event.id === like.event_id && user.id === like.liker_id) {
           userEvents.push(event)
         }
       })
@@ -46,21 +49,22 @@ class Likes extends React.Component {
     })
     return userEvents;
   }
+
   
   renderEvents() {
-    let { fetchEvent } = this.props
-    let events = this.findUserEvents();
-
+    const { user, events, fetchEvent, likes, createLike, deleteLike } = this.props
+    // let events = this.findUserEvents();
+    let likedEvents = this.findLikedEvents();
     return (
-      events.map(event => (
+      likedEvents.map(event => (
       <div className="likes-index-item-container" id={`${event.id}`} key={`${event.id}`}>
-            <Link to={`./events/${event.id}`}>
+            <Link to={`../../events/${event.id}`}>
               <div className="likes-index-item-image">
               </div>
             </Link>
         <div className="like-index-item">
           <Link onClick={this.handleClick} to={`../../events/${event.id}`}>{event.title}</Link>
-          <EventItem fetchEvent={fetchEvent} event={event} ></EventItem>
+          <EventItem user={user} createLike={createLike} deleteLike={deleteLike} likes={likes} fetchEvent={fetchEvent} event={event}></EventItem>
         </div>
       </div>
     ))
