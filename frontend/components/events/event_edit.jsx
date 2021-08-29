@@ -77,6 +77,23 @@ class EventEdit extends React.Component {
                   <input className="event-edit-title" type="text" value={title}
                   onChange={e => this.update(e, 'title')}/>
               </div>
+
+              <div className="category-container">
+                  <div>
+                    <i class="fa-solid fa-list-ul fa-3x"></i>
+                    <h3>Pick a Category</h3>
+                  </div>
+                 
+                  <select value={category} onChange={e => this.update(e, 'category')}> 
+                    <option>Select Category</option>
+                    <option value="Music">Music</option>
+                    <option value="Free">Free</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Charity and Causes">Charity and Causes</option>
+                    <option value="Food and Drink">Food and Drink</option>
+                    <option value="Other">Other</option>
+                  </select>
+               </div>
               
               <div className="start-date-container">
                 <div className="start-date">
