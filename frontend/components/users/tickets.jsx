@@ -21,7 +21,7 @@ class Tickets extends React.Component {
     let regArr = Object.values(this.props.registrations);
     let regToHandle;
     regArr.forEach(reg => {
-      debugger
+      
       // if (reg.attendee_id === user.id && reg.event_id === event.id){
       if (reg.attendee_id === user.id){
         regToHandle = reg;

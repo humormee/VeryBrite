@@ -14,10 +14,12 @@ export const signoutCurrentUser = () => ({
   type: SIGNOUT_CURRENT_USER
 });
 
-export const receiveErrors = errors => ({
+export const receiveErrors = errors => {
+  
+  return ({
   type: RECEIVE_SESSION_ERRORS,
   errors
-});
+})};
 
 export const clearSessionErrors = () => ({
   type: CLEAR_SESSION_ERRORS
@@ -41,9 +43,11 @@ export const signup = user => dispatch => (
 export const signin = user => dispatch => (
   APISessionUtil.signin(user).then(user => (dispatch(receiveCurrentUser(user))
   ),
-  error => (
+  error => {
+    return (
     dispatch(receiveErrors(error.responseJSON))
-  ))
+  )}
+  )
 );
 
 export const signout = () => dispatch => (
