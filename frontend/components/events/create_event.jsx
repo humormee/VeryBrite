@@ -63,8 +63,12 @@ class CreateEvent extends React.Component {
                   onChange={e => this.update(e, 'title')}/>
               </div>
 
-              <div>
                 <div className="category-container">
+                  <div>
+                    <i class="fa-solid fa-list-ul fa-3x"></i>
+                    <h3>Pick a Category</h3>
+                  </div>
+                 
                   <select value={category} onChange={e => this.update(e, 'category')}> 
                     <option>Select Category</option>
                     <option value="Music">Music</option>
@@ -75,15 +79,11 @@ class CreateEvent extends React.Component {
                     <option value="Other">Other</option>
                   </select>
                </div>
-               <div>
-                 <div className="genre-description-index">
+                 {/* <div className="genre-description-index">
                   <select value={category} onChange={e => this.update(e, 'category')}>
 
                   </select>
-                 </div>
-               </div>
-
-              </div>
+                 </div> */}
               
 
               <div className="start-date-container">
