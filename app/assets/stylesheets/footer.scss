@@ -1,16 +1,17 @@
-.footer {
+footer {
   position: fixed;
   bottom: 0;
   width: 100%;
   padding: 10px;
   z-index: 50;
   background-color: navy;
-  height: 50px;
+  height: 40px;
 
   .website-links {
     background-color: navy;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
   }
   .website-links a {
     font-size: 25px;

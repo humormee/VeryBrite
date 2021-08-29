@@ -100,7 +100,10 @@ class EventsIndex extends React.Component {
             <p></p>
           </div>
         </div>
-        <h1 className="events-title">Find a <h1>very</h1> cool event near you </h1>
+        <h1 className="events-title">
+          Event Categories
+        </h1>
+        {/* <h1 className="events-title">Find a <h1>very</h1> cool event near you </h1> */}
         <ul className="categories-list">{categories}</ul>
       <div className="event-index-container">
   

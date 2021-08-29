@@ -23,8 +23,10 @@ div{
   // background: white;
   // background-color: rgba(240, 240, 240, 0.918);
   .categories-list {
-    display: flex;
-    margin-top: 50px;
+    display: inline;
+    margin-top: 30px;
+    list-style: none;
+    margin-bottom: 30px;
     // background-color: white;
     margin: 0 auto;
     position: absolute;
@@ -32,6 +34,8 @@ div{
     right: 10%;
     z-index: 5;
     li {
+      display: inline;
+      // height: 20px;
       border-top: none;
       border-left: none;
       border-right: none;
@@ -67,9 +71,10 @@ div{
   .events-title {
     margin-bottom: 50px;
     padding-top: 30px;
-    display: flex;
-    justify-content: center;
-    left: 10%;
+    display: block;
+    // position: absolute;
+    // justify-content: flex-end;
+    margin-left: 15%;
     color: rgb(33, 35, 39);
     background-color: rgba(240, 240, 240, 0.918);
     font-family: "Neue Plak";
