@@ -124,8 +124,9 @@ class CreateEvent extends React.Component {
                 <div className="title">
                 <i class="fas fa-align-justify fa-3x"></i>
                 <h3>Title</h3>
-                <div>{this.renderErrors('title')}</div>
+                
                 </div>
+                <div>{this.renderErrors('title')}</div>
                 <input className="event-create-title" 
                 type="text" placeholder="enter a title"
                   value={title}

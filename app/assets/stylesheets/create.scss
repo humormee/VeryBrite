@@ -20,11 +20,16 @@
       align-items: center;
       justify-content: space-between;
       width: 60%;
+      .title-errors {
+        color: red;
+      }
+
+      
+
 
       .category-container {
         
         select {
-          // padding-left: 30%;
           font-family: "Neue Plak";
           font-size: 20px;
           border-style: none;
@@ -37,6 +42,9 @@
       }
       div.start-date-container {
           width: 70%;
+          .date-errors {
+            color: red;
+          }
         }
         
       div {
