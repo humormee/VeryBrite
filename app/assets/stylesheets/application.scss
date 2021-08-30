@@ -64,6 +64,7 @@
       background-color: white;
       display: flex;
       align-items: center;
+      text-decoration: none;
       .header-button {
         
         padding-right: 20px;
@@ -163,6 +164,12 @@
         width: 130%;
       
         min-width: 10px;
+        a {
+          text-decoration: none;
+          button {
+            text-decoration: none;
+          }
+        }
         }
         
       .dropdown-content button {
