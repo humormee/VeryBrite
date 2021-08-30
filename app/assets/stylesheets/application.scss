@@ -27,7 +27,6 @@
 
   html {
     background-color: rgba(240, 240, 240, 0.918);
-    // background-color: white;
   }
   html, body, #root, .app, .app>div {
   height: 110%;
@@ -91,6 +90,9 @@
         display: flex;
         align-items: center;
         a.create{
+          &:hover {
+            cursor: pointer;
+          }
           color: blue;
           align-items: center;
           text-decoration: none;
@@ -101,7 +103,6 @@
       }
       .create-container:hover {
         background-color: rgba(0, 0, 0, 0.03);
-        cursor: pointer;
       }
       
       .tickets-container {
@@ -111,10 +112,12 @@
         text-decoration: none;
         background-color: white;
       &:hover {
-        cursor: pointer;
         background-color: rgba(0, 0, 0, 0.03);
       }
         a.tickets {
+          &:hover {
+            cursor: pointer;
+          }
           color: #39364F;
           padding-left: 15px;
           padding-right: 15px;
@@ -128,10 +131,12 @@
         text-decoration: none;
         background-color: white;
       &:hover {
-        cursor: pointer;
         background-color: rgba(0, 0, 0, 0.03);
       }
         a.likes {
+          &:hover {
+            cursor: pointer;
+          } 
           color: #39364F;
           padding-left: 15px;
           padding-right: 15px;
