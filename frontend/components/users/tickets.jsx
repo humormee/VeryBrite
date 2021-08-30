@@ -43,12 +43,6 @@ class Tickets extends React.Component {
     let { user } = this.props;
     let regArr = Object.values(this.props.registrations);
     let regToDelete;
-    // regArr.forEach(reg => {
-    //   // if(reg.attendee_id == user.id && reg.event_id == this.props.event.id) {
-    //   if(reg.attendee_id == user.id) {
-    //     regToDelete = reg
-    //   }
-    // })
     this.props.deleteRegistration(reg)
   }
 
