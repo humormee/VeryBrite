@@ -89,9 +89,7 @@ class Tickets extends React.Component {
   renderEvents() {
     let { fetchEvent } = this.props
     let events = this.findUserEvents();
-
-    return (
-      events.map(event => (
+    let mappedEvents = events.map(event => (
       <div className="registration-index-item-container" id={`${event.id}`} key={`${event.id}`}>
             <Link to={`../../events/${event.id}`}>
               <div className="registration-index-item-image">
@@ -107,6 +105,11 @@ class Tickets extends React.Component {
         </div>
       </div>
     ))
+    return (
+      <>
+      <h1>My Registrations</h1>
+       {mappedEvents}
+      </>
     )
     
   }

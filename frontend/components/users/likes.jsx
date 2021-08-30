@@ -55,9 +55,8 @@ class Likes extends React.Component {
     const { user, events, fetchEvent, likes, createLike, deleteLike } = this.props
     // let events = this.findUserEvents();
     let likedEvents = this.findLikedEvents();
-    <h1 className="likes-header">My Bookmarks</h1>
-    return (
-      likedEvents.map(event => (
+    // <h1 className="likes-header">My Bookmarks</h1>
+    let mappedEvents = likedEvents.map(event => (
       <div className="likes-index-item-container" id={`${event.id}`} key={`${event.id}`}>
             <Link to={`../../events/${event.id}`}>
               <div className="likes-index-item-image">
@@ -69,6 +68,11 @@ class Likes extends React.Component {
         </div>
       </div>
     ))
+    return (
+      <>
+        <h1>My Bookmarks</h1>
+        {mappedEvents}
+      </>
     )
     
   }

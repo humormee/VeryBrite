@@ -48,11 +48,11 @@ const Greeting = ({ currentUser, signout, signin }) => {
             <div className="dropdown-content">
               <button className="header-button" onClick={signout}>Sign Out</button>
               <Link to={`../../users/${currentUser.id}/registrations`}>
-              <button className="header-button">My Bookmarks</button>
+              <button className="header-button">My Registrations</button>
               </Link>
 
               <Link to={`../../users/${currentUser.id}/likes`}>
-                <button className="header-button">My Likes</button>
+                <button className="header-button">My Bookmarks</button>
               </Link>
               
             </div>
