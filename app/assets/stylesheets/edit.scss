@@ -29,7 +29,9 @@
         color: red;
       }
       .category-container {
-        
+        .category-errors {
+          color: red;
+        }
         select {
           // padding-left: 30%;
           font-family: "Neue Plak";
@@ -41,6 +43,11 @@
           height: 60px;
         }
         
+      }
+      div.description-container {
+        .description-errors {
+          color: red;
+        }
       }
       div.start-date-container {
           width: 70%;

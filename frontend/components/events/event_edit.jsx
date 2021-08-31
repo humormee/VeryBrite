@@ -69,6 +69,10 @@ class EventEdit extends React.Component {
           return (
             <p className="title-errors">titles must be under 40 characters</p>
           );
+        } else if(this.state.title.length < 1){
+          return (
+            <p className="title-errors">must enter a title</p>
+          );
         } else {
           return null
         }
@@ -80,7 +84,26 @@ class EventEdit extends React.Component {
         } else {
           return null
         }
-        
+
+      case 'category':
+        debugger
+        if(this.state.category.length < 1 || this.state.category === "Select Category"){
+          return (
+            <p className="category-errors">must select a category</p>
+          )
+        } else {
+          return null;
+        }
+       
+      case 'description':
+        if(this.state.description.length < 1) {
+          return (
+            <p className="description-errors">add a description</p>
+          )
+        } else {
+          return null;
+        }
+      
       case 'end_time':
         if(this.state.start_time > this.state.end_time && this.state.end_time.length > 0) {
           return (
@@ -95,11 +118,9 @@ class EventEdit extends React.Component {
   }
 
   isErrors() {
-    if(this.renderErrors('title') === null && this.renderErrors('start_time') === null && this.renderErrors('end_time') === null) {
-      debugger
+    if(this.renderErrors('title') === null && this.renderErrors('start_time') === null && this.renderErrors('end_time') === null && this.renderErrors('category') === null && this.renderErrors('description') === null) {
       return false;
     } else {
-      debugger
       return true;
     }
   }
@@ -167,6 +188,7 @@ class EventEdit extends React.Component {
                     <h3>Pick a Category</h3>
                   </div>
                  
+                 <div>{this.renderErrors('category')}</div>
                   <select value={category} onChange={e => this.update(e, 'category')}> 
                     <option>Select Category</option>
                     <option value="Music">Music</option>
@@ -198,6 +220,7 @@ class EventEdit extends React.Component {
                 <i className="far fa-sticky-note fa-3x"></i>
                 <h3>Description</h3>
                 </div>
+                  <div>{this.renderErrors('description')}</div>
                   <textarea value={description}cols="30" rows="10" onChange={e => this.update(e, 'description')}></textarea>
               </div>
               

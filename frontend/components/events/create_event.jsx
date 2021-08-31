@@ -50,6 +50,10 @@ class CreateEvent extends React.Component {
           return (
             <p className="title-errors">titles must be under 40 characters</p>
           );
+        } else if(this.state.title.length < 1){
+          return (
+            <p className="title-errors">must enter a title</p>
+          );
         } else {
           return null
         }
