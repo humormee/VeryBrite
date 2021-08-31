@@ -6,9 +6,7 @@ class EventEdit extends React.Component {
   constructor(props) {
     super(props);
 
-    debugger
     if (props.event) {
-      debugger
       this.state = Object.assign(props.event, {current_time: ""})
     }
     
@@ -86,7 +84,6 @@ class EventEdit extends React.Component {
         }
 
       case 'category':
-        debugger
         if(this.state.category.length < 1 || this.state.category === "Select Category"){
           return (
             <p className="category-errors">must select a category</p>
