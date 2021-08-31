@@ -5,7 +5,7 @@ class CreateEvent extends React.Component {
     super(props);
     this.state = {
       author_id: "",
-      category: "", // Free
+      category: "",
       title: "",
       description: "",
       start_time: "",
@@ -44,7 +44,6 @@ class CreateEvent extends React.Component {
   }
 
   renderErrors(field) {
-    // debugger
     switch (field) {
       case 'title':
         if(this.state.title.length >= 40) {
@@ -55,13 +54,22 @@ class CreateEvent extends React.Component {
           return null
         }
       case 'category':
-        debugger
-        document.getElementById('find-cat-error').innerText = "";
-        return;
+        if(this.state.category.length < 2){
+          return (
+            <p className="category-errors">must select a category</p>
+          )
+        } else {
+          return null;
+        }
+       
       case 'description':
-        debugger
-        document.getElementById('find-des-error').innerText = "";
-        return;
+        if(this.state.description.length < 1) {
+          return (
+            <p className="description-errors">add a description</p>
+          )
+        } else {
+          return null;
+        }
       case 'start_time':
         if(this.state.start_time < this.getCurrentTime() && this.state.start_time.length > 0) {
           return (
@@ -85,40 +93,16 @@ class CreateEvent extends React.Component {
   }
 
   isErrors() {
-    if(this.renderErrors('title') === null && this.renderErrors('start_time') === null && this.renderErrors('end_time') === null && this.renderErrors('category') === null && this.renderErrors('description') === null) {
+    if(this.renderErrors('title') === null && this.renderErrors('start_time') === null && this.renderErrors('end_time') === null && (this.renderErrors('category') === null) && this.renderErrors('description') === null) {
       return false;
     } else {
       return true;
     }
   }
 
-  renderCatError() {
-    if(this.state.category.length < 1){
-      document.getElementById('find-cat-error').innerText = 'Must choose a category'
-      // return (
-      //   <div className="category-errors">Must choose a category</div>
-      // )
-    } else {
-      document.getElementById('find-cat-error').innerText = ''
-    }
-  }
-
-  renderDesError() {
-    if(this.state.category.length < 1){
-      document.getElementById('find-des-error').innerText = 'Must enter a description'
-      // return (
-      //   <div className="description-errors">Must enter a description</div>
-      // )
-    } else {
-      document.getElementById('find-des-error').innerText = ''
-    }
-  }
-
   handleSubmit(e) {
     e.preventDefault();
     if(this.isErrors()) {
-      this.renderCatError();
-      this.renderDesError();
       return
     }
     this.setState({author_id: this.props.userId});
@@ -171,7 +155,7 @@ class CreateEvent extends React.Component {
                   </div>
                   <div id="find-cat-error"></div>
                   
-                  {/* <div>{this.renderCatError()}</div> */}
+                  <div>{this.renderErrors('category')}</div>
                   <select value={category} onChange={e => this.update(e, 'category')}> 
                     <option>Select Category</option>
                     <option value="Music">Music</option>
@@ -212,8 +196,7 @@ class CreateEvent extends React.Component {
                   <i class="far fa-sticky-note fa-3x"></i>
                   <h3>Description</h3>
                 </div>
-                  <div id="find-des-error"></div>
-                  {/* <div>{this.renderDesError()}</div> */}
+                  <div>{this.renderErrors('description')}</div>
                   <textarea value={description} placeholder="describe the event"
                   cols="30" rows="10" onChange={e => this.update(e, 'description')}></textarea>
               </div>
