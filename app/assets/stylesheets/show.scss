@@ -45,17 +45,15 @@
     padding-bottom: 3%;
     margin-top: 2%;
     display: flex;
-    width: 60%;
+    width: 80%;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     
-    // background-color: white;
     .event-show-details {
       width: 100%;
       position: relative;
       background-color: white;
-      // display: flex;
       justify-content: center;
       .event-show-image {
         position: absolute;

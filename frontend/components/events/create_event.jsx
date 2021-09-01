@@ -145,11 +145,12 @@ class CreateEvent extends React.Component {
                 <h3>Title</h3>
                 
                 </div>
-                <div>{this.renderErrors('title')}</div>
+                
                 <input className="event-create-title" 
                 type="text" placeholder="enter a title"
                   value={title}
                   onChange={e => this.update(e, 'title')}/>
+                  <div>{this.renderErrors('title')}</div>
               </div>
 
                 <div className="category-container">
@@ -159,7 +160,7 @@ class CreateEvent extends React.Component {
                   </div>
                   <div id="find-cat-error"></div>
                   
-                  <div>{this.renderErrors('category')}</div>
+                  
                   <select value={category} onChange={e => this.update(e, 'category')}> 
                     <option>Select Category</option>
                     <option value="Music">Music</option>
@@ -169,6 +170,7 @@ class CreateEvent extends React.Component {
                     <option value="Food and Drink">Food and Drink</option>
                     <option value="Other">Other</option>
                   </select>
+                  <div>{this.renderErrors('category')}</div>
                </div>
 
 
@@ -177,21 +179,23 @@ class CreateEvent extends React.Component {
                 <i className="far fa-calendar-alt fa-3x"></i>
                 <h3>Date and time</h3>
                 </div>
-                <div>{this.renderErrors('start_time')}</div>
+                
                 <p>Start day and time (click right icon for calendar view)</p>
                   <input id="start-date" 
                   type="datetime-local"
                   min={this.getCurrentTime()}
                   value={start_time}
                   onChange={e => this.update(e, 'start_time')}/>
+                  <div>{this.renderErrors('start_time')}</div>
                   <br />
-                  <div>{this.renderErrors('end_time')}</div>
+                  
                   <p>End day and time (click right icon for calendar view)</p>
                   <input id="end-date" 
                   type="datetime-local"
                   min={this.state.start_time}
                   value={end_time}
                   onChange={e => this.update(e, 'end_time')}/>
+                  <div>{this.renderErrors('end_time')}</div>
               </div>
               
               
@@ -200,9 +204,9 @@ class CreateEvent extends React.Component {
                   <i class="far fa-sticky-note fa-3x"></i>
                   <h3>Description</h3>
                 </div>
-                  <div>{this.renderErrors('description')}</div>
                   <textarea value={description} placeholder="describe the event"
                   cols="30" rows="10" onChange={e => this.update(e, 'description')}></textarea>
+                  <div>{this.renderErrors('description')}</div>
               </div>
 
               <button type="submit">Create</button>              

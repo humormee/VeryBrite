@@ -1,20 +1,19 @@
 
 .create-form-container {
   
-  background-color: rgba(240, 240, 240, 0.966);
-
+  background-color: white;
   display: flex;
   justify-content: center;
   padding: 7%;
   
   .create-form {
-    background-color: rgba(240, 240, 240, 0.966);
 
-    width: 100%;
-  
+    width: 70%;
+    background-color: white;
     display: flex;
     justify-content: center;
     .event-create-details {
+      background-color: white;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -28,14 +27,15 @@
 
 
       .category-container {
-        
+        background-color: white;
         .category-errors {
           color: red;
         }
         select {
+          border: 1px solid lightgrey;
           font-family: "Neue Plak";
           font-size: 20px;
-          border-style: none;
+          // border-style: none;
           text-align: center;
           line-height: 3;
           margin-bottom: 5%;
@@ -44,11 +44,13 @@
         
       }
       div.description-container {
+        background-color: white;
         .description-errors {
           color: red;
         }
       }
       div.start-date-container {
+        background-color: white;
           width: 70%;
           .date-errors {
             color: red;
@@ -59,11 +61,13 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+        background-color: white;
         div {
           display: flex;
           flex-direction: row;
           width: 100%;
-
+          position: relative;
+          right: 10%;
           i {
             padding: 10px;
           }
@@ -83,26 +87,30 @@
           input {
             font-family: "Neue Plak";
             font-size: 20px;
-            border-style: none;
+            border: 1px solid lightgrey;
+            // border-radius: 2%;
             text-align: center;
             line-height: 3;
             margin-bottom: 5%;
           }
 
           textarea {
+            border: 1px solid lightgrey;
             font-family: "Neue Plak";
             font-size: 18px;
-            border-style: none;
+            // border-style: none;
             text-align: center;
           }
 
           input:hover {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border: 1px solid grey;
+            // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             cursor: pointer;
           }
 
           textarea:hover {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border: 1px solid grey;
+            // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             cursor: pointer;
           }
         
