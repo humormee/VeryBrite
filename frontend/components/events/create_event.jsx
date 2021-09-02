@@ -10,7 +10,8 @@ class CreateEvent extends React.Component {
       description: "",
       start_time: "",
       end_time: "",
-      current_time: ""
+      current_time: "",
+      hasSubmit: false
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -44,6 +45,10 @@ class CreateEvent extends React.Component {
   }
 
   renderErrors(field) {
+    debugger
+    if(!this.state.hasSubmit) {
+      return
+    }
     switch (field) {
       case 'title':
         if(this.state.title.length >= 40) {
@@ -106,10 +111,14 @@ class CreateEvent extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.setState({hasSubmit: true});
     if(this.isErrors()) {
       return
     }
+    debugger
     this.setState({author_id: this.props.userId});
+   
+    debugger
     this.props.createEvent(this.state).then(event => this.props.history.push(`/events/${event.event.id}`));
   }
 
