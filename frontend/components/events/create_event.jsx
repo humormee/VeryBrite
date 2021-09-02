@@ -45,7 +45,6 @@ class CreateEvent extends React.Component {
   }
 
   renderErrors(field) {
-    debugger
     if(!this.state.hasSubmit) {
       return
     }
@@ -115,10 +114,8 @@ class CreateEvent extends React.Component {
     if(this.isErrors()) {
       return
     }
-    debugger
     this.setState({author_id: this.props.userId});
    
-    debugger
     this.props.createEvent(this.state).then(event => this.props.history.push(`/events/${event.event.id}`));
   }
 
@@ -153,12 +150,16 @@ class CreateEvent extends React.Component {
                 </div>
                 <div className="split-right-title">
                   <h3>Basic Info</h3>
-                  <label htmlFor="event-create-title">event title</label>
-                  <input className="event-create-title" 
-                        type="text" placeholder="enter a title"
+                  <p>Name your event and tell event-goers why they should come. Add details that highlight what makes it unique.</p>
+                  <div className="input-wrapper">
+                    <label for="event-create-title">event title<span className="asteric"> *</span></label>
+                  <input id="event-create-title" 
+                        type="text"
                         value={title}
                         onChange={e => this.update(e, 'title')}
                   />
+                  </div>
+                  
                   <div>{this.renderErrors('title')}</div>
                   <div className="split-right-category">
                   {/* <h3>Pick a Category</h3> */}
@@ -183,21 +184,27 @@ class CreateEvent extends React.Component {
                 <div className="split-right-start-date">
                   <h3>Date and time</h3>
                   <p>Start day and time (click right icon for calendar view)</p>
-                  <label className="event-start-label" htmlFor="start-date">event starts</label>
-                  <input id="start-date" 
-                          type="datetime-local"
-                          min={this.getCurrentTime()}
-                          value={start_time}
-                          onChange={e => this.update(e, 'start_time')}
-                  />
+                  <div className="input-wrapper">
+                    <label className="event-start-label" htmlFor="start-date">event starts<span className="asteric"> *</span></label>
+                    <input id="start-date" 
+                            type="datetime-local"
+                            min={this.getCurrentTime()}
+                            value={start_time}
+                            onChange={e => this.update(e, 'start_time')}
+                    />
+                  </div>
+                  
                   <div>{this.renderErrors('start_time')}</div>
                   <p>End day and time (click right icon for calendar view)</p>
-                  <label className="event-end-label" htmlFor="end-date">event ends</label>
-                  <input id="end-date" 
-                        type="datetime-local"
-                        min={this.state.start_time}
-                        value={end_time}
-                        onChange={e => this.update(e, 'end_time')}/>
+                  <div className="input-wrapper">
+                    <label className="event-end-label" htmlFor="end-date">event ends<span className="asteric"> *</span></label>
+                    <input id="end-date" 
+                          type="datetime-local"
+                          min={this.state.start_time}
+                          value={end_time}
+                          onChange={e => this.update(e, 'end_time')}/>
+                  </div>
+                  
                   <div>{this.renderErrors('end_time')}</div>
                 </div>
                 
@@ -211,9 +218,13 @@ class CreateEvent extends React.Component {
                 </div>
                 <div className="split-right-description">
                   <h3>Description</h3>
-                  <label className="description-label" htmlFor="description-create">add a description</label>
-                  <textarea className="description-create"value={description} placeholder="describe the event"
-                  cols="30" rows="10" onChange={e => this.update(e, 'description')}></textarea>
+                  <div className="input-wrapper">
+                    <label className="description-label" htmlFor="description-create">add a description
+                    <span className="asteric"> *</span></label>
+                  <textarea className="description-create"value={description} 
+                  rows="10" onChange={e => this.update(e, 'description')}></textarea>
+                  </div>
+                  
                   <div>{this.renderErrors('description')}</div>
                 </div>
               </div>

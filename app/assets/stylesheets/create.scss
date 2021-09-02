@@ -8,7 +8,7 @@
   
   .create-form {
 
-    width: 70%;
+    width: 100%;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -26,14 +26,35 @@
         width: 100%;
       .split-left-title, .split-left-category, .split-left-description{
         background-color: white;
-        padding: 10px;
+        padding-top: 15px;
+        padding-right: 30px;
+        color: #d2d2d2;
       }
       .split-right-title, .split-right-category, .split-right-description{
           position: relative;
           background-color: white;
           display: flex;
           flex-direction: column;
-          min-width: 300px;
+          width: 80%;
+          min-width: 400px;
+          .input-wrapper {
+            background-color: white;
+            input {
+              min-width: 410px;
+              font-family: "Neue Plak";
+              font-size: 20px;
+              border: 1px solid lightgrey;
+              border-radius: 4px; 
+              border-radius: 4px;
+              text-align: center;
+              line-height: 3;
+              margin-bottom: 10px;
+              &:hover {
+                cursor: pointer;
+                border: 1px solid grey;
+              }
+            }
+          }
           h3 {
             margin-bottom: 10px;
             padding-top: 15px;
@@ -43,30 +64,25 @@
             font-size: 30px;
             font-weight: bold;
           }
-          label {
-            font-weight: 250;
-            font-size: 13px;
-            color: red;
-            position: absolute;
-            bottom: 166px;
-            left: 5px;
-          }
-          input {
-            // position: relative;
-            font-family: "Neue Plak";
-            font-size: 20px;
-            border: 1px solid lightgrey;
-            border-radius: 4px; 
-            border-radius: 4px;
-            text-align: center;
-            line-height: 3;
+          p {
             margin-bottom: 10px;
-            &:hover {
-              cursor: pointer;
-              border: 1px solid grey;
+          }
+          label {
+            font-size: 12px;
+            font-weight: 400;
+            color: #6f7287;
+            position: absolute;
+            margin-top: 5px;
+            margin-left: 5px;
+            left: 5px;
+            span {
+              margin-left: 1px;
+              color:red;
             }
           }
+          
           select {
+            width: 125%;
             border: 1px solid lightgrey;
             border-radius: 4px; 
             font-family: "Neue Plak";
@@ -82,11 +98,20 @@
           }
           .description-label {
             position: absolute;
-            bottom: 150px;
+            margin-top: 5px;
+            margin-left: 5px;
+            span {
+              margin-left: 1px;
+              color:red;
+            }
           }
           textarea {
+            resize: none;
             border: 1px solid lightgrey;
             border-radius: 4px; 
+            min-height: 200px;
+            max-height: 700px;
+            width: 100%;
             &:hover {
               cursor: pointer;
               border: 1px solid grey;
@@ -112,42 +137,20 @@
         width: 100%;
         div.split-left-create {
           background-color: white;
-          padding: 10px;
+          color: #d2d2d2;
+          padding-top: 15px;
+          padding-right: 30px;
         }
         .split-right-start-date {
           position: relative;
           background-color: white;
           display: flex;
           flex-direction: column;
-          min-width: 300px;
-          h3 {
-            margin-bottom: 10px;
-            padding-top: 15px;
-            padding-right: 15px;
-            padding-bottom: 10px;
-            font-family: "Neue Plak";
-            font-size: 30px;
-            font-weight: bold;
-          }
-          label.event-end-label {
-            color: red;
-            font-weight: 250;
-            font-size: 13px;
-            position: absolute;
-            bottom: 63px;
-            left: 5px;
-            // margin-bottom: 50px;
-          }
-          label.event-start-label {
-            color: red;
-            font-weight: 250;
-            font-size: 13px;
-            position: absolute;
-            bottom: 175px;
-            left: 5px;
-            // margin-bottom: 50px;
-          }
-          input {
+          width: 80%;
+          min-width: 420px;
+          .input-wrapper {
+            background-color: white;
+            input {
             font-family: "Neue Plak";
             font-size: 20px;
             border: 1px solid lightgrey;
@@ -160,6 +163,50 @@
               border: 1px solid grey;
             }
           }
+          }
+          p {
+            margin-bottom: 5px;
+          }
+          h3 {
+            margin-bottom: 10px;
+            padding-top: 15px;
+            padding-right: 15px;
+            padding-bottom: 10px;
+            font-family: "Neue Plak";
+            font-size: 30px;
+            font-weight: bold;
+          }
+          
+          label.event-start-label {
+            font-size: 12px;
+            font-weight: 400;
+            color: #6f7287;
+    
+            position: absolute;
+            margin-top: 5px;
+            margin-left: 5px;
+            left: 5px;
+            span {
+              margin-left: 1px;
+              color:red;
+            }
+          }
+
+          label.event-end-label {
+            font-size: 12px;
+            font-weight: 400;
+            color: #6f7287;
+            position: absolute;
+            margin-top: 5px;
+            margin-left: 5px;
+            left: 5px;
+            span {
+              margin-left: 1px;
+              color:red;
+            }
+          }
+
+          
         }
         .date-errors {
           color: red;
