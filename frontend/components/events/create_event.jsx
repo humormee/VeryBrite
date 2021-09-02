@@ -138,75 +138,74 @@ class CreateEvent extends React.Component {
       <div className="create-form-container">
           <form onSubmit={e => this.handleSubmit(e)}  className="create-form">
             <div className="event-create-details">
-
-              <div className="title-container">
-                <div className="title">
-                <i class="fas fa-align-justify fa-3x"></i>
-                <h3>Title</h3>
-                
+              <div className="basic-info-container-create">
+                <div className="split-left-title">
+                  <i class="fas fa-align-justify fa-3x"></i>
                 </div>
-                
-                <input className="event-create-title" 
-                type="text" placeholder="enter a title"
-                  value={title}
-                  onChange={e => this.update(e, 'title')}/>
+                <div className="split-right-title">
+                  <h3>Basic Info</h3>
+                  <label htmlFor="event-create-title">event title</label>
+                  <input className="event-create-title" 
+                        type="text" placeholder="enter a title"
+                        value={title}
+                        onChange={e => this.update(e, 'title')}
+                  />
                   <div>{this.renderErrors('title')}</div>
-              </div>
-
-                <div className="category-container">
-                  <div>
-                    <i class="fa-solid fa-list-ul fa-3x"></i>
-                    <h3>Pick a Category</h3>
-                  </div>
-                  <div id="find-cat-error"></div>
-                  
-                  
+                  <div className="split-right-category">
+                  {/* <h3>Pick a Category</h3> */}
                   <select value={category} onChange={e => this.update(e, 'category')}> 
-                    <option>Select Category</option>
-                    <option value="Music">Music</option>
-                    <option value="Free">Free</option>
-                    <option value="Entertainment">Entertainment</option>
-                    <option value="Charity and Causes">Charity and Causes</option>
-                    <option value="Food and Drink">Food and Drink</option>
-                    <option value="Other">Other</option>
-                  </select>
-                  <div>{this.renderErrors('category')}</div>
-               </div>
-
-
-              <div className="start-date-container">
-                <div className="start-date">
-                <i className="far fa-calendar-alt fa-3x"></i>
-                <h3>Date and time</h3>
+                  <option>Select Category</option>
+                  <option value="Music">Music</option>
+                  <option value="Free">Free</option>
+                  <option value="Entertainment">Entertainment</option>
+                  <option value="Charity and Causes">Charity and Causes</option>
+                  <option value="Food and Drink">Food and Drink</option>
+                  <option value="Other">Other</option>
+                </select>
+                <div>{this.renderErrors('category')}</div>
+                </div>
+                </div>
+              </div>
+              
+              <div className="date-container-create">
+                <div className="split-left-create">
+                  <i className="far fa-calendar-alt fa-3x"></i>
+                </div>
+                <div className="split-right-start-date">
+                  <h3>Date and time</h3>
+                  <p>Start day and time (click right icon for calendar view)</p>
+                  <label className="event-start-label" htmlFor="start-date">event starts</label>
+                  <input id="start-date" 
+                          type="datetime-local"
+                          min={this.getCurrentTime()}
+                          value={start_time}
+                          onChange={e => this.update(e, 'start_time')}
+                  />
+                  <div>{this.renderErrors('start_time')}</div>
+                  <p>End day and time (click right icon for calendar view)</p>
+                  <label className="event-end-label" htmlFor="end-date">event ends</label>
+                  <input id="end-date" 
+                        type="datetime-local"
+                        min={this.state.start_time}
+                        value={end_time}
+                        onChange={e => this.update(e, 'end_time')}/>
+                  <div>{this.renderErrors('end_time')}</div>
                 </div>
                 
-                <p>Start day and time (click right icon for calendar view)</p>
-                  <input id="start-date" 
-                  type="datetime-local"
-                  min={this.getCurrentTime()}
-                  value={start_time}
-                  onChange={e => this.update(e, 'start_time')}/>
-                  <div>{this.renderErrors('start_time')}</div>
-                  <br />
-                  
-                  <p>End day and time (click right icon for calendar view)</p>
-                  <input id="end-date" 
-                  type="datetime-local"
-                  min={this.state.start_time}
-                  value={end_time}
-                  onChange={e => this.update(e, 'end_time')}/>
-                  <div>{this.renderErrors('end_time')}</div>
+                
               </div>
               
               
-              <div className="description-container">
-                <div className="description">
+              <div className="description-container-create">
+                <div className="split-left-description">
                   <i class="far fa-sticky-note fa-3x"></i>
-                  <h3>Description</h3>
                 </div>
+                <div className="split-right-description">
+                  <h3>Description</h3>
                   <textarea value={description} placeholder="describe the event"
                   cols="30" rows="10" onChange={e => this.update(e, 'description')}></textarea>
                   <div>{this.renderErrors('description')}</div>
+                </div>
               </div>
 
               <button type="submit">Create</button>              

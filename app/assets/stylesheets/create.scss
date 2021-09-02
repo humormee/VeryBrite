@@ -19,114 +19,161 @@
       align-items: center;
       justify-content: space-between;
       width: 60%;
-      .title-errors {
-        color: red;
-      }
-
-      
-
-
-      .category-container {
+      .basic-info-container-create, .category-container-create, .description-container-create{
+        display: flex;
+        justify-content: center;
         background-color: white;
-        .category-errors {
-          color: red;
-        }
-        select {
-          border: 1px solid lightgrey;
-          font-family: "Neue Plak";
-          font-size: 20px;
-          // border-style: none;
-          text-align: center;
-          line-height: 3;
-          margin-bottom: 5%;
-          height: 60px;
-        }
-        
+        width: 100%;
+      .split-left-title, .split-left-category, .split-left-description{
+        background-color: white;
+        padding: 10px;
       }
+      .split-right-title, .split-right-category, .split-right-description{
+          position: relative;
+          background-color: white;
+          display: flex;
+          flex-direction: column;
+          min-width: 300px;
+          h3 {
+            margin-bottom: 10px;
+            padding-top: 15px;
+            padding-right: 15px;
+            padding-bottom: 10px;
+            font-family: "Neue Plak";
+            font-size: 30px;
+            font-weight: bold;
+          }
+          label {
+            font-weight: 250;
+            font-size: 13px;
+            color: red;
+            position: absolute;
+            bottom: 75px;
+            left: 5px;
+          }
+          input {
+            // position: relative;
+            font-family: "Neue Plak";
+            font-size: 20px;
+            border: 1px solid lightgrey;
+            border-radius: 4px; 
+            border-radius: 4px;
+            text-align: center;
+            line-height: 3;
+            margin-bottom: 5%;
+            &:hover {
+              cursor: pointer;
+              border: 1px solid grey;
+            }
+          }
+          select {
+            border: 1px solid lightgrey;
+            border-radius: 4px; 
+            font-family: "Neue Plak";
+            font-size: 20px;
+            text-align: center;
+            line-height: 3;
+            margin-bottom: 5%;
+            height: 60px;
+            &:hover {
+              cursor: pointer;
+              border: 1px solid grey;
+            }
+          }
+
+          textarea {
+            border: 1px solid lightgrey;
+            border-radius: 4px; 
+            &:hover {
+              cursor: pointer;
+              border: 1px solid grey;
+            }
+          }
+          div {
+            background-color: white;
+            color: red;
+          }
+        }
+      }
+
       div.description-container {
         background-color: white;
         .description-errors {
           color: red;
         }
       }
-      div.start-date-container {
-        background-color: white;
-          width: 70%;
-          .date-errors {
-            color: red;
-          }
-        }
-        
-      div {
+      div.date-container-create {
         display: flex;
-        flex-direction: column;
-        width: 100%;
+        justify-content: center;
         background-color: white;
-        div {
-          display: flex;
-          flex-direction: row;
-          width: 100%;
+        width: 100%;
+        div.split-left-create {
+          background-color: white;
+          padding: 10px;
+        }
+        .split-right-start-date {
           position: relative;
-          right: 10%;
-          i {
-            padding: 10px;
-          }
+          background-color: white;
+          display: flex;
+          flex-direction: column;
+          min-width: 300px;
           h3 {
             margin-bottom: 10px;
-            padding: 10px;
+            padding-top: 15px;
+            padding-right: 15px;
+            padding-bottom: 10px;
             font-family: "Neue Plak";
             font-size: 30px;
             font-weight: bold;
           }
-      }
-        
-          p {
-            margin-bottom: 7px;
-            font-weight: lighter;
+          label.event-end-label {
+            color: red;
+            font-weight: 250;
+            font-size: 13px;
+            position: absolute;
+            bottom: 63px;
+            left: 5px;
+            // margin-bottom: 50px;
+          }
+          label.event-start-label {
+            color: red;
+            font-weight: 250;
+            font-size: 13px;
+            position: absolute;
+            bottom: 175px;
+            left: 5px;
+            // margin-bottom: 50px;
           }
           input {
             font-family: "Neue Plak";
             font-size: 20px;
             border: 1px solid lightgrey;
-            // border-radius: 2%;
+            border-radius: 4px;
             text-align: center;
             line-height: 3;
             margin-bottom: 5%;
+            &:hover {
+              cursor: pointer;
+              border: 1px solid grey;
+            }
           }
-
-          textarea {
-            border: 1px solid lightgrey;
-            font-family: "Neue Plak";
-            font-size: 18px;
-            // border-style: none;
-            text-align: center;
-          }
-
-          input:hover {
-            border: 1px solid grey;
-            // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            cursor: pointer;
-          }
-
-          textarea:hover {
-            border: 1px solid grey;
-            // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            cursor: pointer;
-          }
-        
-      }
-
+        }
+        .date-errors {
+          color: red;
+        }
+        }
       button {
-            color: lightcoral;
-            // background-color: lightgrey;
-            width: 30%;
-            line-height: 3;
-          }
-          button:hover {
-            cursor: pointer;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            background-color: white;
-          }
+        border-radius: 4px; 
+        color: lightcoral;
+        background-color: white;
+        width: 30%;
+        line-height: 3;
+      }
+      button:hover {
+        cursor: pointer;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        background-color: white;
+      }
     }
 
   }
