@@ -82,7 +82,6 @@
           }
           
           select {
-            width: 125%;
             border: 1px solid lightgrey;
             border-radius: 4px; 
             font-family: "Neue Plak";
@@ -151,13 +150,14 @@
           .input-wrapper {
             background-color: white;
             input {
-            font-family: "Neue Plak";
-            font-size: 20px;
-            border: 1px solid lightgrey;
-            border-radius: 4px;
-            text-align: center;
-            line-height: 3;
-            margin-bottom: 5%;
+              width: 100%;
+              font-family: "Neue Plak";
+              font-size: 20px;
+              border: 1px solid lightgrey;
+              border-radius: 4px;
+              text-align: center;
+              line-height: 3;
+              margin-bottom: 5%;
             &:hover {
               cursor: pointer;
               border: 1px solid grey;
