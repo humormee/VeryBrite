@@ -202,7 +202,8 @@ class CreateEvent extends React.Component {
                 </div>
                 <div className="split-right-description">
                   <h3>Description</h3>
-                  <textarea value={description} placeholder="describe the event"
+                  <label className="description-label" htmlFor="description-create">add a description</label>
+                  <textarea className="description-create"value={description} placeholder="describe the event"
                   cols="30" rows="10" onChange={e => this.update(e, 'description')}></textarea>
                   <div>{this.renderErrors('description')}</div>
                 </div>
