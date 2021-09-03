@@ -7,7 +7,9 @@ class EventEdit extends React.Component {
     super(props);
 
     if (props.event) {
-      this.state = Object.assign(props.event, {current_time: ""})
+      this.state = Object.assign(props.event, 
+                                {current_time: "",
+                                 hasSubmit: false})
     }
     
 
@@ -31,7 +33,6 @@ class EventEdit extends React.Component {
             current_time: this.getCurrentTime()
           })
         })
-        // this.setState({current_time: this.getCurrentTime()})
   }
   
 
@@ -58,7 +59,7 @@ class EventEdit extends React.Component {
     }
 
   renderErrors(field) {
-    if(!this.state) {
+    if(!this.state.hasSubmit) {
       return
     }
     switch (field) {
@@ -125,7 +126,7 @@ class EventEdit extends React.Component {
   handleSubmit(e){
 
     e.preventDefault();
-
+    this.setState({hasSubmit: true})
      if(this.isErrors()) {
       return
     }
@@ -219,10 +220,13 @@ class EventEdit extends React.Component {
                   
                   <div>{this.renderErrors('start_time')}</div>
                   <p>end date and time (click the right icon for calendar view)</p>
-                  <input id="end-date" 
+                  <div className="input-wrapper">
+                    <label className="event-end-label" htmlFor="end-date">event ends<span className="asteric"> *</span></label>
+                    <input id="end-date" 
                          type="datetime-local" 
                          value={end_time.slice(0, -1)} 
                          onChange={e => this.handleEndDate(e)}/>
+                  </div>
                 <div>{this.renderErrors('end_time')}</div>
                 </div>
               </div>
