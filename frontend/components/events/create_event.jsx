@@ -142,9 +142,12 @@ class CreateEvent extends React.Component {
     const { title, start_time, end_time, category, description }  = this.state;
     return (
       <div className="create-form-container">
+
           <form onSubmit={e => this.handleSubmit(e)}  className="create-form">
             <div className="event-create-details">
+
               <div className="basic-info-container-create">
+
                 <div className="split-left-title">
                   <i class="fas fa-align-justify fa-3x"></i>
                 </div>
@@ -162,7 +165,6 @@ class CreateEvent extends React.Component {
                   
                   <div>{this.renderErrors('title')}</div>
                   <div className="split-right-category">
-                  {/* <h3>Pick a Category</h3> */}
                   <select value={category} onChange={e => this.update(e, 'category')}> 
                   <option>Select Category</option>
                   <option value="Music">Music</option>
@@ -207,8 +209,6 @@ class CreateEvent extends React.Component {
                   
                   <div>{this.renderErrors('end_time')}</div>
                 </div>
-                
-                
               </div>
               
               
@@ -222,7 +222,8 @@ class CreateEvent extends React.Component {
                     <label className="description-label" htmlFor="description-create">add a description
                     <span className="asteric"> *</span></label>
                   <textarea className="description-create"value={description} 
-                  rows="10" onChange={e => this.update(e, 'description')}></textarea>
+                  rows="10" 
+                  onChange={e => this.update(e, 'description')}></textarea>
                   </div>
                   
                   <div>{this.renderErrors('description')}</div>

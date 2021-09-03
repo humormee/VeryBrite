@@ -169,56 +169,81 @@ class EventEdit extends React.Component {
           <form className="edit-form">
             <div className="event-edit-details">
 
-              <div className="title-container">
-                <div className="title">
+              <div className="basic-info-container-edit">
+
+                <div className="split-left-title">
                   <i class="fas fa-align-justify fa-3x"></i>
-                  <h3>Title</h3>
                 </div>
-                <div>{this.renderErrors('title')}</div>
+                <div className="split-right-title">
+                  <h3>Basic Info</h3>
+                  <p>Name your event and tell event-goers why they should come. Add details that highlight what makes it unique.</p>
+                <div className="input-wrapper">
+                  <label for="event-create-title">event title<span className="asteric"> *</span></label>
                   <input className="event-edit-title" type="text" value={title}
                   onChange={e => this.update(e, 'title')}/>
+                </div>
+                <div>{this.renderErrors('title')}</div>
+                <div className="split-right-category">
+                <select value={category} onChange={e => this.update(e, 'category')}> 
+                  <option>Select Category</option>
+                  <option value="Music">Music</option>
+                  <option value="Free">Free</option>
+                  <option value="Entertainment">Entertainment</option>
+                  <option value="Charity and Causes">Charity and Causes</option>
+                  <option value="Food and Drink">Food and Drink</option>
+                  <option value="Other">Other</option>
+                </select>
+                  <div>{this.renderErrors('category')}</div>
+               </div>
+               </div>
               </div>
 
-              <div className="category-container">
-                  <div>
-                    <i class="fa-solid fa-list-ul fa-3x"></i>
-                    <h3>Pick a Category</h3>
-                  </div>
-                 
-                 <div>{this.renderErrors('category')}</div>
-                  <select value={category} onChange={e => this.update(e, 'category')}> 
-                    <option>Select Category</option>
-                    <option value="Music">Music</option>
-                    <option value="Free">Free</option>
-                    <option value="Entertainment">Entertainment</option>
-                    <option value="Charity and Causes">Charity and Causes</option>
-                    <option value="Food and Drink">Food and Drink</option>
-                    <option value="Other">Other</option>
-                  </select>
-               </div>
+             
               
-              <div className="start-date-container">
-                <div className="start-date">
+              <div className="date-container-edit">
+                <div className="split-left-edit">
                   <i className="far fa-calendar-alt fa-3x"></i>
-                  <h3>Date and time</h3>
                 </div>
-                <div>{this.renderErrors('start_time')}</div>
-                <p>start date and time (click the right icon for calendar view)</p>
+                <div className="split-right-start-date">
+
                 
-                  <input id="start-date" type="datetime-local" value={start_time.slice(0,-1)} onChange={e => this.handleStartDate(e)}/>
-                  <div>{this.renderErrors('end_time')}</div>
+                  <h3>Date and time</h3>
+                  <p>start date and time (click the right icon for calendar view)</p>
+                  <div className="input-wrapper">
+                    <label className="event-start-label" htmlFor="start-date">event starts<span className="asteric"> *</span></label>
+                    <input id="start-date" 
+                            type="datetime-local" 
+                            value={start_time.slice(0,-1)} onChange={e => this.handleStartDate(e)}
+                    />
+                  </div> 
+                  
+                  <div>{this.renderErrors('start_time')}</div>
                   <p>end date and time (click the right icon for calendar view)</p>
-                  <input id="end-date" type="datetime-local" value={end_time.slice(0, -1)} onChange={e => this.handleEndDate(e)}/>
+                  <input id="end-date" 
+                         type="datetime-local" 
+                         value={end_time.slice(0, -1)} 
+                         onChange={e => this.handleEndDate(e)}/>
+                <div>{this.renderErrors('end_time')}</div>
                 </div>
-              
-              
-              <div className="description-container">
-                <div className="description">
-                <i className="far fa-sticky-note fa-3x"></i>
-                <h3>Description</h3>
+              </div>
+
+              <div className="description-container-edit">
+                <div className="split-left-description">
+                  <i className="far fa-sticky-note fa-3x"></i>
                 </div>
+                <div className="split-right-description">
+                  <h3>Description</h3>
+                  <div className="input-wrapper">
+                    <label className="description-label" htmlFor="description-edit">add a description
+                    <span className="asteric"> *</span></label>
+                    <textarea 
+                      className="description-edit"
+                      value={description}
+                      rows="10" 
+                      onChange={e => this.update(e, 'description')}></textarea>
+                  </div>
                   <div>{this.renderErrors('description')}</div>
-                  <textarea value={description}cols="30" rows="10" onChange={e => this.update(e, 'description')}></textarea>
+                </div>
               </div>
               
              <button onClick={e => this.handleSubmit(e)}>Update</button>
@@ -226,7 +251,6 @@ class EventEdit extends React.Component {
             </div>
             
           </form>
-        
       </div>
     )
   }
