@@ -101,7 +101,7 @@
  }
 
  .signup-form-box {
-   top: 20%;
+   top: 30%;
    left: 13%;
    position: absolute;
    .signup-form-container {
@@ -115,11 +115,18 @@
 }
 
  .signin-signup-errors {
-    top: 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100px;
+    top: 16%;
     left: 13%;
     color: #C5162E;
     position: absolute;
     ul {
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: flex-end;
       li {
         margin-top: 10px;
       }
