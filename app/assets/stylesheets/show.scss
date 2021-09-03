@@ -38,9 +38,10 @@
   
   .event-show {
     width: 80%;
+    max-width: 1000px;
     font-style: "Neue Plak";
     position: relative;
-   
+    
     filter: blur(0);
     padding-bottom: 3%;
     margin-top: 2%;
@@ -152,16 +153,21 @@
         }
       }
       .show-buttons-container {
+        padding: 30px;
         display: flex;
-        .registration {
-
-        // background-color: none;
-        background: none;
+        justify-content: space-between;
         position: absolute;
         top: 40%;
-        right: 10%;
+        right: 0%;
         left: 0%;
-      
+        border-bottom: 1px solid lightgrey;
+        background-color: white;
+        z-index: 1;
+        margin-bottom: 30px;
+        .registration {
+
+        background: none;
+
         z-index: 1;
         button {
           color: white;
@@ -169,21 +175,13 @@
           padding: 20px;
           border: none;
           &:hover {
-          cursor: pointer;
-          background-color: lighten(#0D8547, 10%);
+            cursor: pointer;
+            background-color: lighten(#0D8547, 10%);
+          }
         }
-        }
-
-        
       }
       .like {
 
-     
-        position: absolute;
-        top: 40%;
-        right: 0%;
-        // left: 90%;
-        // margin: 20px;
         z-index: 1;
         button {
           color: white;
@@ -203,7 +201,7 @@
       .event-show-other-details {
         position: relative;
         background-color: white;
-        top: 50%;
+        top: 55%;
         width: 60%;
         display: flex;
         flex-direction: column;
