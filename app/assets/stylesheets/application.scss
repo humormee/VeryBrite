@@ -29,7 +29,7 @@
     background-color: rgba(240, 240, 240, 0.918);
   }
   html, body, #root, .app, .app>div {
-  height: 110%;
+  height: 105%;
   font-family: "Neue Plak",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",Helvetica,Tahoma,Arial,sans-serif;
 }
 
@@ -166,6 +166,7 @@
         right: 70%;
         z-index: 1;
         color:rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         width: 130%;
       
         min-width: 10px;
