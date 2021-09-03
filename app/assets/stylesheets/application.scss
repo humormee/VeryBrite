@@ -82,8 +82,8 @@
 
     .right-nav-bar {
       display: flex;
-      height: 100%;
-      align-items: center;
+      // height: 100%;
+      align-items: flex-end;
       .create-container {
         background-color: white;
         height: 100%;
@@ -93,11 +93,14 @@
           &:hover {
             cursor: pointer;
           }
+         
           color: blue;
+          display: flex;
           align-items: center;
           text-decoration: none;
           padding-right: 15px;
           padding-left: 15px;
+          height: 100%;
         }
     
       }
@@ -118,10 +121,13 @@
           &:hover {
             cursor: pointer;
           }
+          display: flex;
+          align-items: center;
           color: #39364F;
           padding-left: 15px;
           padding-right: 15px;
           text-decoration: none;
+          height: 100%;
         }
     }
     .likes-container {
@@ -137,6 +143,9 @@
           &:hover {
             cursor: pointer;
           } 
+          display: flex;
+          align-items: center;
+          height: 100%;
           color: #39364F;
           padding-left: 15px;
           padding-right: 15px;

@@ -39,6 +39,8 @@ const Greeting = ({ currentUser, signout, signin }) => {
             <Link className="tickets" to={`../../users/${currentUser.id}/registrations`}>Tickets</Link>
           </div>
 
+          {/* <Link className="likes-conatiner" >
+          </Link> */}
           <div className="likes-container">
             <Link className="likes" to={`../../users/${currentUser.id}/likes`}>Bookmarks</Link>
           </div>
