@@ -5,7 +5,7 @@
     align-items: center;
     position: relative;
     width: 80%;
-    top: 10%;
+    top: 6%;
     left: 50%;
     // right: 30%;
     transform: translateX(-50%);
@@ -20,12 +20,17 @@
 
       background-color: white;
       
-      color: red;
+      // color: lightgrey;
       width: 80%;
       height: 100%;
       padding: 30px;
-      border-bottom: solid;
+      border: none;
+      // border-width: 1px;
       display: flex;
+      &:hover {
+        width: 85%;
+        height: 105%;
+      }
       .image-div-background {
         min-height: 150px;
         height: 100%;
@@ -53,7 +58,7 @@
         max-width: 250px;
         position: absolute;
         margin-top: 4%;
-        right: 15%;
+        right: 20%;
         padding: 10px;
         align-items: center;
         background-color: white;
@@ -80,11 +85,12 @@
               // padding: 20px;
               
                 button {
-                  // position: absolute;
-                  // right: -10%;
-                  // top: -10%;
+                  position: relative;
+                  left: 20px;
+                  bottom: 20px;
+                  border-radius: 50%;
                   background-color: white;
-                  padding: 30px;
+                  padding: 20px;
                   border: none;
                   &:hover {
                     cursor: pointer;
