@@ -1,10 +1,10 @@
 div {
-  background-color: white;
+  background-color: #fff;
   .index-header-container {
     position: relative;
     width: 100%;
     height: 50%;
-    background-color: white;
+    background-color: #fff;
 
 
     .index-header {
@@ -36,7 +36,6 @@ div{
     z-index: 5;
     li {
       display: inline;
-      // height: 20px;
       border-top: none;
       border-left: none;
       border-right: none;
@@ -48,24 +47,17 @@ div{
         cursor: pointer;
       }
       &.active {
-        // border-top: none;
-        // border-left: none;
-        // border-right: none;
+
         font-size: 16px;
         border-style: solid;
         border-color: #3659E3;
         color: #3659E3;
-        border-top-color: white;
-        border-left-color: white;
-        border-right-color: white;
-        // border-bottom: #F05537;
+        border-top-color: #fff;
+        border-left-color: #fff;
+        border-right-color: #fff;
         border-radius: 3px;
-        // color: #F05537;
-        // border-style: solid;
         border-width: 3px;
       }
-      // margin-left: 20px;
-      // margin-right: 20px;
     }
   }
 }
@@ -76,7 +68,7 @@ div{
     display: block;
     margin-left: 6%;
     color: rgb(33, 35, 39);
-    background-color: white;
+    background-color: #fff;
     font-family: "Neue Plak";
     font-weight: bold;
     font-size: 30px;
@@ -92,7 +84,7 @@ div{
   }
 .event-index-container {
 
-  background-color: white;;
+  background-color: #fff;
 
   display: flex;
   position: relative;
@@ -126,7 +118,7 @@ div{
 
     .event-index-item-container {
       
-      background-color: rgba(240, 240, 240, 0.918);
+      background-color: white;
       display: flex;
       flex-direction: column;
       color: red;
