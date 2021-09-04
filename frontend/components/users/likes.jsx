@@ -53,15 +53,18 @@ class Likes extends React.Component {
   
   renderEvents() {
     const { user, events, fetchEvent, likes, createLike, deleteLike } = this.props
-    // let events = this.findUserEvents();
     let likedEvents = this.findLikedEvents();
-    // <h1 className="likes-header">My Bookmarks</h1>
     let mappedEvents = likedEvents.map(event => (
       <div className="likes-index-item-container" id={`${event.id}`} key={`${event.id}`}>
-            <Link to={`../../events/${event.id}`}>
-              <div className="likes-index-item-image">
-              </div>
+        <div className="image-div-background">
+          <Link className="likes-index-item-image" to={`../../events/${event.id}`} height="100" width="100">
+              
+              {/* <img src="image-url('entertainment_genre.jpg')" alt="performers"
+              height="200" 
+              width="200"/> */}
             </Link>
+        </div>
+            
         <div className="like-index-item">
           <Link onClick={this.handleClick} to={`../../events/${event.id}`}>{event.title}</Link>
           <EventItem user={user} createLike={createLike} deleteLike={deleteLike} likes={likes} fetchEvent={fetchEvent} event={event}></EventItem>

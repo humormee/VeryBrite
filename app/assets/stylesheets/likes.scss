@@ -8,13 +8,13 @@
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
-  
-    a {
-      text-decoration: none;
-      color: black;
-      font: 25px "Neue Plak";
-      font-weight: 700;
-    }
+    
+    // a {
+    //   text-decoration: none;
+    //   color: black;
+    //   font: 25px "Neue Plak";
+    //   font-weight: 700;
+    // }
 
     h1 {
       margin-bottom:5%;
@@ -22,59 +22,68 @@
     }
 
     .likes-index-item-container {
-      max-width: 700px;
-      min-width: 550px;
-      margin: 15px;
+
       background-color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      
       color: red;
       width: 80%;
-      height: 80%;
-      
-      a {
-
-        width: 30%;
+      height: 100%;
+      display: flex;
+      .image-div-background {
+        min-height: 150px;
         height: 100%;
-        margin-right: 40px;
-        
-        width: 200px;
-        height: 200px;
+        width: 40%;
+        // height: 100%;
+        // width: 100%;
         background-size: 100% 100%, contain;
         background-repeat: no-repeat;
-        background-image: image-url('outdoor_party.jpg')
+        background-image: image-url('entertainment_genre.jpg');
+        .likes-index-item-image {
+          display: block;
+          min-height: 150px;
+          height: 100%;
+          width: 100%;
+          z-index: 5;
+          &:hover {
+            cursor: pointer;
+          }
+        }
       }
+      
       }
       
       .like-index-item {
         max-width: 250px;
         
         position: relative;
-        top: 10%;
-        right: 10%;
+        left: 50%;
         padding: 10px;
         align-items: center;
         background-color: white;
         a {
-          margin-right: 150px;
           background: none;
+          text-decoration: none;
+          color: black;
+          font: 25px "Neue Plak";
+          font-weight: 700;
         }
         .event-item-container {
           background-color: white;
           color: grey;
           margin-top: 10px;
+          
           .event-item {
             background-color: white;
+            display: flex;
             .like {
               background-color: white;
               div {
                 background-color: white;
                 margin: 30px;
                 button {
-                  position: absolute;
-                  right: -10%;
-                  top: -10%;
+                  // position: absolute;
+                  // right: -10%;
+                  // top: -10%;
                   background-color: white;
                   padding: 30px;
                   border: none;
