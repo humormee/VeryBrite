@@ -7,10 +7,8 @@
     width: 80%;
     top: 6%;
     left: 50%;
-    // right: 30%;
     transform: translateX(-50%);
     
-
     h1 {
       margin-bottom:5%;
       font: 40px "Neue Plak";
@@ -19,36 +17,26 @@
     .likes-index-item-container {
 
       background-color: white;
-      
-      // color: lightgrey;
       width: 80%;
       height: 100%;
       padding: 30px;
       border: none;
-      // border-width: 1px;
       display: flex;
       &:hover {
         width: 85%;
         height: 105%;
       }
-      .image-div-background {
-        min-height: 150px;
+      a {
+        width: 70%;
         height: 100%;
-        width: 40%;
-        // height: 100%;
-        // width: 100%;
+        margin-right: 40px;
+        .registration-index-item-image {
+
+        width: 250px;
+        height: 200px;
         background-size: 100% 100%, contain;
         background-repeat: no-repeat;
-        background-image: image-url('entertainment_genre.jpg');
-        .likes-index-item-image {
-          display: block;
-          min-height: 150px;
-          height: 100%;
-          width: 100%;
-          z-index: 5;
-          &:hover {
-            cursor: pointer;
-          }
+        background-image: image-url('outdoor_party.jpg')
         }
       }
       
@@ -77,12 +65,12 @@
           .event-item {
             background-color: white;
             display: flex;
+            color: #f05537;
             .like {
               background-color: white;
               position: absolute;
               right: -25%;
               top: 50%;
-              // padding: 20px;
               
                 button {
                   position: relative;
@@ -95,6 +83,9 @@
                   &:hover {
                     cursor: pointer;
                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                  }
+                  i {
+                    color: #f05537;
                   }
                 }
             
@@ -110,6 +101,5 @@
 
     .likes-index-item-container:hover {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
     }
   
