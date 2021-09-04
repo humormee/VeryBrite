@@ -51,6 +51,7 @@ div{
         // border-top: none;
         // border-left: none;
         // border-right: none;
+        font-size: 16px;
         border-style: solid;
         border-color: #3659E3;
         color: #3659E3;
@@ -79,6 +80,8 @@ div{
     font-family: "Neue Plak";
     font-weight: bold;
     font-size: 30px;
+    position: relative;
+    left: 0.7%;
     h1 {
       font-style: italic;
       font-size: 30px;
