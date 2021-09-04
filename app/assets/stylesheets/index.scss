@@ -1,10 +1,10 @@
 div {
-  background-color: rgba(240, 240, 240, 0.918);
+  background-color: white;
   .index-header-container {
     position: relative;
     width: 100%;
     height: 40%;
-    background-color: rgba(240, 240, 240, 0.918);
+    background-color: white;
 
 
     .index-header {
@@ -54,9 +54,9 @@ div{
         border-style: solid;
         border-color: #3659E3;
         color: #3659E3;
-        border-top-color: rgba(240, 240, 240, 0.918);
-        border-left-color: rgba(240, 240, 240, 0.918);
-        border-right-color: rgba(240, 240, 240, 0.918);
+        border-top-color: white;
+        border-left-color: white;
+        border-right-color: white;
         // border-bottom: #F05537;
         border-radius: 3px;
         // color: #F05537;
@@ -75,7 +75,7 @@ div{
     display: block;
     margin-left: 6%;
     color: rgb(33, 35, 39);
-    background-color: rgba(240, 240, 240, 0.918);
+    background-color: white;
     font-family: "Neue Plak";
     font-weight: bold;
     font-size: 30px;
@@ -89,7 +89,7 @@ div{
   }
 .event-index-container {
 
-  background-color: rgba(240, 240, 240, 0.918);
+  background-color: white;;
 
   display: flex;
   position: relative;
@@ -122,7 +122,8 @@ div{
     }
 
     .event-index-item-container {
-      background-color: white;
+      
+      background-color: rgba(240, 240, 240, 0.918);
       display: flex;
       flex-direction: column;
       color: red;
@@ -180,7 +181,7 @@ div{
                 height: 50px;
                 &:hover {
                   cursor: pointer;
-                  background-color:rgba(240, 240, 240, 0.918);
+                  background-color:white;
                 }
               }
             }

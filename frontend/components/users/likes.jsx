@@ -58,11 +58,7 @@ class Likes extends React.Component {
       <div className="likes-index-item-container" id={`${event.id}`} key={`${event.id}`}>
         <div className="image-div-background">
           <Link className="likes-index-item-image" to={`../../events/${event.id}`} height="100" width="100">
-              
-              {/* <img src="image-url('entertainment_genre.jpg')" alt="performers"
-              height="200" 
-              width="200"/> */}
-            </Link>
+          </Link>
         </div>
             
         <div className="like-index-item">
