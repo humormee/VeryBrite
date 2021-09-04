@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 80%;
+    width: 600px;
     top: 6%;
     left: 50%;
     transform: translateX(-50%);
@@ -20,14 +20,19 @@
       // min-width: 590px;
       // max-width: 790px;
       background-color: white;
-      width: 590px;
+      max-width: 600;
+      width: 100%;
+      min-width: 550px;
       height: 150px;
       padding: 30px;
       border: none;
       display: flex;
       &:hover {
-        width: 85%;
+        width: 105%;
         height: 105%;
+        border-style: solid;
+        border-color: #ff795f;
+        border-width: 1px;
       }
       .image-div-background {
         max-height: 150px;

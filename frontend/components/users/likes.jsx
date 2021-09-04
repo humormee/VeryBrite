@@ -70,7 +70,7 @@ class Likes extends React.Component {
     ))
     return (
       <>
-        <h1>My Bookmarks</h1>
+        <h1>Bookmarks</h1>
         {mappedEvents}
       </>
     )
