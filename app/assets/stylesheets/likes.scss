@@ -15,10 +15,13 @@
     }
 
     .likes-index-item-container {
-
+      // max-width: 900px;
+      // min-height: 150px;
+      // min-width: 590px;
+      // max-width: 790px;
       background-color: white;
-      width: 80%;
-      height: 100%;
+      width: 590px;
+      height: 150px;
       padding: 30px;
       border: none;
       display: flex;
@@ -26,17 +29,25 @@
         width: 85%;
         height: 105%;
       }
-      a {
-        width: 70%;
+      .image-div-background {
+        max-height: 150px;
+        min-height: 140px;
         height: 100%;
-        margin-right: 40px;
-        .registration-index-item-image {
-
-        width: 250px;
-        height: 200px;
+        width: 40%;
+        max-width: 250px;
+        min-width: 200px;
         background-size: 100% 100%, contain;
         background-repeat: no-repeat;
-        background-image: image-url('outdoor_party.jpg')
+        background-image: image-url('entertainment_genre.jpg');
+        .likes-index-item-image {
+          display: block;
+          min-height: 150px;
+          height: 100%;
+          width: 100%;
+          z-index: 5;
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
       
@@ -65,7 +76,6 @@
           .event-item {
             background-color: white;
             display: flex;
-            color: #f05537;
             .like {
               background-color: white;
               position: absolute;

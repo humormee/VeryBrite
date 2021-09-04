@@ -14,7 +14,7 @@
       font: 40px "Neue Plak";
     }
 
-    .registrations-index-item-container {
+    .registration-index-item-container {
 
       background-color: white;
       width: 80%;
@@ -22,6 +22,7 @@
       padding: 30px;
       border: none;
       display: flex;
+      // margin-bottom: 30px;
       &:hover {
         width: 85%;
         height: 105%;
@@ -31,7 +32,7 @@
         height: 100%;
         margin-right: 40px;
         .registration-index-item-image {
-
+        // background-color: blue;
         width: 250px;
         height: 200px;
         background-size: 100% 100%, contain;
