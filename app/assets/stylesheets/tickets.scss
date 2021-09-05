@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 80%;
+    width: 600px;
     top: 6%;
     left: 50%;
     transform: translateX(-50%);
@@ -17,27 +17,47 @@
     .registration-index-item-container {
 
       background-color: white;
-      width: 80%;
-      height: 100%;
+      max-width: 600;
+      width: 100%;
+      min-width: 550px;
+      height: 150px;
       padding: 30px;
       border: none;
       display: flex;
-      // margin-bottom: 30px;
       &:hover {
-        width: 85%;
+        width: 105%;
         height: 105%;
+        border-style: solid;
+        border-color: #ff795f;
+        border-width: 1px;
       }
       a {
-        width: 70%;
+        // width: 70%;
+        // height: 100%;
+        // margin-right: 40px;
+        max-height: 150px;
+        min-height: 140px;
         height: 100%;
-        margin-right: 40px;
-        .registration-index-item-image {
-        // background-color: blue;
-        width: 250px;
-        height: 200px;
+        width: 40%;
+        max-width: 250px;
+        min-width: 200px;
         background-size: 100% 100%, contain;
         background-repeat: no-repeat;
-        background-image: image-url('outdoor_party.jpg')
+        background-image: image-url('entertainment_genre.jpg');
+        .registration-index-item-image {
+          display: block;
+          min-height: 150px;
+          height: 100%;
+          width: 100%;
+          z-index: 5;
+          &:hover {
+            cursor: pointer;
+          }
+        // width: 250px;
+        // height: 200px;
+        // background-size: 100% 100%, contain;
+        // background-repeat: no-repeat;
+        // background-image: image-url('outdoor_party.jpg')
         }
       }
       
@@ -45,10 +65,11 @@
       
       .registration-index-item {
         max-width: 250px;
-        position: absolute;
+        // position: absolute;
         margin-top: 4%;
-        right: 20%;
+        // right: 20%;
         padding: 10px;
+        padding-left: 30px;
         align-items: center;
         background-color: white;
         a {
@@ -66,29 +87,29 @@
           .event-item {
             background-color: white;
             display: flex;
-            color: #f05537;
+            // color: #f05537;
             .registration {
               background-color: white;
               position: absolute;
               right: -25%;
               top: 50%;
               
-                button {
-                  position: relative;
-                  left: 20px;
-                  bottom: 20px;
-                  border-radius: 50%;
-                  background-color: white;
-                  padding: 20px;
-                  border: none;
-                  &:hover {
-                    cursor: pointer;
-                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                  }
-                  i {
-                    color: #f05537;
-                  }
-                }
+                // button {
+                //   position: relative;
+                //   left: 45px;
+                //   bottom: 40px;
+                //   border-radius: 50%;
+                //   background-color: white;
+                //   padding: 40px;
+                //   border: none;
+                //   &:hover {
+                //     cursor: pointer;
+                //     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                //   }
+                //   i {
+                //     color: #f05537;
+                //   }
+                // }
             
             }
           }
@@ -97,6 +118,24 @@
           background-color: white;
         }
 
+      }
+      .show-buttons-container
+      button {
+        position: relative;
+        // left: 45px;
+        // bottom: 40px;
+        // border-radius: 50%;
+        background-color: white;
+        padding: 40px;
+        border: none;
+        top: 20px;
+        &:hover {
+          cursor: pointer;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        i {
+          color: #f05537;
+        }
       }
     }
 

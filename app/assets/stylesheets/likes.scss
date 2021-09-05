@@ -62,7 +62,7 @@
         max-width: 250px;
         position: absolute;
         margin-top: 4%;
-        right: 20%;
+        left: 280px;
         padding: 10px;
         align-items: center;
         background-color: white;
@@ -84,8 +84,10 @@
             .like {
               background-color: white;
               position: absolute;
-              right: -25%;
-              top: 50%;
+              // right: -25%;
+              left: 240px;
+              top: 30px;
+
               
                 button {
                   position: relative;
@@ -93,7 +95,7 @@
                   bottom: 20px;
                   border-radius: 50%;
                   background-color: white;
-                  padding: 20px;
+                  padding: 30px;
                   border: none;
                   &:hover {
                     cursor: pointer;
