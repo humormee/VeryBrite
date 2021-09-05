@@ -5,13 +5,16 @@
     align-items: center;
     position: relative;
     width: 600px;
-    top: 6%;
+    top: 15%;
+    // left: 450px;
     left: 50%;
     transform: translateX(-50%);
     
     h1 {
-      margin-bottom:5%;
-      font: 40px "Neue Plak";
+      position: absolute;
+      left: -100px;
+      top: -70px;
+      font: 40px "arial";
     }
 
     .registration-index-item-container {
@@ -122,9 +125,6 @@
       .show-buttons-container
       button {
         position: relative;
-        // left: 45px;
-        // bottom: 40px;
-        // border-radius: 50%;
         background-color: white;
         padding: 40px;
         border: none;

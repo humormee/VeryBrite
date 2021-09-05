@@ -107,7 +107,7 @@ class Tickets extends React.Component {
     ))
     return (
       <>
-      <h1>My Registrations</h1>
+      <h1>Registrations</h1>
        {mappedEvents}
       </>
     )
