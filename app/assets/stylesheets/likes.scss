@@ -82,6 +82,7 @@
             background-color: white;
             display: flex;
             .like {
+              
               background-color: white;
               position: absolute;
               left: 240px;
@@ -95,7 +96,7 @@
                   border-radius: 50%;
                   background-color: white;
                   padding: 30px;
-                  border: none;
+                  border: 1px solid #e6e6e6;
                   &:hover {
                     cursor: pointer;
                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

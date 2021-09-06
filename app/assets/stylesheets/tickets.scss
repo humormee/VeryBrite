@@ -127,7 +127,8 @@
         position: relative;
         background-color: white;
         padding: 40px;
-        border: none;
+        border: 1px solid #e6e6e6;
+        border-radius: 4px;
         top: 20px;
         &:hover {
           cursor: pointer;
