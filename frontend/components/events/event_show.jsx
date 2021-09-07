@@ -113,6 +113,8 @@ class EventShow extends React.Component {
     
   }
 
+  
+
   handleRegistration() {
     
     this.props.createRegistration({
@@ -130,7 +132,6 @@ class EventShow extends React.Component {
       }
     })
     this.props.deleteRegistration(regToDelete)
-    // window.location.reload();
   }
 
   renderButton(){
@@ -148,23 +149,71 @@ class EventShow extends React.Component {
     };
   }
 
+  renderDate(start_time, end_time) {
+    if(!start_time || !end_time) {
+      return null;
+    }
+    const startDate = new Date(start_time.slice(0,-1));
+    const endDate = new Date(end_time.slice(0, -1));
+
+    const startDateString = startDate.toDateString();
+    const endDateString = endDate.toDateString();
+    
+    const startDayMonthArr = startDateString.split(' ');
+    const endDayMonthArr = endDate.toDateString();
+
+    const startDayMonthString = startDayMonthArr[0].concat(', ').concat(`${startDayMonthArr[1]} `).concat(`${startDayMonthArr[2]}, `).concat(startDayMonthArr[3]);
+    const endDayMonthString = endDayMonthArr[0].concat(', ').concat(`${endDayMonthArr[1]} `).concat(`${endDayMonthArr[2]}, `).concat(endDayMonthArr[3]);
+    
+    const startDateArr = startDateString.split(' ').slice(0,-1);
+    const endDateArr = endDateString.split(' ').slice(0, -1);
+
+    const monthDayString = startDateArr.join(' ');
+
+    const formatStartTime = new Date(startDate.getTime())
+            .toLocaleTimeString().replace(/(.*)\D\d+/, '$1');
+    const formatEndTime = new Date(endDate.getTime())
+          .toLocaleTimeString().replace(/(.*)\D\d+/, '$1');
+
+    let l = startDayMonthArr.length;
+    let dateRange;
+
+    debugger
+    if(startDateArr[0] !== endDateArr[0] || startDateArr[1] !== endDateArr[1]) {
+      dateRange = `${startDateArr.join(' ')} - ${endDateArr.join(' ')}, ${startDayMonthArr[l-1]}`
+    } else {
+      dateRange = `${startDateArr.join(' ')}, ${startDayMonthArr[l-1]}`
+    }
+    debugger
+
+    return dateRange;
+  }
+
   render() {
 
     if (!this.props.event) {
       return null;
     }
-  
     const { authorFName, authorLName, author_id, title, start_time, end_time, category, description }  = this.props.event;
     const { user } = this.props.user;
 
+    // this.renderDate(start_time, end_time);
 
     const startDate = new Date(start_time.slice(0,-1));
-    const endDate = new Date(end_time.slice(0,-1));
+    const endDate = new Date(end_time.slice(0, -1));
+
     const startDateString = startDate.toDateString();
-    const dayMonthArr = startDateString.split(' ');
-    const dayMonthString = dayMonthArr[0].concat(', ').concat(`${dayMonthArr[1]} `).concat(`${dayMonthArr[2]}, `).concat(dayMonthArr[3])
+    // const endDateString = endDate.toDateString();
+    
+    // const startDayMonthArr = startDateString.split(' ');
+    // const endDayMonthArr = endDate.toDateString();
+
+    // const startDayMonthString = startDayMonthArr[0].concat(', ').concat(`${startDayMonthArr[1]} `).concat(`${startDayMonthArr[2]}, `).concat(startDayMonthArr[3]);
+    // const endDayMonthString = endDayMonthArr[0].concat(', ').concat(`${endDayMonthArr[1]} `).concat(`${endDayMonthArr[2]}, `).concat(endDayMonthArr[3]);
     
     const startDateArr = startDateString.split(' ').slice(1,-1);
+    // const endDateArr = startDateString.split(' ').slice(1, -1);
+
     const monthDayString = startDateArr.join(' ');
 
 
@@ -172,7 +221,7 @@ class EventShow extends React.Component {
             .toLocaleTimeString().replace(/(.*)\D\d+/, '$1');
     const formatEndTime = new Date(endDate.getTime())
           .toLocaleTimeString().replace(/(.*)\D\d+/, '$1');
-      
+
     return (
       <div className="event-show-container">
         
@@ -204,7 +253,7 @@ class EventShow extends React.Component {
             <div className="event-show-date-time">
               <p className="event-show-date">Date and time</p>
               <br />
-              <p className="event-show-time">{dayMonthString}
+              <p className="event-show-time">{this.renderDate(start_time, end_time)}
               <br />
               {`${formatStartTime} - ${formatEndTime}`}</p>
             </div>
