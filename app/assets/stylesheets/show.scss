@@ -215,7 +215,7 @@
           font-weight: 500;
         }
         .event-show-description {
-          overflow-y: scroll;
+          overflow-y: auto;
           height: 200px;
         }
         
@@ -235,10 +235,11 @@
              display: flex;
              justify-content: space-between;
               .edit-event {
+                border: 1px solid #e6e6e6;
+                border-radius: 4px;
+                padding: 20px;
                 color: lightcoral;
                 background-color: white;
-                border-style: none;
-                border-width: 0.5px;
               }
               .edit-event:hover {
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -246,10 +247,11 @@
                 cursor: pointer;
               }
               .delete-event {
+                border: 1px solid #e6e6e6;
+                border-radius: 4px;
+                padding: 20px;
                 color: lightcoral;
                 background-color: white;
-                border-style: none;
-                border-width: 0.5px;
               }
               .delete-event:hover {
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
