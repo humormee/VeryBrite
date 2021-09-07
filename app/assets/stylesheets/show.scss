@@ -50,7 +50,7 @@
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    
+    background-color: white;
     .event-show-details {
       width: 100%;
       position: relative;
@@ -214,12 +214,24 @@
           margin-bottom: 20px;
           font-weight: 500;
         }
-        div {
+        .event-show-description {
+          overflow-y: scroll;
+          height: 200px;
+        }
+        
+      }
+
+      .delete-edit-container {
             background-color: white;
+            // width: 80%;
            div.edit-delete-event {
-             position: relative;
-             top: 20px;
-             padding: 20;
+             
+             position: absolute;
+             right: 0;
+             left: 70%;
+             width: 25%;
+             bottom: 0;
+             
              display: flex;
              justify-content: space-between;
               .edit-event {
@@ -249,10 +261,6 @@
         
         
         }
-        
-        
-        
-      }
     }
   }
 }

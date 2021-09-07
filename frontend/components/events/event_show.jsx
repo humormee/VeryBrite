@@ -266,8 +266,9 @@ class EventShow extends React.Component {
             <div className="event-show-other-details">
               <h2>About this event</h2>
               <div className="event-show-description">{description}</div>
-              <div>{this.renderButton()}</div>
             </div>
+
+            <div className="delete-edit-container">{this.renderButton()}</div>
             
           </div>
         </div>
