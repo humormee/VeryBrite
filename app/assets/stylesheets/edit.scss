@@ -104,6 +104,7 @@
             }
           }
           textarea {
+            padding: 20px;
             resize: none;
             border: 1px solid lightgrey;
             border-radius: 4px; 
@@ -118,6 +119,25 @@
           div {
             background-color: white;
             color: red;
+            position: relative;
+            font-size: 13px;
+            font-weight: 300;
+            left: 5px;
+            &.title-errors p{
+
+              position: relative;
+              bottom: 8px;
+              font-size: 13px;
+              font-weight: 300;
+              left: 5px;
+            }
+            &.category-errors {
+              position: relative;
+              bottom: 12px;
+              font-size: 13px;
+              font-weight: 300;
+              left: 5px;
+            }
           }
         }
       }
@@ -126,6 +146,11 @@
         background-color: white;
         .description-errors {
           color: red;
+          position: relative;
+          bottom: 17px;
+          font-size: 13px;
+          font-weight: 300;
+          left: 5px;
         }
       }
       div.date-container-edit {
@@ -209,6 +234,11 @@
         }
         .date-errors {
           color: red;
+          position: relative;
+          bottom: 17px;
+          font-size: 13px;
+          font-weight: 300;
+          left: 5px;
         }
         }
       button {

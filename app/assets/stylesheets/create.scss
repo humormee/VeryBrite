@@ -105,6 +105,7 @@
             }
           }
           textarea {
+            padding: 20px;
             resize: none;
             border: 1px solid lightgrey;
             border-radius: 4px; 
@@ -127,6 +128,11 @@
         background-color: white;
         .description-errors {
           color: red;
+          position: relative;
+          bottom: 17px;
+          font-size: 13px;
+          font-weight: 300;
+          left: 5px;
         }
       }
       div.date-container-create {
@@ -210,6 +216,11 @@
         }
         .date-errors {
           color: red;
+          position: relative;
+          bottom: 17px;
+          font-size: 13px;
+          font-weight: 300;
+          left: 5px;
         }
         }
       button {
