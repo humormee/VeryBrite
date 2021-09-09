@@ -178,13 +178,11 @@ class EventShow extends React.Component {
     let l = startDayMonthArr.length;
     let dateRange;
 
-    debugger
     if(startDateArr[0] !== endDateArr[0] || startDateArr[1] !== endDateArr[1]) {
       dateRange = `${startDateArr.join(' ')} - ${endDateArr.join(' ')}, ${startDayMonthArr[l-1]}`
     } else {
       dateRange = `${startDateArr.join(' ')}, ${startDayMonthArr[l-1]}`
     }
-    debugger
 
     return dateRange;
   }
