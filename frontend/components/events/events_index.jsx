@@ -21,6 +21,23 @@ class EventsIndex extends React.Component {
     this.setState({index: index})
   }
 
+  functionforscroll(e, id){
+
+    e.preventDefault();
+
+    document
+      .getElementById(id)
+      .scrollIntoView(
+        {behavior: "smooth"}
+      );
+
+    // window.scrollTo({
+    //   top: 650,
+    //   left: 0,
+    //   behavior: 'smooth'
+    // });
+  }
+
   renderEvents(events, index) {
 
   }
@@ -97,14 +114,18 @@ class EventsIndex extends React.Component {
       <div>
        <div className="index-header-container">
             <div className="index-header">
-            <p></p>
+              <div className="blue"></div>
+              <div className="black"></div>
+              <div className="orange"></div>
+              <div className="grey"></div>
+              <button onClick={e => this.functionforscroll(e, 'categories-list')}><h3>Browse Events</h3><i class="fas fa-arrow-right fa-2x"></i></button>
           </div>
         </div>
         <h1 className="events-title">
           Browse by Category
         </h1>
         {/* <h1 className="events-title">Find a <h1>very</h1> cool event near you </h1> */}
-        <ul className="categories-list">{categories}</ul>
+        <ul id="categories-list" className="categories-list">{categories}</ul>
       <div className="event-index-container">
   
         <ul className="event-index">

@@ -3,37 +3,146 @@ div {
   .index-header-container {
     position: relative;
     width: 100%;
-    height: 50%;
+    height: 30%;
     background-color: transparent;
-
+    // max-width: 1200px;
 
     .index-header {
       position: relative;
-      left: 0.2%;
-      width: 99.6%;
-      height: 100%;
-      background-size: 100% 100%, contain;
-      background-repeat: no-repeat;
+      // padding-top: 20%;
+      // padding-bottom: 20%;
+      max-width: 350px;
+      left: 50%;
+      width: 100%;
+      margin-top: 50px;
+      height: 80%;
+      // opacity: 0.4;
+      div {
+        border-radius: 4px;
+        border: 1px solid white;
+        position: absolute;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        height: 30%;
+        width: 100%;
+        &:hover {
+          z-index: 9;
+        }
+      }
+      .black {
+        // opacity: .4;
+        left: -40%;
+        top: 50%;
+        z-index: 2;
+        // background-color: #39364F;
+        // background-color: #e6e6e6;
+        background-size: 100% 100%, contain;
+        background-repeat: no-repeat;
+        background-image: image-url('other_genre.jpg');
+      }
+      .grey {
+        left: -80%;
+        top: 10%;
+        z-index: 0;
+        &:hover {
+          z-index: 0;
+        }
+        background-color: #e6e6e6;
+        height: 80%;
+        width: 180%;
+        // background-size: 98% 98%, contain;
+        // background-repeat: no-repeat;
+        // background-image: image-url('show-image.jpg');
+      }
+      .blue {
+        left: -20%;
+        top: 40%;
+        z-index: 8;
+        // background-color: #0000FF;
+        // background-color: #e6e6e6;
+        background-size: 100% 100%, contain;
+        background-repeat: no-repeat;
+        background-image: image-url('outdoor_party.jpg');
+      }
+      .orange {
+        left: -100%;
+        top: 20%;
+        z-index: 2;
+        // background-color: #F05537;
+        // background-color: #e6e6e6;
+        background-size: 100% 100%, contain;
+        background-repeat: no-repeat;
+        background-image: image-url('concert_genre.jpg');
+      }
+      // background-size: 100% 100%, contain;
+      // background-repeat: no-repeat;
 
-      background-image: image-url('concert_genre.jpg');
-    
-  }
+      // background-image: image-url('rectangles.jpg');
+    }
+    button {
+  
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      display: flex;
+      background-color: #F05537;
+      color: white;
+      font-size: 14px;
+      border: 1px solid white;
+      border-radius: 20px;
+      position: absolute;
+      z-index: 10;
+      top: 69%;
+      left: -90%;
+      max-width: 300px;
+      &:hover {
+        cursor: pointer;
+      }
+      i {
+        position: relative;
+        left: 5px;
+        font-size: 14px;
+      }
+      // &:hover {
+      //   background-color: white;
+      //   border-color: #0000FF;
+      //   cursor: pointer;
+      //  i {
+      //     color: white;
+      //     font-size: 14px;
+      //   }
+      //   // background-color: rgb(197, 197, 197);
+      // }
+      h3 {
+        // color: white;
+        // font-weight: 400;
+        // font-size: 30px;
+        // position: absolute;
+        // bottom: 10%;
+        // left: 5%
+      }
+      
+    }
 }
 div{
   
   // background: white;
   // background-color: rgba(240, 240, 240, 0.918);
-  background-color: transparent;
+  // background-color: white;
   .categories-list {
+    background-color: inherit;
     padding-top: 20px;
-    display: inline;
-    margin-top: 30px;
+    padding-bottom: 20px;
+    display: block;
+    // margin-top: 30px;
     list-style: none;
-    margin-bottom: 30px;
-    margin: 0 auto;
-    position: absolute;
-    left: 5%;
-    right: 10%;
+    // margin-bottom: 30px;
+    // margin: 0 auto;
+    position: sticky;
+    top: 0;
+    padding-left: 5%;
+    // padding-right: 5%;
     z-index: 5;
     li {
       display: inline;
@@ -67,6 +176,8 @@ div{
     padding-top: 30px;
     display: block;
     margin-left: 6%;
+    z-index: 6;
+    // margin-bottom: 20px;
     color: rgb(33, 35, 39);
     background-color: transparent;
     font-family: "Neue Plak";
