@@ -33,6 +33,8 @@
         border-style: solid;
         border-color: #ff795f;
         border-width: 1px;
+        cursor: pointer;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
       a {
         // width: 70%;
@@ -79,6 +81,7 @@
           background: none;
           text-decoration: none;
           color: black;
+          font-size: 25px;
           // font: 25px "Neue Plak";
           font-weight: 700;
         }
@@ -96,23 +99,6 @@
               position: absolute;
               right: -25%;
               top: 50%;
-              
-                // button {
-                //   position: relative;
-                //   left: 45px;
-                //   bottom: 40px;
-                //   border-radius: 50%;
-                //   background-color: white;
-                //   padding: 40px;
-                //   border: none;
-                //   &:hover {
-                //     cursor: pointer;
-                //     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                //   }
-                //   i {
-                //     color: #f05537;
-                //   }
-                // }
             
             }
           }
@@ -143,118 +129,3 @@
     .registrations-index-item-container:hover {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
-  
-
-  
-  // .registrations-index {
-    
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   align-items: center;
-  //   position: relative;
-  //   width: 80%;
-  //   top: 6%;
-  //   left: 50%;
-  //   transform: translateX(-50%);
-  
-  //   h1 {
-  //     margin-bottom:5%;
-  //     font: 40px "Neue Plak";
-  //   }
-
-  //   .registration-index-item-container {
-  //     background-color: white;
-  //     width: 80%;
-  //     height: 100%;
-  //     padding: 30px;
-  //     border: none;
-  //     display: flex;
-  //     &:hover {
-  //       width: 85%;
-  //       height: 105%;
-  //     }
-  //     a {
-  //       width: 70%;
-  //       height: 100%;
-  //       margin-right: 40px;
-  //       .registration-index-item-image {
-
-  //       width: 250px;
-  //       height: 200px;
-  //       background-size: 100% 100%, contain;
-  //       background-repeat: no-repeat;
-  //       background-image: image-url('outdoor_party.jpg')
-  //       }
-  //     }
-
-      
-      
-      
-
-  //     .registration-index-item {
-  //       // max-width: 250px;
-  //       background-color: white;
-  //       position: relative;
-  //       margin-right: 15%;
-  //       width: 500px;
-  //       .event-item-container {
-  //         z-index: 1;
-  //         background-color: white;
-  //         color: grey;
-  //         margin-top: 10px;
-  //       }
-  //       p {
-  //         z-index: 1;
-  //         background-color: white;
-  //       }
-  //     }
-
-  //     .show-buttons-container {
-  //       .registration {
-  //             // background-color: white;
-  //             position: absolute;
-  //             // top: 0;
-  //               // background-color: white;
-  //               // margin: 30px;
-  //               button {
-  //                 position: absolute;
-  //                 right: 0px;
-  //                 bottom: 10px;
-  //                 // right: 100%;
-  //                 // top: 100%;
-  //                 // right: 0;
-  //                 // top: -80%;
-                  
-  //                 padding: 30px;
-  //                 border: none;
-  //                 &:hover {
-  //                   cursor: pointer;
-  //                   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  //                 }
-  //               }
-            
-  //           }
-  //     }
-
-  //     .show-buttons-container {
-  //         position: absolute;
-  //         right: 0;
-  //         button {
-  //           background-color: white;
-  //           border: none;
-  //           &:hover {
-  //             cursor: pointer;
-  //             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  //           }
-  //         }
-  //       }
-
-  //   }
-
-  //   .registration-index-item-container:hover {
-  //     cursor: pointer;
-  //     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-  //   }
-  // }
