@@ -71,7 +71,8 @@
           background: none;
           text-decoration: none;
           color: black;
-          font: 25px "Neue Plak";
+          font: 25px;
+          // font: 25px "Neue Plak";
           font-weight: 700;
         }
         .event-item-container {
@@ -84,7 +85,7 @@
             display: flex;
             .like {
               
-              background-color: white;
+              // background-color: white;
               position: absolute;
               left: 240px;
               top: 30px;

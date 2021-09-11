@@ -39,7 +39,7 @@
   .event-show {
     width: 80%;
     max-width: 1000px;
-    font-style: "Neue Plak";
+    // font-style: "Neue Plak";
     position: relative;
     
     filter: blur(0);
@@ -105,7 +105,7 @@
             // display: flex;
             // max-width: 50px;
             background: none;
-            font: "Neue Plak";
+            // font: "Neue Plak";
             margin-bottom: 15px;
         }
         .event-show-host {
@@ -127,7 +127,7 @@
       }
 
       .event-show-title {
-        font: 20px "Neue Plak";
+        // font: 20px "Neue Plak";
         font-weight: bold;
       }
 
@@ -147,7 +147,7 @@
         height: 15%;
         color: #39364F;
         font-size: 14.93333px;
-        font-style: "Neue Plak";
+        // font-style: "Neue Plak";
         font-weight: 200;
         .event-show-time {
           align-self: start;
@@ -175,7 +175,7 @@
           background-color: #0D8547;
           padding: 20px;
           border: none;
-          font-family: "Neue Plak";
+          // font-family: "Neue Plak";
           &:hover {
             cursor: pointer;
             background-color: lighten(#0D8547, 10%);
@@ -210,7 +210,7 @@
         line-height: 2;
         padding-left: 5%;
         font-weight: 200;
-        font-style: "Neue Plak";
+        // font-style: "Neue Plak";
         h2 {
           margin-bottom: 20px;
           font-weight: 500;
