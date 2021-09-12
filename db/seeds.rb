@@ -134,6 +134,16 @@ event8 = Event.create!(
   end_time: "2021-08-25 2:00:00"
 )
 
+event9 = Event.create!(
+  author_id: user5.id,
+  image_url: "https://images.unsplash.com/photo-1573152958734-1922c188fba3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1490&q=80",
+  category: 'Charity and Causes',
+  title: 'consistent pics',
+  description: "new description",
+  start_time: "2021-08-25 11:00:00",
+  end_time: "2021-08-25 2:00:00"
+)
+
 registration1 = Registration.create!(
   event_id: 2,
   attendee_id: 7

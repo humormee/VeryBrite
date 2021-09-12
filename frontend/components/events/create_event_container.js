@@ -7,6 +7,7 @@ const mSTP = state => ({
     
     author_id: null,
     category: '', //'free'
+    image_url: '',
     title: '',
     description: '',
     start_time: '',
