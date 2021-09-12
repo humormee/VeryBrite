@@ -37,9 +37,7 @@
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
       a {
-        // width: 70%;
-        // height: 100%;
-        // margin-right: 40px;
+       
         max-height: 150px;
         min-height: 140px;
         height: 100%;
@@ -58,11 +56,6 @@
           &:hover {
             cursor: pointer;
           }
-        // width: 250px;
-        // height: 200px;
-        // background-size: 100% 100%, contain;
-        // background-repeat: no-repeat;
-        // background-image: image-url('outdoor_party.jpg')
         }
       }
       
@@ -70,9 +63,7 @@
       
       .registration-index-item {
         max-width: 250px;
-        // position: absolute;
         margin-top: 4%;
-        // right: 20%;
         padding: 10px;
         padding-left: 30px;
         align-items: center;
@@ -93,7 +84,6 @@
           .event-item {
             background-color: white;
             display: flex;
-            // color: #f05537;
             .registration {
               background-color: white;
               position: absolute;
