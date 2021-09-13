@@ -22,7 +22,6 @@ class Tickets extends React.Component {
     let regToHandle;
     regArr.forEach(reg => {
       
-      // if (reg.attendee_id === user.id && reg.event_id === event.id){
       if (reg.attendee_id === user.id){
         regToHandle = reg;
         isOwnReg = true;
@@ -91,15 +90,10 @@ class Tickets extends React.Component {
     let events = this.findUserEvents();
     let mappedEvents = events.map(event => (
       <div className="registration-index-item-container" id={`${event.id}`} key={`${event.id}`}>
-            {/* <Link to={`../../events/${event.id}`}>
-              <div className="registration-index-item-image">
-              </div>
-            </Link> */}
+
             <Link to={`../../events/${event.id}`}>
-              <img className="registration-index-item-image" src="https://images.unsplash.com/photo-1573152958734-1922c188fba3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1490&q=80" alt="concert" />
-              
-              {/* <div className="registration-index-item-image">
-              </div> */}
+              <img className="registration-index-item-image" src={event.image_url} alt={event.title} />
+
               
             </Link>
         <div className="registration-index-item">
@@ -107,7 +101,6 @@ class Tickets extends React.Component {
           <EventItem fetchEvent={fetchEvent} event={event}></EventItem>
         </div>
         <div className="show-buttons-container">
-            {/* <div className="like">{this.renderLike()}</div> */}
             <div className="registration">{this.registrationButton()}</div>
         </div>
       </div>

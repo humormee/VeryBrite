@@ -11,7 +11,7 @@ class CreateEvent extends React.Component {
       start_time: "",
       end_time: "",
       current_time: "",
-      image_url: "",
+      image_url: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29uY2VydHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
       hasSubmit: false
     };
 
