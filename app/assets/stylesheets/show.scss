@@ -26,14 +26,17 @@
   .event-show-background {
     
     position: absolute;
-    height: 66%;
-    width: 100%;
+    
     background-size: 100% 100%, contain;
     background-repeat: no-repeat;
-
-    background-image: image-url('show-image.jpg');
+    height: 100%;
+    width: 100%;
+    // background-image: image-url('show-image.jpg');
     filter: blur(8px);
-    
+    img {
+      height: 66%;
+      width: 100%;
+    }
   }
   
   .event-show {
