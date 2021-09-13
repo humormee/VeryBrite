@@ -192,26 +192,15 @@ class EventShow extends React.Component {
     if (!this.props.event) {
       return null;
     }
-    const { authorFName, authorLName, author_id, title, start_time, end_time, category, description }  = this.props.event;
+    const { authorFName, authorLName, author_id, title, start_time, end_time, category, description, image_url}  = this.props.event;
     const { user } = this.props.user;
 
-    // this.renderDate(start_time, end_time);
 
     const startDate = new Date(start_time.slice(0,-1));
     const endDate = new Date(end_time.slice(0, -1));
 
     const startDateString = startDate.toDateString();
-    // const endDateString = endDate.toDateString();
-    
-    // const startDayMonthArr = startDateString.split(' ');
-    // const endDayMonthArr = endDate.toDateString();
-
-    // const startDayMonthString = startDayMonthArr[0].concat(', ').concat(`${startDayMonthArr[1]} `).concat(`${startDayMonthArr[2]}, `).concat(startDayMonthArr[3]);
-    // const endDayMonthString = endDayMonthArr[0].concat(', ').concat(`${endDayMonthArr[1]} `).concat(`${endDayMonthArr[2]}, `).concat(endDayMonthArr[3]);
-    
     const startDateArr = startDateString.split(' ').slice(1,-1);
-    // const endDateArr = startDateString.split(' ').slice(1, -1);
-
     const monthDayString = startDateArr.join(' ');
 
 
@@ -224,16 +213,18 @@ class EventShow extends React.Component {
       <div className="event-show-container">
         
         <div className="event-show-background">
-          <div className="background-image">
+          <img className="background-image"src={image_url} alt={title} />
+          {/* <div className="background-image">
             
-          </div>
+          </div> */}
         </div>
 
         <div className="event-show">
           <div className="event-show-details">
-            <div className="event-show-image">
+            <img className="event-show-image"src={image_url} alt={title} />
+            {/* <div className="event-show-image">
               <div></div>
-            </div>
+            </div> */}
             <div className="event-show-basic-info">
               <div className="date">
                 <h3 className="month">{monthDayString.split(" ")[0].toUpperCase()}</h3>

@@ -68,7 +68,8 @@ event1 = Event.create!(
   title: 'Fun Buns',
   description: "picnic in Pioneers Park",
   start_time: "2021-07-28 11:00:00",
-  end_time: "2021-07-28 14:00:00"
+  end_time: "2021-07-28 14:00:00",
+  image_url: "https://images.unsplash.com/photo-1573152958734-1922c188fba3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNvbmNlcnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
 )
 
 event2 = Event.create!(
@@ -77,7 +78,8 @@ event2 = Event.create!(
   title: 'Movie Night',
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed libero varius, faucibus ipsum vel, malesuada turpis. Nam congue felis vitae eleifend hendrerit. Mauris ultrices, neque vel maximus efficitur, felis leo consectetur ligula, maximus interdum arcu nibh eget massa. In non mi porta, iaculis magna ut, aliquam mi.",
   start_time: "2021-08-18 20:00:00",
-  end_time: "2021-07-28 23:00:00"
+  end_time: "2021-07-28 23:00:00",
+  image_url: "https://images.unsplash.com/photo-1573152958734-1922c188fba3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNvbmNlcnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
 )
 
 event3 = Event.create!(
@@ -86,7 +88,8 @@ event3 = Event.create!(
   title: 'Rave the Cave',
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed libero varius, faucibus ipsum vel, malesuada turpis. Nam congue felis vitae eleifend hendrerit. Mauris ultrices, neque vel maximus efficitur, felis leo consectetur ligula, maximus interdum arcu nibh eget massa. In non mi porta, iaculis magna ut, aliquam mi. ",
   start_time: "2021-08-09 22:00:00",
-  end_time: "2021-08-10 01:00:00"
+  end_time: "2021-08-10 01:00:00",
+  image_url: "https://images.unsplash.com/photo-1573152958734-1922c188fba3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNvbmNlcnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
 )
 
 event4 = Event.create!(
@@ -95,7 +98,8 @@ event4 = Event.create!(
   title: 'Lincoln Helping Hands',
   description: "Nam elementum mollis nibh, et interdum eros aliquet vitae. Nullam suscipit magna quam, eu consectetur eros fermentum at. Nulla diam magna, sagittis vel lacinia ac, suscipit et odio.",
   start_time: "2021-09-18 15:00:00",
-  end_time: "2021-09-18 17:00:00"
+  end_time: "2021-09-18 17:00:00",
+  image_url: "https://images.unsplash.com/photo-1573152958734-1922c188fba3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNvbmNlcnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
 )
 
 event5 = Event.create!(
@@ -104,7 +108,8 @@ event5 = Event.create!(
   title: 'Conway Magical Revolution',
   description: "Mauris ultrices, neque vel maximus efficitur, felis leo consectetur ligula, maximus interdum arcu nibh eget massa. In non mi porta, iaculis magna ut, aliquam mi. Nam elementum mollis nibh, et interdum eros aliquet vitae. Nullam suscipit magna quam, eu consectetur eros fermentum at.",
   start_time: "2021-08-20 20:00:00",
-  end_time: "2021-08-20 23:00:00"
+  end_time: "2021-08-20 23:00:00",
+  image_url: "https://images.unsplash.com/photo-1573152958734-1922c188fba3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNvbmNlcnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
 )
 
 event6 = Event.create!(
@@ -113,7 +118,8 @@ event6 = Event.create!(
   title: 'Yoga with Alpacas',
   description: " Nulla diam magna, sagittis vel lacinia ac, suscipit et odio. Praesent ornare ex sed lectus commodo, in tristique sem sodales. Integer erat quam, auctor vitae lacus eu, suscipit commodo odio. Pellentesque nec leo sit amet nibh commodo pellentesque imperdiet eu massa. Morbi vel blandit sem. Integer ac venenatis orci.",
   start_time: "2021-08-04 8:00:00",
-  end_time: "2021-07-28 9:30:00"
+  end_time: "2021-07-28 9:30:00",
+  image_url: "https://images.unsplash.com/photo-1573152958734-1922c188fba3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNvbmNlcnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
 )
 
 event7 = Event.create!(
@@ -122,7 +128,8 @@ event7 = Event.create!(
   title: 'Margs and Args',
   description: "In non mi porta, iaculis magna ut, aliquam mi. Nam elementum mollis nibh, et interdum eros aliquet vitae. Nullam suscipit magna quam, eu consectetur eros fermentum at. Nulla diam magna, sagittis vel lacinia ac, suscipit et odio. Praesent ornare ex sed lectus commodo, in tristique sem sodales. Integer erat quam, auctor vitae lacus eu, suscipit commodo odio. Pellentesque nec leo sit amet nibh commodo pellentesque imperdiet eu massa.",
   start_time: "2021-08-18 17:00:00",
-  end_time: "2021-08-28 20:00:00"
+  end_time: "2021-08-28 20:00:00",
+  image_url: "https://images.unsplash.com/photo-1573152958734-1922c188fba3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNvbmNlcnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
 )
 
 event8 = Event.create!(
@@ -131,17 +138,18 @@ event8 = Event.create!(
   title: 'Bars for Mars',
   description: "Nulla diam magna, sagittis vel lacinia ac, suscipit et odio. Praesent ornare ex sed lectus commodo, in tristique sem sodales. Integer erat quam, auctor vitae lacus eu, suscipit commodo odio. Pellentesque nec leo sit amet nibh commodo pellentesque imperdiet eu massa.",
   start_time: "2021-08-25 11:00:00",
-  end_time: "2021-08-25 2:00:00"
+  end_time: "2021-08-25 2:00:00",
+  image_url: "https://images.unsplash.com/photo-1573152958734-1922c188fba3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNvbmNlcnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
 )
 
 event9 = Event.create!(
   author_id: user5.id,
-  image_url: "https://images.unsplash.com/photo-1573152958734-1922c188fba3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1490&q=80",
   category: 'Charity and Causes',
   title: 'consistent pics',
   description: "new description",
   start_time: "2021-08-25 11:00:00",
-  end_time: "2021-08-25 2:00:00"
+  end_time: "2021-08-25 2:00:00",
+  image_url: "https://images.unsplash.com/photo-1573152958734-1922c188fba3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNvbmNlcnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
 )
 
 registration1 = Registration.create!(
