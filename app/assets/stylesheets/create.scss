@@ -1,10 +1,14 @@
 
 .create-form-container {
   
-  background-color: white;
+  background: white;
   display: flex;
   justify-content: center;
-  padding: 7%;
+  // padding: 7%;
+  position: relative;
+  top: 5%;
+  left: 15%;
+  width: 80%;
   
   .create-form {
 

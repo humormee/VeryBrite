@@ -152,15 +152,15 @@ event8 = Event.create!(
   image_url: "https://images.unsplash.com/photo-1601643157091-ce5c665179ab?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFwfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
 )
 
-event9 = Event.create!(
-  author_id: user5.id,
-  category: 'Charity and Causes',
-  title: 'consistent pics',
-  description: "new description",
-  start_time: "2021-08-25 11:00:00",
-  end_time: "2021-08-25 2:00:00",
-  image_url: "https://images.unsplash.com/photo-1573152958734-1922c188fba3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNvbmNlcnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-)
+# event9 = Event.create!(
+#   author_id: user5.id,
+#   category: 'Charity and Causes',
+#   title: 'consistent pics',
+#   description: "new description",
+#   start_time: "2021-08-25 11:00:00",
+#   end_time: "2021-08-25 2:00:00",
+#   image_url: "https://images.unsplash.com/photo-1573152958734-1922c188fba3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNvbmNlcnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+# )
 
 registration1 = Registration.create!(
   event_id: 2,
