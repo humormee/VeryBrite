@@ -216,12 +216,13 @@ div{
         align-items: center;
         background-color: white;
         position: relative;
-        top: 10%;
+        top: 5%;
         padding: 10px;
         align-self: center;
         div {
           background-color: white;
           .event-item {
+            margin-top: 10px;
             .like {
               background: none;
               margin-top: 20px;
@@ -238,13 +239,21 @@ div{
               button {
                 background: none;
                 position: absolute;
-                top: -60px;
+                top: -43px;
                 right: 10px;
                 background-color: white;
+                border: 1px solid lightgrey;
                 border-radius: 50%;
                 width: 50px;
                 height: 50px;
+
                 &:hover {
+                  i {
+                    // color: #F05537;
+                    // background-color: #F05537;
+                  }
+                  border: 1px solid #F05537;
+                  // color: #F05537;
                   cursor: pointer;
                   background-color:white;
                 }

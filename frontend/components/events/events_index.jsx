@@ -96,8 +96,6 @@ class EventsIndex extends React.Component {
       <div className="event-index-item-container" id={`${event.id}`} key={`${event.id}`}>
             <Link to={`../../events/${event.id}`}>
               <img className="event-index-item-image" src={event.image_url} alt={event.title} />
-              {/* <div className="event-index-item-image">
-              </div> */}
             </Link>
           
         <div className="event-index-item">
