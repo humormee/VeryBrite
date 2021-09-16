@@ -66,7 +66,7 @@ event1 = Event.create!(
   author_id: user2.id,
   category: 'Food and Drink',
   title: 'Picnic',
-  description: "Come by for some treats in the park. Pioneers park is an iconic staple of the city where old, young and everyone in between can come together outdoor get togethers.
+  description: "Come by for some treats in the park. Pioneers park is an iconic staple of the city where old, young and everyone in between can gather.
 ",
   start_time: "2021-07-28 11:00:00",
   end_time: "2021-07-28 14:00:00",
