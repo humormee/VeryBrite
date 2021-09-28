@@ -29,15 +29,19 @@
     
     background-size: 100% 100%, contain;
     background-repeat: no-repeat;
-    overflow-y: hidden;
+    // overflow-y: hidden;
     height: 66%;
     width: 100%;
     // background-image: image-url('show-image.jpg');
     filter: blur(8px);
     img {
-      overflow-y: hidden;
-      // height: 110%;
-      width: 100%;
+      // overflow-y: hidden;
+      // height: 10%;
+      // width: 100%;
+      left: -15px;
+      right: -15px;
+      top: -15px;
+      bottom: -15px;
     }
   }
   
