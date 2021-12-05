@@ -98,10 +98,18 @@ div {
 }
 div{
 
+  .events-title {
+    // display: block;
+    // position: absolute;
+    width: 100%;
+    // left: 10%;
+  }
+
   .categories-list {
     background-color: inherit;
     padding-top: 20px;
     padding-bottom: 20px;
+    margin-bottom: 40px;
     display: block;
     list-style: none;
     position: sticky;
@@ -139,9 +147,10 @@ div{
   .events-title {
     padding-top: 30px;
     display: block;
-    margin-left: 10%;
+    // margin-left: 10%;
+    padding-left: 10%;
     z-index: 6;
-    // margin-bottom: 20px;
+    padding-bottom: 20px;
     color: rgb(33, 35, 39);
     background-color: transparent;
     // font-family: "Neue Plak";
