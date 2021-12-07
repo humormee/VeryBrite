@@ -32,11 +32,12 @@ Hosting:
 
 One major technical issue was to auto style added events to the homepage while creating new rows. The solution was, using SASS, I could grab the id's of the elements
 
+## Narrow Your Search with Categories
+
+![Categories](eventbrite_categories.gif)
 
 
 ## Future Implementations
 
-* User pages for viewing registered and hosted events
-* Bookmark events
-* Like events
-* Categories and search functionality
+* AWS integration
+* Search bar
