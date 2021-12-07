@@ -32,7 +32,7 @@ Hosting:
 
 One major technical issue was to auto style added events to the homepage while creating new rows. The solution was, using SASS, I could grab the id's of the elements
 
-## Narrow Your Search with Categories
+#### Search by Event Category
 
 ![Categories](eventbrite_categories.gif)
 
