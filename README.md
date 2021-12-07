@@ -36,6 +36,9 @@ One major technical issue was to auto style added events to the homepage while c
 
 ![Categories](eventbrite_categories.gif)
 
+#### Keep Track of Interesting Events with Bookmarks!
+
+![Bookmarks](verybrite_tickets.gif)
 
 ## Future Implementations
 
