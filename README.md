@@ -1,6 +1,6 @@
 # verybrite
 
-Verybrite is an Eventbrite clone. Users of verybrite can register for the site, create, read and register for events.
+Verybrite is an Eventbrite clone. Users of verybrite are able to search for events with a categories as well as register and/or bookmark those events. Logged-in users also have the ability to create and host their own events.
 
 [Verybrite Live Site](https://very-brite.herokuapp.com/)
 
@@ -27,6 +27,13 @@ Hosting:
 * User authentication
 * Full CRUD (**C**reate, **R**ead, **U**pdate and **D**elete) functionality for events
 * Registered users can create and delete registrations
+* Search events with Categories
+
+![Categories](eventbrite_categories.gif)
+
+* Bookmark and/or Register for Events
+
+![Bookmarks](verybrite_tickets.gif)
 
 ## Example Code
 
