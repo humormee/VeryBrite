@@ -25,7 +25,13 @@ Hosting:
 ## Features
 
 * User authentication
+
+![Auth](verybrite_signin.gif)
+
 * Full CRUD (**C**reate, **R**ead, **U**pdate and **D**elete) functionality for events
+
+![Create_Event](verybrite_create_event.gif)
+
 * Registered users can create and delete registrations
 * Search events with Categories
 
@@ -37,15 +43,6 @@ Hosting:
 
 ## Example Code
 
-One major technical issue was to auto style added events to the homepage while creating new rows. The solution was, using SASS, I could grab the id's of the elements
-
-#### Search by Event Category
-
-![Categories](eventbrite_categories.gif)
-
-#### Keep Track of Interesting Events with Bookmarks!
-
-![Bookmarks](verybrite_tickets.gif)
 
 ## Future Implementations
 
