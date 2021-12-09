@@ -43,6 +43,7 @@ Hosting:
 
 ## Example Code
 
+A common feature is too display specific errors to users when they try to submit forms. This lets users know 1) that the form did not submit properly and 2) how the users input is invalid. To display errors to the user in real time, Verybrite takes an event-driven approach by checking and verifying user input when an event listener is triggered.
 
 ## Future Implementations
 
