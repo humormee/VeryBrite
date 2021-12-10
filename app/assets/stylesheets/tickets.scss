@@ -20,21 +20,27 @@
     .registration-index-item-container {
 
       background-color: white;
+      position: relative;
+      box-shadow: 0px 30px 70px -20px #adacaa;
       max-width: 600;
       width: 100%;
       min-width: 550px;
       height: 150px;
       padding: 30px;
+      margin-bottom: 5px;
       border: none;
       display: flex;
+      transition: transform .5s ease;
       &:hover {
-        width: 105%;
-        height: 105%;
+        transform: scale(1.05);
+        // width: 105%;
+        // height: 105%;
+        z-index: 0;
         border-style: solid;
         border-color: #ff795f;
         border-width: 1px;
         cursor: pointer;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
       a {
        
