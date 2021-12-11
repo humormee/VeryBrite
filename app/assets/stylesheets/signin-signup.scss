@@ -28,10 +28,10 @@
   // min-width: 520px;
   left: 0;
   position: relative;
-  background-image: image-url('entertainment.jpg');
-  background-repeat: no-repeat;
-  background-position: 0;
-  background-size: cover;
+  // background-image: image-url('entertainment.jpg');
+  // background-repeat: no-repeat;
+  // background-position: 0;
+  // background-size: cover;
   height: 100%;
   width: 55%;
 }
@@ -40,7 +40,7 @@
   // min-width: 520px;
   position: relative;
   background-image: image-url('concert_genre.jpg');
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
   margin: auto;
   top: 0;
