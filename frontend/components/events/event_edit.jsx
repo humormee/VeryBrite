@@ -1,6 +1,6 @@
 import React from "react";
-import EventShow from "./event_show";
-// import DateTimePicker from 'react-datetime-picker';
+import { getTime, renderErrors, isErrors} from "./form_methods";
+
 
 class EventEdit extends React.Component {
   constructor(props) {
