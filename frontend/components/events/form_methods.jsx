@@ -22,17 +22,22 @@ export var getTime = () => {
   return yyyy+'-'+mm+'-'+dd+'T'+hh+ ":"+min;
 }
 
-export var renderErrors = (field) => {
-  if(!this.state.hasSubmit) {
+// , hasSubmit, title, start_time, end_time, category, description
+
+export var renderErrors = (field, state) => {
+
+  let {hasSubmit, title, start_time, end_time, category, description} = state;
+
+  if(!hasSubmit) {
       return
     }
     switch (field) {
       case 'title':
-        if(this.state.title.length >= 40) {
+        if(title.length >= 40) {
           return (
             <p className="title-errors">titles must be under 40 characters</p>
           );
-        } else if(this.state.title.length < 1){
+        } else if(title.length < 1){
           return (
             <p className="title-errors">must enter a title</p>
           );
@@ -40,7 +45,7 @@ export var renderErrors = (field) => {
           return null
         }
       case 'start_time':
-        if(this.state.start_time < this.getCurrentTime() && this.state.start_time.length > 0) {
+        if(start_time < this.getCurrentTime() && start_time.length > 0) {
           return (
             <p className="date-errors">Start time must be after the current time</p>
           );
@@ -49,7 +54,7 @@ export var renderErrors = (field) => {
         }
 
       case 'category':
-        if(this.state.category.length < 1 || this.state.category === "Select Category"){
+        if(category.length < 1 || category === "Select Category"){
           return (
             <p className="category-errors">must select a category</p>
           )
@@ -58,7 +63,7 @@ export var renderErrors = (field) => {
         }
        
       case 'description':
-        if(this.state.description.length < 1) {
+        if(description.length < 1) {
           return (
             <p className="description-errors">add a description</p>
           )
@@ -67,7 +72,7 @@ export var renderErrors = (field) => {
         }
       
       case 'end_time':
-        if(this.state.start_time > this.state.end_time && this.state.end_time.length > 0) {
+        if(start_time > end_time && end_time.length > 0) {
           return (
             <p className="date-errors">Start time must be before end time</p>
           );

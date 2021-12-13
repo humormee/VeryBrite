@@ -30,93 +30,95 @@ class EventEdit extends React.Component {
             description: event.description,
             start_time: event.start_time,
             end_time: event.end_time,
-            current_time: this.getCurrentTime()
+            // current_time: this.getCurrentTime()
           })
         })
   }
   
 
-    getCurrentTime() {
-      let today = new Date();
-      let min = today.getMinutes();
-      let hh = today.getHours();
-      let dd = today.getDate();
-      let mm = today.getMonth()+1;
-      let yyyy = today.getFullYear();
-      if(min<10){
-        min='0'+min
-      } 
-      if(hh<10){
-        hh='0'+hh
-      } 
-      if(dd<10){
-        dd='0'+dd
-      } 
-      if(mm<10){
-        mm='0'+mm
-      } 
-      return yyyy+'-'+mm+'-'+dd+'T'+hh+ ":"+min;
-    }
+    // getCurrentTime() {
+    //   let today = new Date();
+    //   let min = today.getMinutes();
+    //   let hh = today.getHours();
+    //   let dd = today.getDate();
+    //   let mm = today.getMonth()+1;
+    //   let yyyy = today.getFullYear();
+    //   if(min<10){
+    //     min='0'+min
+    //   } 
+    //   if(hh<10){
+    //     hh='0'+hh
+    //   } 
+    //   if(dd<10){
+    //     dd='0'+dd
+    //   } 
+    //   if(mm<10){
+    //     mm='0'+mm
+    //   } 
+    //   return yyyy+'-'+mm+'-'+dd+'T'+hh+ ":"+min;
+    // }
 
-  renderErrors(field) {
-    if(!this.state.hasSubmit) {
-      return
-    }
-    switch (field) {
-      case 'title':
-        if(this.state.title.length >= 40) {
-          return (
-            <p className="title-errors">titles must be under 40 characters</p>
-          );
-        } else if(this.state.title.length < 1){
-          return (
-            <p className="title-errors">must enter a title</p>
-          );
-        } else {
-          return null
-        }
-      case 'start_time':
-        if(this.state.start_time < this.getCurrentTime() && this.state.start_time.length > 0) {
-          return (
-            <p className="date-errors">Start time must be after the current time</p>
-          );
-        } else {
-          return null
-        }
+    
 
-      case 'category':
-        if(this.state.category.length < 1 || this.state.category === "Select Category"){
-          return (
-            <p className="category-errors">must select a category</p>
-          )
-        } else {
-          return null;
-        }
+  // renderErrors(field) {
+  //   if(!this.state.hasSubmit) {
+  //     return
+  //   }
+  //   switch (field) {
+  //     case 'title':
+  //       if(this.state.title.length >= 40) {
+  //         return (
+  //           <p className="title-errors">titles must be under 40 characters</p>
+  //         );
+  //       } else if(this.state.title.length < 1){
+  //         return (
+  //           <p className="title-errors">must enter a title</p>
+  //         );
+  //       } else {
+  //         return null
+  //       }
+  //     case 'start_time':
+  //       if(this.state.start_time < getTime() && this.state.start_time.length > 0) {
+  //         return (
+  //           <p className="date-errors">Start time must be after the current time</p>
+  //         );
+  //       } else {
+  //         return null
+  //       }
+
+  //     case 'category':
+  //       if(this.state.category.length < 1 || this.state.category === "Select Category"){
+  //         return (
+  //           <p className="category-errors">must select a category</p>
+  //         )
+  //       } else {
+  //         return null;
+  //       }
        
-      case 'description':
-        if(this.state.description.length < 1) {
-          return (
-            <p className="description-errors">add a description</p>
-          )
-        } else {
-          return null;
-        }
+  //     case 'description':
+  //       if(this.state.description.length < 1) {
+  //         return (
+  //           <p className="description-errors">add a description</p>
+  //         )
+  //       } else {
+  //         return null;
+  //       }
       
-      case 'end_time':
-        if(this.state.start_time > this.state.end_time && this.state.end_time.length > 0) {
-          return (
-            <p className="date-errors">Start time must be before end time</p>
-          );
-        } else {
-          return null
-        }
-      default:
-        break;
-    }
-  }
+  //     case 'end_time':
+  //       if(this.state.start_time > this.state.end_time && this.state.end_time.length > 0) {
+  //         return (
+  //           <p className="date-errors">Start time must be before end time</p>
+  //         );
+  //       } else {
+  //         return null
+  //       }
+  //     default:
+  //       break;
+  //   }
+  // }
 
   isErrors() {
-    if(this.renderErrors('title') === null && this.renderErrors('start_time') === null && this.renderErrors('end_time') === null && this.renderErrors('category') === null && this.renderErrors('description') === null) {
+    if(renderErrors('title') === null && renderErrors('start_time') === null && renderErrors('end_time') === null && renderErrors('category') === null && renderErrors('description') === null) {
       return false;
     } else {
       return true;
@@ -183,7 +185,8 @@ class EventEdit extends React.Component {
                   <input className="event-edit-title" type="text" value={title}
                   onChange={e => this.update(e, 'title')}/>
                 </div>
-                <div>{this.renderErrors('title')}</div>
+
+                <div>{renderErrors('title', ...this.state)}</div>
                 <div className="split-right-category">
                 <select value={category} onChange={e => this.update(e, 'category')}> 
                   <option>Select Category</option>
@@ -194,7 +197,7 @@ class EventEdit extends React.Component {
                   <option value="Food and Drink">Food and Drink</option>
                   <option value="Other">Other</option>
                 </select>
-                  <div>{this.renderErrors('category')}</div>
+                  <div>{renderErrors('category', ...this.state)}</div>
                </div>
                </div>
               </div>
@@ -218,7 +221,7 @@ class EventEdit extends React.Component {
                     />
                   </div> 
                   
-                  <div>{this.renderErrors('start_time')}</div>
+                  <div>{renderErrors('start_time', ...this.state)}</div>
                   <p>end date and time (click the right icon for calendar view)</p>
                   <div className="input-wrapper">
                     <label className="event-end-label" htmlFor="end-date">event ends<span className="asteric"> *</span></label>
@@ -227,7 +230,7 @@ class EventEdit extends React.Component {
                          value={end_time.slice(0, -1)} 
                          onChange={e => this.handleEndDate(e)}/>
                   </div>
-                <div>{this.renderErrors('end_time')}</div>
+                <div>{renderErrors('end_time', ...this.state)}</div>
                 </div>
               </div>
 
@@ -246,7 +249,7 @@ class EventEdit extends React.Component {
                       rows="10" 
                       onChange={e => this.update(e, 'description')}></textarea>
                   </div>
-                  <div>{this.renderErrors('description')}</div>
+                  <div>{renderErrors('description', ...this.state)}</div>
                 </div>
               </div>
               
