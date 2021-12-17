@@ -165,7 +165,7 @@ class EventEdit extends React.Component {
       const { title, start_time, end_time, category, description }  = this.state;
     
     return (
-      <div className="edit-form-container">
+      <div height="unset" className="edit-form-container">
         
           <form className="edit-form">
             <div className="event-edit-details">
