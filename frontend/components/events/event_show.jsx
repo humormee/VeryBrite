@@ -9,9 +9,12 @@ class EventShow extends React.Component {
     super(props);
 
     this.state = {
-      index: null
+      index: null,
+      show: false
     }
 
+    this.showModal = this.showModal.bind(this);
+    this.hideModal = this.hideModal.bind(this);
     this.handleEdit = this.handleEdit.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
     this.handleRegistration = this.handleRegistration.bind(this);
@@ -28,7 +31,13 @@ class EventShow extends React.Component {
     this.props.fetchLikes(this.props.user.id);
   }
 
+  showModal() {
+    this.setState({show: true})
+  }
 
+  hideModal() {
+    this.setState({show: false})
+  }
 
   handleEdit(e) {
     e.preventDefault();
@@ -86,6 +95,10 @@ class EventShow extends React.Component {
 
     if(!this.props.likes){
       return null;
+    }
+
+    if(!this.props.user) {
+      this.showModal()
     }
 
     let { likes } = this.props;

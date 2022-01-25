@@ -17,9 +17,6 @@ class SessionForm extends React.Component {
     this.props.clearSessionErrors();
   }
 
-  // componentDidMount() {
-  //   this.props.receiveErrors();
-  // }
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -34,14 +31,6 @@ class SessionForm extends React.Component {
 
   handleDemo(e) {
     e.preventDefault();
-    // this.setState({
-    //   username: 'demo',
-    //   password: 'password'
-    // });
-    // const user = Object.assign({
-    //   'username': 'demo', 
-    //   'password': 'password'}, 
-    //   this.state)
 
     this.props.processForm({
       username: 'demo',
