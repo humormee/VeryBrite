@@ -1,4 +1,5 @@
 import React from 'react';
+import Modal from '../modals/modal'
 import { Link } from 'react-router-dom';
 import EventItem from './event_item';
 import EventEdit from './event_edit';
@@ -23,6 +24,7 @@ class EventShow extends React.Component {
     this.renderButton = this.renderButton.bind(this);
     this.handleLike = this.handleLike.bind(this);
     this.renderLike = this.renderLike.bind(this);
+    this.renderModal = this.renderModal.bind(this);
   }
 
   componentDidMount() {
@@ -37,6 +39,16 @@ class EventShow extends React.Component {
 
   hideModal() {
     this.setState({show: false})
+  }
+
+  renderModal() {
+    if(this.state.show) {
+      return <Modal>
+        <p>Modal</p>
+      </Modal>
+    } else {
+      return null
+    }
   }
 
   handleEdit(e) {
@@ -93,13 +105,17 @@ class EventShow extends React.Component {
 
   handleLike() {
 
+    console.log(!this.props.user.id)
+    if(!this.props.user.id) {
+      // console.log("showing modal")
+      return this.showModal()
+    }
+
     if(!this.props.likes){
       return null;
     }
 
-    if(!this.props.user) {
-      this.showModal()
-    }
+    
 
     let { likes } = this.props;
     let likesArr = Object.values(likes);
@@ -224,7 +240,7 @@ class EventShow extends React.Component {
 
     return (
       <div className="event-show-container">
-        
+        <div>{this.renderModal()}</div>
         <div className="event-show-background">
           <img className="background-image"src={image_url} alt={title} />
           {/* <div className="background-image">
