@@ -43,7 +43,7 @@ class EventShow extends React.Component {
 
   renderModal() {
     if(this.state.show) {
-      return <Modal show={this.state.show}>
+      return <Modal show={this.state.show} handleClose={this.hideModal}>
         <p>Modal</p>
       </Modal>
     } else {

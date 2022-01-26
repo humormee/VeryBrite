@@ -1,12 +1,22 @@
 import React from 'react'
 
-const Modal = (show) => {
+// class Modal extends React.Component {
+//   onClose = e => {
+
+//   }
+//   render() {
+
+//   }
+// }
+
+
+const Modal = ({ handleClose, show}) => {
   // const showHideClassName = show ? "modal display-block" : "modal disdplay-none";
   debugger
   //show is an object with show and children keys
 
 
-  if (!show.show) {
+  if (!show) {
     return null
   }
   debugger
@@ -14,7 +24,7 @@ const Modal = (show) => {
     <div className="modal">
       <div className="modal-main">
         
-        <button type="button" >
+        <button type="button" onClick={handleClose}>
           Close
         </button>
       </div>
