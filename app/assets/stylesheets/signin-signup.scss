@@ -21,13 +21,14 @@
 }
 
 .signup {
-  display: flex;
-  justify-content: space-between;
+  // display: flex;
+  // justify-content: space-between;
+  height: 100%;
 }
 .split-right-container {
   // min-width: 520px;
-  left: 0;
-  position: relative;
+  right: 0;
+  position: absolute;
   // background-image: image-url('entertainment.jpg');
   // background-repeat: no-repeat;
   // background-position: 0;
@@ -44,11 +45,12 @@
   background-size: cover;
   margin: auto;
   top: 0;
-  left: 0;
-  bottom: 0;
+  // left: 0;
+  bottom: 50px;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  margin-left: 40px;
+  // z-index: 1;
 }
 
   .signin-signup {
