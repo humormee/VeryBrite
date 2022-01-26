@@ -240,7 +240,7 @@ class EventShow extends React.Component {
 
     return (
       <div className="event-show-container">
-        <div>{this.renderModal()}</div>
+        {this.renderModal()}
         <div className="event-show-background">
           <img className="background-image"src={image_url} alt={title} />
           {/* <div className="background-image">
