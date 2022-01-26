@@ -44,7 +44,7 @@ class EventShow extends React.Component {
   renderModal() {
     if(this.state.show) {
       return <Modal show={this.state.show} handleClose={this.hideModal}>
-        <p>Modal</p>
+        <p>To register and bookmark events, <Link to="../../signin">signin</Link>  or <Link to="../../signup">signup</Link></p>
       </Modal>
     } else {
       return null
