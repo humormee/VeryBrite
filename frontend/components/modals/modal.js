@@ -1,8 +1,15 @@
 import React from 'react'
 
-const Modal = () => {
+const Modal = (show) => {
   // const showHideClassName = show ? "modal display-block" : "modal disdplay-none";
+  debugger
+  //show is an object with show and children keys
 
+
+  if (!show.show) {
+    return null
+  }
+  debugger
   return (
     <div className="modal">
       <div className="modal-main">
