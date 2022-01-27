@@ -3,6 +3,7 @@ import React from 'react';
 export const Footer = () => {
     return (
         <div className="footer">
+            <div class="copyright">&copy; Justin Ernst 2020</div>
             <div className="website-links">
                 <a href='https://github.com/humormee' target="_blank"><i className="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/justin-ernst-a0ab10156/" target="_blank"><i className="fab fa-linkedin"></i></a>
