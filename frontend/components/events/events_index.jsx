@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import EventItem from "./event_item";
+import Footer from "../footer/footer";
 
 class EventsIndex extends React.Component {
   constructor(props) {
@@ -132,6 +133,7 @@ class EventsIndex extends React.Component {
 
         {this.renderCreateButton()}
       </div>
+
       </div>
     );
   }

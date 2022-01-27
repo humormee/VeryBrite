@@ -99,13 +99,6 @@ div {
 }
 div{
 
-  .events-title {
-    // display: block;
-    // position: absolute;
-    width: 100%;
-    // left: 10%;
-  }
-
   .categories-list {
     background-color: inherit;
     padding-top: 20px;
@@ -173,10 +166,11 @@ div{
 
   background-color: transparent;
 
-  display: flex;
-  position: absolute; 
+  // display: flex;
+  position: relative; 
+  width: 80%;
   left: 10%; 
-  right: 10%; 
+  // right: 10%; 
   // max-width: 1200px;
 
   .event-index {

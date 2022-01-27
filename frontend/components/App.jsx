@@ -35,9 +35,9 @@ const App = () => (
         <ProtectedRoute exact path="/events/:id/edit" component={EventEditContainer}></ProtectedRoute>
         
       </Switch>
-      <footer>
+      {/* <footer>
         <Route path="/" component={Footer}></Route>
-      </footer>
+      </footer> */}
       
   </div>
 );
