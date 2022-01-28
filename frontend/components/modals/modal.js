@@ -2,11 +2,11 @@ import React from 'react'
 
 
 const Modal = ({ handleClose, show, children}) => {
-  debugger
+
   if (!show) {
     return null
   }
-  debugger
+  
   return (
     <div className="modal">
       <div className="modal-main">
