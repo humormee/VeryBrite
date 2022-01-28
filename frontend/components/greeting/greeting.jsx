@@ -8,10 +8,9 @@ const Greeting = ({ currentUser, signout, signin }) => {
           <Link to="/" className="nav-verybrite">verybrite</Link>
           <div className="header-button-container">
             <Link to="/signin"className="header-button">Sign In</Link>
+            <Link></Link>
           </div>
-        
       </hgroup>
-      
     );
   }
 
