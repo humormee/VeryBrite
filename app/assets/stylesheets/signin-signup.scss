@@ -9,6 +9,9 @@
 
 
 .split-left-container {
+  position: relative; 
+  left: 50%;
+  transform: translateX(-50%);
   width: 40%;
   height: 100%;
   min-width: 500px;
@@ -21,36 +24,25 @@
 }
 
 .signup {
-  // display: flex;
+  display: flex;
   // justify-content: space-between;
   height: 100%;
 }
 .split-right-container {
-  // min-width: 520px;
-  right: 0;
-  position: absolute;
-  // background-image: image-url('entertainment.jpg');
-  // background-repeat: no-repeat;
-  // background-position: 0;
-  // background-size: cover;
+  
+  // position: relative;
   height: 100%;
   width: 55%;
 }
 
 .split-right {
-  // min-width: 520px;
-  position: relative;
+  // position: relative;
   background-image: image-url('concert_genre.jpg');
   background-repeat: repeat;
   background-size: cover;
   margin: auto;
-  top: 0;
-  // left: 0;
-  bottom: 50px;
   width: 100%;
   height: 100%;
-  margin-left: 40px;
-  // z-index: 1;
 }
 
   .signin-signup {
@@ -59,7 +51,6 @@
    background-color: #f05537;
    color: white;
    font-size: 20px;
-  //  font: 20px "Neue Plak";
    border: 1px solid black;
    border-radius: 5px;
  }
@@ -80,13 +71,11 @@
  }
 
  .signin-form-box {
-   top: 30%;
-   left: 10%;
-   position: absolute;
+   
+   position: relative;
    .signin-form-container {
-    left: 30%;
     display: flex;
-    position: absolute;
+    position: relative;
     transform: translate(0, -50%);
   }
 }
@@ -96,6 +85,9 @@
   flex-wrap: wrap;
   width: 300px;
   flex-direction: column;
+  position: relative; 
+  left: 50%;
+  transform: translateX(-50%);
   .nav-signup {
     color: #3659E3;
     font-size: 14px;
@@ -104,15 +96,13 @@
  }
 
  .signup-form-box {
-   top: 30%;
-   left: 10%;
-   position: absolute;
+   
+   position: relative;
    .signup-form-container {
     height: 100%;
-    left: 30%;
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: relative;
     transform: translate(0, -50%);
   }
 }
@@ -122,10 +112,9 @@
     flex-direction: column;
     justify-content: flex-end;
     height: 100px;
-    top: 16%;
-    left: 10%;
+
     color: #C5162E;
-    position: absolute;
+    position: relative;
     ul {
       li {
         margin-top: 10px;
@@ -134,9 +123,12 @@
  }
 
  .signup-form {
-   display: flex;
-   flex-wrap: wrap;
-   width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  position: relative; 
+  left: 50%;
+  transform: translateX(-50%);
  }
 
   .verybrite-header-login {
@@ -154,6 +146,7 @@
  }
 
  .session-submit {
+  border: none;
   margin-top: 10px;
   width: 100%;
   background-color: #D1410C;
@@ -164,13 +157,14 @@
  }
 
  .demo-submit {
-    margin-top: 10px;
-    width: 100%;
-    background-color: #D1410C;
-    padding: 0px 30px 1px;
-    height: 40px;
-    font: 14px;
-    color: white;
+  margin-top: 10px;
+  width: 100%;
+  background-color: #D1410C;
+  padding: 0px 30px 1px;
+  height: 40px;
+  font: 14px;
+  color: white;
+  border: none;
  }
 
  .demo-submit:hover {
@@ -184,6 +178,12 @@
  }
 
  .signin-input .inner-text {
-  position: absolute;
+  position: relative;
   width: 100%;
+ }
+
+ .signup-form-container {
+  position: relative; 
+  left: 50%;
+  transform: translateX(-50%);
  }
