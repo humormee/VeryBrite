@@ -10,17 +10,41 @@
 }
 
 .modal-main {
-  position:fixed;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: white;
+  max-width: 1000px;
   width: 80%;
   height: 50%;
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: pre;
+    a {
+      text-decoration: none;
+      color: #3659E3;
+    }
+  }
   button {
     position: absolute;
     top: 3%;
     right: 3%;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    padding: 20px;
+    color: lightcoral;
+    background-color: white;
+  }
+  button:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
   }
 
 }
