@@ -105,9 +105,7 @@ class EventShow extends React.Component {
 
   handleLike() {
 
-    console.log(!this.props.user.id)
     if(!this.props.user.id) {
-      // console.log("showing modal")
       return this.showModal()
     }
 
@@ -145,7 +143,10 @@ class EventShow extends React.Component {
   
 
   handleRegistration() {
-    
+    if(!this.props.user.id) {
+      // console.log("showing modal")
+      return this.showModal()
+    }
     this.props.createRegistration({
       attendee_id: this.props.user.id,
       event_id: this.props.event.id
