@@ -8,6 +8,7 @@ class EventItem extends React.Component {
   }
 
   renderLike() {
+
     if(!this.props.likes) {
       return null;
     }

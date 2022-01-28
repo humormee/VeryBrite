@@ -113,8 +113,6 @@ class EventShow extends React.Component {
       return null;
     }
 
-    
-
     let { likes } = this.props;
     let likesArr = Object.values(likes);
     let isDelete = false;
@@ -144,7 +142,6 @@ class EventShow extends React.Component {
 
   handleRegistration() {
     if(!this.props.user.id) {
-      // console.log("showing modal")
       return this.showModal()
     }
     this.props.createRegistration({

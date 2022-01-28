@@ -7,15 +7,35 @@ class EventsIndex extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      index: 0
+      index: 0,
+      show: false
     };
+
+    this.showModal = this.showModal.bind(this);
+    this.hideModal = this.hideModal.bind(this);
   }
 
-  renderCreateButton(){
-  }
   componentDidMount(){
     this.props.fetchEvents();
     this.props.fetchLikes();
+  }
+
+  showModal() {
+    this.setState({show: true})
+  }
+
+  hideModal() {
+    this.setState({show: false})
+  }
+
+  renderModal() {
+    if(this.state.show) {
+      return <Modal show={this.state.show} handleClose={this.hideModal}>
+        <p>To register and bookmark events, <Link to="../../signin">signin</Link>  or <Link to="../../signup">signup</Link></p>
+      </Modal>
+    } else {
+      return null
+    }
   }
 
   selectCategory(e, index) {
@@ -31,12 +51,6 @@ class EventsIndex extends React.Component {
       .scrollIntoView(
         {behavior: "smooth"}
       );
-
-    // window.scrollTo({
-    //   top: 650,
-    //   left: 0,
-    //   behavior: 'smooth'
-    // });
   }
 
   renderEvents(events, index) {
@@ -111,6 +125,7 @@ class EventsIndex extends React.Component {
 
     return (
       <div>
+        {this.renderModal()}
        <div className="index-header-container">
             <div className="index-header">
               <div className="blue"></div>
@@ -123,7 +138,6 @@ class EventsIndex extends React.Component {
         <h1 className="events-title">
           Browse by Category
         </h1>
-        {/* <h1 className="events-title">Find a <h1>very</h1> cool event near you </h1> */}
         <ul id="categories-list" className="categories-list">{categories}</ul>
       <div className="event-index-container">
   
@@ -131,7 +145,7 @@ class EventsIndex extends React.Component {
           {eventItems}
         </ul>
 
-        {this.renderCreateButton()}
+        {/* {this.renderCreateButton()} */}
       </div>
 
       </div>
