@@ -4,7 +4,7 @@ export const Footer = () => {
     return (
         <div class="footer">
             <div class="footer-info">
-                <div class="copyright">&copy; Justin Ernst 2020</div>
+                <div class="copyright">&copy; Justin Ernst 2022</div>
                 <div class="technologies">JavaScript &bull; Ruby on Rails &bull; React &bull; Redux &bull; PostgreSQL &bull; HTML5 &bull; CSS3 &bull; SCSS</div>
             <   div className="website-links">
                     <a href='https://github.com/humormee' target="_blank"><i className="fab fa-github"><span ></span></i></a>

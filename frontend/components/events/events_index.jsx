@@ -53,10 +53,6 @@ class EventsIndex extends React.Component {
       );
   }
 
-  renderEvents(events, index) {
-
-  }
-
   render() {
 
     const CATEGORIES = [
@@ -81,6 +77,9 @@ class EventsIndex extends React.Component {
     })
 
     let categoryEvents;
+
+    //user selects index through the different categories
+    //render events conditionally based off of the index
     switch (this.state.index) {
             case 0:
                 categoryEvents = events;
@@ -128,6 +127,7 @@ class EventsIndex extends React.Component {
         {this.renderModal()}
        <div className="index-header-container">
             <div className="index-header">
+              {/* divs for placing seeded images at the top of the index page */}
               <div className="blue"></div>
               <div className="black"></div>
               <div className="orange"></div>
@@ -145,7 +145,6 @@ class EventsIndex extends React.Component {
           {eventItems}
         </ul>
 
-        {/* {this.renderCreateButton()} */}
       </div>
 
       </div>

@@ -32,14 +32,6 @@ export const signup = user => dispatch => (
   ))
 );
 
-// export const login = user => dispatch => (
-//   APIUtil.login(user).then(user => (
-//     dispatch(receiveCurrentUser(user))
-//   ), err => (
-//     dispatch(receiveErrors(err.responseJSON))
-//   ))
-// );
-
 export const signin = user => dispatch => (
   APISessionUtil.signin(user).then(user => (dispatch(receiveCurrentUser(user))
   ),
@@ -53,5 +45,3 @@ export const signin = user => dispatch => (
 export const signout = () => dispatch => (
   APISessionUtil.signout().then(() => dispatch(signoutCurrentUser()))
 );
-
-// export const clearErrors = ()
